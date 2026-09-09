@@ -1,0 +1,46 @@
+# ---- Secrets ----
+.env
+.env.local
+*.pem
+kaggle.json
+
+# ---- Virtual environment ----
+.venv/
+venv/
+env/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ---- Data: heavy + regenerable ----
+# raw/ holds twcs.csv (~500MB) - downloaded via scripts/download_data.py
+data/raw/
+# interim/ holds embedding caches and parquet intermediates - regenerable
+data/interim/
+# NOTE: data/processed/ is deliberately NOT ignored. The seeded brand subsample
+# is committed so the pipeline reproduces without a Kaggle account.
+
+# ---- Notebooks ----
+.ipynb_checkpoints/
+
+# ---- OS / editor ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/settings.json
+
+# ---- Planning docs (per user request) ----
+# WARNING: docs/decision_log.md and docs/report.md are graded deliverables of the
+# assignment. Ignoring docs/ keeps them off GitHub. To ship them to evaluators,
+# delete the line below (or see README for the selective alternative).
+docs

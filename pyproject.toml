@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "threadpilot"
+version = "0.1.0"
+description = "Support-tweet triage agent: intent, grounded reply, auto-handle vs escalate"
+requires-python = ">=3.12,<3.14"
+
+# Runtime deps are intentionally NOT listed here. requirements.in is the source
+# and requirements.txt the frozen lock (decision_log.md D18); duplicating them
+# in a second place is how a lock and a spec drift apart. This file exists so
+# `pip install -e .` makes the src/ layout importable, nothing more.
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

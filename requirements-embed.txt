@@ -1,0 +1,17 @@
+# ThreadPilot — OPTIONAL embedding dependencies.
+#
+# You only need these to REBUILD the embedding matrix / retrieval index from
+# scratch. Reproducing every number in docs/report.md does not require them:
+# the embedding matrix and the LLM response cache are both committed.
+#
+# torch is a ~200MB wheel and is the single largest cost in a fresh-clone
+# setup, which is exactly why it is quarantined here. See decision_log.md D17.
+#
+# Install with:  pip install -r requirements-embed.txt
+#
+# NOTE: on Windows, plain `pip install torch` fetches the CPU build, which is
+# what we want. Do NOT add an --index-url for CUDA; embeddings run on CPU and
+# a GPU build would bloat setup for zero benefit at this index size.
+
+torch>=2.4,<3
+sentence-transformers>=3.0,<6
