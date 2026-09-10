@@ -53,6 +53,23 @@ for _d in (RAW_DIR, INTERIM_DIR, PROCESSED_DIR, GOLDEN_DIR, RESULTS_DIR, CACHE_D
     _d.mkdir(parents=True, exist_ok=True)
 
 # --------------------------------------------------------------------------
+# Brand (Phase 1)
+# --------------------------------------------------------------------------
+# Chosen by measurement against criteria pre-registered in requirements.md 2.1,
+# then by ROBUSTNESS when the composite score turned out unable to separate the
+# top two (see decision_log.md D25 and eval/results/brand_sensitivity.md).
+# AmazonHelp is the only brand in the top 3 under all four defensible
+# definitions of "usable precedent", and carries ~4x the retrieval index of the
+# runner-up. Known cost: the lowest intent-diversity proxy of the leaders.
+BRAND = "AmazonHelp"
+
+# Committed subsample size. "A few thousand tweets from one brand" per the
+# brief; large enough for a useful retrieval index plus a 200-example golden set
+# and a ~100-example silver dev set, small enough to commit and to embed on CPU
+# inside the 15-minute reproducibility budget.
+SUBSAMPLE_PAIRS = 8000
+
+# --------------------------------------------------------------------------
 # Models
 # --------------------------------------------------------------------------
 # Generation: classification, drafting, decisions.

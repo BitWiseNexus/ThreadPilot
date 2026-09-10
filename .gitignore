@@ -25,8 +25,14 @@ dist/
 data/raw/
 # interim/ holds embedding caches and parquet intermediates - regenerable
 data/interim/
-# NOTE: data/processed/ is deliberately NOT ignored. The seeded brand subsample
-# is committed so the pipeline reproduces without a Kaggle account.
+# processed/ holds the seeded brand subsample. NOT redistributed: it is a
+# derivative of the Kaggle "Customer Support on Twitter" dataset, which is
+# CC BY-NC-SA 4.0. Rebuild it locally with:
+#     python tasks.py data && python tasks.py subsample
+# (deterministic from SEED, so every run produces the identical file).
+data/processed/*.parquet
+# subsample_meta.json IS committed - it is counts and provenance, not tweet
+# content, and the report quotes it.
 
 # ---- Notebooks ----
 .ipynb_checkpoints/
@@ -44,3 +50,9 @@ desktop.ini
 # assignment. Ignoring docs/ keeps them off GitHub. To ship them to evaluators,
 # delete the line below (or see README for the selective alternative).
 docs
+
+# ---- sqlite sidecars ----
+# The cache DB itself IS committed (D10), but WAL/SHM are transient per-process
+# state and committing them would produce spurious diffs on every run.
+*.sqlite-wal
+*.sqlite-shm

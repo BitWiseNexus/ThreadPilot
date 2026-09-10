@@ -1,0 +1,23 @@
+{
+  "generated": "2026-09-12 11:48:36",
+  "brand": "AmazonHelp",
+  "seed": 20260909,
+  "n_pairs": 8000,
+  "n_threads": 7512,
+  "n_usable_precedent": 6429,
+  "n_canonical": 8000,
+  "n_implies_escalation": 422,
+  "mojibake_rows": 1,
+  "reply_kind_counts": {
+    "self_contained": 3567,
+    "link_referral": 2156,
+    "fragment": 1100,
+    "diagnostic_ask": 540,
+    "channel_switch_bare": 256,
+    "bare_ack": 205,
+    "handoff_with_ask": 166,
+    "truncated": 10
+  },
+  "total_brand_pairs_available": 168814,
+  "note": "Committed subsample. usable_precedent rows with is_canonical form the retrieval index, minus golden-set thread_ids (Phase 4 leakage guard)."
+}

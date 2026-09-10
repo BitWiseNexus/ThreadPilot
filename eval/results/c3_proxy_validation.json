@@ -1,0 +1,293 @@
+{
+  "generated": "2026-09-10 15:33:27",
+  "rater_model": "qwen/qwen3.8-27b",
+  "generator_model": "openai/gpt-oss-120b",
+  "n_rated": 257,
+  "n_failed": 0,
+  "raw_agreement": 0.6965,
+  "cohen_kappa": 0.3745,
+  "verdict": "WEAK - C3 is unreliable; brand table must be re-weighted",
+  "confusion_matrix": {
+    "labels": [
+      "not_usable",
+      "usable"
+    ],
+    "rows_regex_cols_llm": [
+      [
+        66,
+        47
+      ],
+      [
+        31,
+        113
+      ]
+    ]
+  },
+  "per_class": [
+    {
+      "kind": "bare_ack",
+      "n": 36,
+      "agreement": 0.917,
+      "regex_usable": 0.0,
+      "llm_usable": 0.083
+    },
+    {
+      "kind": "channel_switch_bare",
+      "n": 36,
+      "agreement": 0.639,
+      "regex_usable": 0.0,
+      "llm_usable": 0.361
+    },
+    {
+      "kind": "diagnostic_ask",
+      "n": 36,
+      "agreement": 0.833,
+      "regex_usable": 1.0,
+      "llm_usable": 0.833
+    },
+    {
+      "kind": "fragment",
+      "n": 15,
+      "agreement": 0.467,
+      "regex_usable": 0.0,
+      "llm_usable": 0.533
+    },
+    {
+      "kind": "handoff_with_ask",
+      "n": 36,
+      "agreement": 0.833,
+      "regex_usable": 1.0,
+      "llm_usable": 0.833
+    },
+    {
+      "kind": "link_referral",
+      "n": 36,
+      "agreement": 0.889,
+      "regex_usable": 1.0,
+      "llm_usable": 0.889
+    },
+    {
+      "kind": "self_contained",
+      "n": 36,
+      "agreement": 0.583,
+      "regex_usable": 1.0,
+      "llm_usable": 0.583
+    },
+    {
+      "kind": "truncated",
+      "n": 26,
+      "agreement": 0.115,
+      "regex_usable": 0.0,
+      "llm_usable": 0.885
+    }
+  ],
+  "per_brand": [
+    {
+      "brand": "AmazonHelp",
+      "n": 92,
+      "agreement": 0.652,
+      "regex_usable": 0.522,
+      "llm_usable": 0.63
+    },
+    {
+      "brand": "AmericanAir",
+      "n": 80,
+      "agreement": 0.725,
+      "regex_usable": 0.6,
+      "llm_usable": 0.625
+    },
+    {
+      "brand": "SpotifyCares",
+      "n": 85,
+      "agreement": 0.718,
+      "regex_usable": 0.565,
+      "llm_usable": 0.612
+    }
+  ],
+  "disagreements": [
+    {
+      "brand": "AmazonHelp",
+      "kind": "bare_ack",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Directly answers the specific return policy question.",
+      "customer_msg": "<user> If it is \u201cfulfilled by amazon\u201d which return policy is that? Til Jan 31 or 30 Days ?",
+      "brand_reply": "<user> That would be Jan 31 for FBA items!"
+    },
+    {
+      "brand": "AmericanAir",
+      "kind": "diagnostic_ask",
+      "usable": true,
+      "llm_usable": false,
+      "llm_why": "Only asks a vague question without addressing the specific complaint.",
+      "customer_msg": "LA to SF in just seven hours. As <user> swerves between terrible policy, no information and outright laughable lies.",
+      "brand_reply": "<user> What's going on Daniel? Let us know how we can help."
+    },
+    {
+      "brand": "AmazonHelp",
+      "kind": "truncated",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Explains authorization charge and provides specific contact link.",
+      "customer_msg": "<user> No it doesn\u2019t say refund issued. It says no charge will be applied but 19 Nov \u00a379 was taken out of my account",
+      "brand_reply": "<user> Hi Jennie. This may have been an authorization charge, were we first hold the funds. To double check can you please contact us via: <url> Thanks,"
+    },
+    {
+      "brand": "AmericanAir",
+      "kind": "channel_switch_bare",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Asks specific diagnostic question to identify staff member.",
+      "customer_msg": "Thank you <user> for the nicest gate agent ever who got me on flight 2289 back to DFW this morning! I wish I had her name to share!",
+      "brand_reply": "<user> Allison, we'd love to share your kudos with her! Can you provide a description of her via DM, we're following you?"
+    },
+    {
+      "brand": "AmazonHelp",
+      "kind": "truncated",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Asks specific diagnostic question to move resolution forward.",
+      "customer_msg": "<user> your customer services are appalling!!",
+      "brand_reply": "<user> Sorry you feel that way Bonni- Without providing personal info, can you tell us a bit more on what happened? Thank you"
+    },
+    {
+      "brand": "AmericanAir",
+      "kind": "channel_switch_bare",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Asks for specific confirmation code to investigate issue.",
+      "customer_msg": "<user> <user> It\u2019s amazing that <user> has not responded to this yet? Kinda figures... #failing",
+      "brand_reply": "<user> Please DM us your six letter confirmation and we'll take a look."
+    },
+    {
+      "brand": "AmazonHelp",
+      "kind": "fragment",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Acknowledges issue and states specific status of missing details.",
+      "customer_msg": "<user> You people showing wrong information that courier unable to contact us though I am informing your customer care that delivery guy phone if",
+      "brand_reply": "<user> We understand your concern, Danish. Apologies for the situation. We've not yet received your details."
+    },
+    {
+      "brand": "AmazonHelp",
+      "kind": "link_referral",
+      "usable": true,
+      "llm_usable": false,
+      "llm_why": "Only redirects to support without answering or diagnosing.",
+      "customer_msg": "<user> thanks for the helpful info.... Where's my parcel!?!?!? <url>",
+      "brand_reply": "<user> We're sorry you haven't received your order; please contact our support team so we may assist you: <url>"
+    },
+    {
+      "brand": "AmazonHelp",
+      "kind": "channel_switch_bare",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Acknowledges issue and requests order number for resolution.",
+      "customer_msg": "<user> \u306f\u3044\u3001\u304a\u5f85\u3061\u3057\u3066\u3044\u307e\u3059\u3002\u3042\u3068\u3001\u3064\u3044\u3067\u3068\u8a00\u3063\u3066\u306f\u306a\u3093\u3067\u3059\u304c\u3001\u3068\u3042\u308b\u76ee\u9ed2\u533a\u306e\u30c7\u30ea\u30d0\u30ea\u30fc\u30d7\u30ed\u30d0\u30a4\u30c0\u3055\u3093\u304c\u591c\u306e11\u6642\u4ee5\u964d\u306b\u914d\u9054\u306b\u6765\u308b\u3053\u3068\u304c\u3042\u308b\u306e\u3067\u56f0\u3063\u3066\u307e\u3059\u3002\u3057\u304b\u3082\u4f1a\u793e\u540d\u3092\u540d\u4e57\u3089\u305a\u300cAmazon\u3067\u3059\u300d\u3068\u8a00\u3063\u3066\u3002\u3069\u3046\u306b\u304b\u306a\u3089\u306a\u3044\u3082\u306e\u304b\u3068...\u3002",
+      "brand_reply": "<user> \u4f55\u5ea6\u3082\u3001\u304a\u624b\u6570\u304a\u304b\u3051\u3057\u3066\u304a\u308a\u307e\u3059\u3002 \u914d\u9001\u696d\u8005\u304c\u591c\u5206\u306b\u304a\u5c4a\u3051\u306b\u4f3a\u3063\u3066\u3044\u308b\u3068\u306e\u3053\u3068\u3067\u3059\u306d\u3002\u8a72\u5f53\u306e\u3054\u6ce8\u6587\u3092\u7279\u5b9a\u306e\u3046\u3048\u3001\u914d\u9001\u696d\u8005\u3078\u9069\u5b9c\u5bfe\u5fdc\u3055\u305b\u3066\u3044\u305f\u3060\u304d\u307e\u3059\u306e\u3067\u3001\u3054\u6ce8\u6587\u756a\u53f7\u304c\u308f\u304b\u308b\u5834\u5408\u3001\u3082\u3057\u304f\u306f\u3001\u4eca\u5f8c\u767a\u751f\u3057\u305f\u5834\u5408\u306b\u306f\u3001\u30ab\u30b9\u30bf\u30de\u30fc\u30b5\u30fc\u30d3\u30b9\u3078\u3054\u4e00\u5831\u3044\u305f\u3060\u3051\u308c\u3070\u3068\u5b58\u3058\u307e\u3059\u3002TY"
+    },
+    {
+      "brand": "SpotifyCares",
+      "kind": "channel_switch_bare",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Gives concrete instruction to reduce suggested tracks.",
+      "customer_msg": "<user> I'm using the latest version of Spotify on iOS 11.0.3",
+      "brand_reply": "<user> Thanks! To reduce the number of Suggested Tracks you get, try adding more artists into your playlists"
+    },
+    {
+      "brand": "AmericanAir",
+      "kind": "channel_switch_bare",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Explains the specific reason for the fee.",
+      "customer_msg": "<user> Why a fee at all though? Flight had a ton of open seats? Tickets were same price",
+      "brand_reply": "<user> If you buy a restrictive ticket and don't hold elite status with us, there's a charge for voluntary changes."
+    },
+    {
+      "brand": "SpotifyCares",
+      "kind": "truncated",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Explains status and provides concrete next step to join waitlist.",
+      "customer_msg": "<user> you should honestly thinking about releasing an official version in India.",
+      "brand_reply": "<user> Hi Joel! While we haven't officially launched in India just yet, we're launching in new countries as often as possible. Be sure to add your email at <url>"
+    },
+    {
+      "brand": "AmericanAir",
+      "kind": "truncated",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Confirms concrete rebooking action resolving the missed connection issue.",
+      "customer_msg": "<user> I made it in time. They gave up my seat. Could have told us ahead of time and I could have got on a different flight. Instead stuck in MIA",
+      "brand_reply": "<user> Our team has rebooked you for the next available connection. We know this isn't ideal, and we appreciate your understanding,"
+    },
+    {
+      "brand": "AmericanAir",
+      "kind": "channel_switch_bare",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Apologizes and corrects the specific error.",
+      "customer_msg": "<user> You wanna reread that response <user> ? My \"bad\"? Because that's a perfect example of just not caring.",
+      "brand_reply": "<user> Our apologies, Michele. We're human and we make mistakes. We meant to say bag."
+    },
+    {
+      "brand": "SpotifyCares",
+      "kind": "truncated",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Asks for specific account details to investigate the issue.",
+      "customer_msg": "<user> - I'm trying to update my payment info for premium, but it'll only let me do so for the student discount, and keeps telling me I'm not a student. I know I'm not a student I just want spotify and i lost my old debit card plz help i am gonna die if it goes away",
+      "brand_reply": "<user> Hi Sarah. Don't worry, help's here! Can you DM us your account's email address or username? We'll see what we can do"
+    },
+    {
+      "brand": "AmazonHelp",
+      "kind": "fragment",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Provides specific link to submit packaging feedback.",
+      "customer_msg": "<user> Small Product Big Wastage, received such a big box for this item. Super waste of Money order Id - 402-0826451-6063536 <url>",
+      "brand_reply": "<user> Apologies. Please share your packaging feedback here: <url> We'll be sure to work on it"
+    },
+    {
+      "brand": "AmazonHelp",
+      "kind": "self_contained",
+      "usable": true,
+      "llm_usable": false,
+      "llm_why": "Only pleasantry and well-wishes, no support content.",
+      "customer_msg": "<user> Que majos y agradables sois! \u2764\u2764\u2764",
+      "brand_reply": "<user> Gracias nuevamente. Que tengas un feliz fin de semana y que veas muchas pelis y series."
+    },
+    {
+      "brand": "SpotifyCares",
+      "kind": "self_contained",
+      "usable": true,
+      "llm_usable": false,
+      "llm_why": "Only pleasantries and channel redirection without specific support value.",
+      "customer_msg": "<user> Seems better now! If I've any further problems I'll let you know. Thanks :)",
+      "brand_reply": "<user> No worries. Feel free to tweet us if there's anything else. <url>"
+    },
+    {
+      "brand": "SpotifyCares",
+      "kind": "fragment",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Asks specific diagnostic questions to identify the issue.",
+      "customer_msg": "<user> Hi! I am having issues with my account. Even though I do have internet connection, Spotify thinks I don't. Any ideas? Thanks! :)",
+      "brand_reply": "<user> Hey there! We're here to help. Could you let us know what device, operating system, and version of Spotify you're using? Also, is this happening over G, WiFi, or both? We'll see what we can suggest"
+    },
+    {
+      "brand": "SpotifyCares",
+      "kind": "truncated",
+      "usable": false,
+      "llm_usable": true,
+      "llm_why": "Provides specific troubleshooting resource for the issue.",
+      "customer_msg": "<user> Everything I have downloaded, regardless of location gets wiped from my iPhone",
+      "brand_reply": "<user> That doesn't sound good. Check the steps under \u201cDownloads unexpectedly removed\u201d at <url> They should help with this"
+    }
+  ],
+  "cache": {
+    "entries": 457,
+    "models": 1
+  }
+}

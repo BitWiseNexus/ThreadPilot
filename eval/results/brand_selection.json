@@ -1,0 +1,760 @@
+{
+  "generated": "2026-09-10 15:23:23",
+  "seed": 20260909,
+  "sample_per_brand": 4000,
+  "total_rows": 2811774,
+  "n_inbound": 1537843,
+  "n_outbound": 1273931,
+  "criteria": "docs/requirements.md 2.1 (pre-registered)",
+  "c3_method": "5-way classifier in threadpilot.data.clean; usable = self_contained + link_referral",
+  "score_weights": {
+    "c3_usable": 0.45,
+    "c2_diversity": 0.2,
+    "c1_volume_log": 0.15,
+    "c4_multiturn": 0.1,
+    "c5_both_poles": 0.1
+  },
+  "table": [
+    {
+      "brand": "SpotifyCares",
+      "c1_usable_pairs": 43092,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.896,
+      "self_contained": 0.335,
+      "link_referral": 0.1585,
+      "diagnostic_ask": 0.1452,
+      "handoff_with_ask": 0.2572,
+      "channel_switch_bare": 0.0668,
+      "bare_ack": 0.0067,
+      "fragment": 0.0003,
+      "truncated": 0.0302,
+      "median_reply_chars": 105,
+      "c4_multiturn_rate": 0.3728,
+      "c2_diversity_entropy": 0.7306,
+      "c5_escalate_pole_rate": 0.0558,
+      "c5_auto_pole_rate": 0.0747,
+      "mojibake_rate": 0.0,
+      "score": 0.7933
+    },
+    {
+      "brand": "AmazonHelp",
+      "c1_usable_pairs": 168814,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.7933,
+      "self_contained": 0.453,
+      "link_referral": 0.256,
+      "diagnostic_ask": 0.0633,
+      "handoff_with_ask": 0.021,
+      "channel_switch_bare": 0.0343,
+      "bare_ack": 0.0348,
+      "fragment": 0.1358,
+      "truncated": 0.002,
+      "median_reply_chars": 95,
+      "c4_multiturn_rate": 0.5055,
+      "c2_diversity_entropy": 0.6263,
+      "c5_escalate_pole_rate": 0.069,
+      "c5_auto_pole_rate": 0.0393,
+      "mojibake_rate": 0.0,
+      "score": 0.6982
+    },
+    {
+      "brand": "AmericanAir",
+      "c1_usable_pairs": 36531,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.879,
+      "self_contained": 0.6633,
+      "link_referral": 0.0428,
+      "diagnostic_ask": 0.0143,
+      "handoff_with_ask": 0.1588,
+      "channel_switch_bare": 0.0867,
+      "bare_ack": 0.0323,
+      "fragment": 0.0005,
+      "truncated": 0.0015,
+      "median_reply_chars": 95,
+      "c4_multiturn_rate": 0.3212,
+      "c2_diversity_entropy": 0.6959,
+      "c5_escalate_pole_rate": 0.0425,
+      "c5_auto_pole_rate": 0.0283,
+      "mojibake_rate": 0.0,
+      "score": 0.6297
+    },
+    {
+      "brand": "Uber_Support",
+      "c1_usable_pairs": 56160,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.7065,
+      "self_contained": 0.154,
+      "link_referral": 0.1872,
+      "diagnostic_ask": 0.0037,
+      "handoff_with_ask": 0.3615,
+      "channel_switch_bare": 0.2895,
+      "bare_ack": 0.0015,
+      "fragment": 0.0,
+      "truncated": 0.0025,
+      "median_reply_chars": 83,
+      "c4_multiturn_rate": 0.289,
+      "c2_diversity_entropy": 0.7184,
+      "c5_escalate_pole_rate": 0.167,
+      "c5_auto_pole_rate": 0.0625,
+      "mojibake_rate": 0.0,
+      "score": 0.6064
+    },
+    {
+      "brand": "SouthwestAir",
+      "c1_usable_pairs": 28828,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.8592,
+      "self_contained": 0.6388,
+      "link_referral": 0.0432,
+      "diagnostic_ask": 0.0315,
+      "handoff_with_ask": 0.1457,
+      "channel_switch_bare": 0.0648,
+      "bare_ack": 0.0522,
+      "fragment": 0.0232,
+      "truncated": 0.0005,
+      "median_reply_chars": 101,
+      "c4_multiturn_rate": 0.278,
+      "c2_diversity_entropy": 0.673,
+      "c5_escalate_pole_rate": 0.0227,
+      "c5_auto_pole_rate": 0.0377,
+      "mojibake_rate": 0.0,
+      "score": 0.5309
+    },
+    {
+      "brand": "VirginTrains",
+      "c1_usable_pairs": 27416,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.6925,
+      "self_contained": 0.6025,
+      "link_referral": 0.0515,
+      "diagnostic_ask": 0.02,
+      "handoff_with_ask": 0.0185,
+      "channel_switch_bare": 0.017,
+      "bare_ack": 0.203,
+      "fragment": 0.0715,
+      "truncated": 0.016,
+      "median_reply_chars": 61,
+      "c4_multiturn_rate": 0.467,
+      "c2_diversity_entropy": 0.6786,
+      "c5_escalate_pole_rate": 0.0515,
+      "c5_auto_pole_rate": 0.0483,
+      "mojibake_rate": 0.0,
+      "score": 0.5262
+    },
+    {
+      "brand": "British_Airways",
+      "c1_usable_pairs": 29290,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.6255,
+      "self_contained": 0.4612,
+      "link_referral": 0.027,
+      "diagnostic_ask": 0.033,
+      "handoff_with_ask": 0.1042,
+      "channel_switch_bare": 0.026,
+      "bare_ack": 0.0225,
+      "fragment": 0.319,
+      "truncated": 0.007,
+      "median_reply_chars": 106,
+      "c4_multiturn_rate": 0.3455,
+      "c2_diversity_entropy": 0.7467,
+      "c5_escalate_pole_rate": 0.0495,
+      "c5_auto_pole_rate": 0.057,
+      "mojibake_rate": 0.0,
+      "score": 0.5048
+    },
+    {
+      "brand": "AppleSupport",
+      "c1_usable_pairs": 106646,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.7073,
+      "self_contained": 0.1867,
+      "link_referral": 0.182,
+      "diagnostic_ask": 0.082,
+      "handoff_with_ask": 0.2565,
+      "channel_switch_bare": 0.2853,
+      "bare_ack": 0.006,
+      "fragment": 0.0,
+      "truncated": 0.0015,
+      "median_reply_chars": 100,
+      "c4_multiturn_rate": 0.2933,
+      "c2_diversity_entropy": 0.6429,
+      "c5_escalate_pole_rate": 0.0318,
+      "c5_auto_pole_rate": 0.0535,
+      "mojibake_rate": 0.0,
+      "score": 0.4913
+    },
+    {
+      "brand": "comcastcares",
+      "c1_usable_pairs": 32921,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.6927,
+      "self_contained": 0.2275,
+      "link_referral": 0.0075,
+      "diagnostic_ask": 0.012,
+      "handoff_with_ask": 0.4457,
+      "channel_switch_bare": 0.262,
+      "bare_ack": 0.0158,
+      "fragment": 0.0,
+      "truncated": 0.0295,
+      "median_reply_chars": 114,
+      "c4_multiturn_rate": 0.2737,
+      "c2_diversity_entropy": 0.7285,
+      "c5_escalate_pole_rate": 0.0367,
+      "c5_auto_pole_rate": 0.0413,
+      "mojibake_rate": 0.0,
+      "score": 0.4907
+    },
+    {
+      "brand": "Delta",
+      "c1_usable_pairs": 42114,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.6895,
+      "self_contained": 0.5373,
+      "link_referral": 0.0235,
+      "diagnostic_ask": 0.0123,
+      "handoff_with_ask": 0.1165,
+      "channel_switch_bare": 0.0867,
+      "bare_ack": 0.1113,
+      "fragment": 0.1108,
+      "truncated": 0.0018,
+      "median_reply_chars": 84,
+      "c4_multiturn_rate": 0.3215,
+      "c2_diversity_entropy": 0.6177,
+      "c5_escalate_pole_rate": 0.0293,
+      "c5_auto_pole_rate": 0.0445,
+      "mojibake_rate": 0.0,
+      "score": 0.3729
+    },
+    {
+      "brand": "TMobileHelp",
+      "c1_usable_pairs": 34215,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.5327,
+      "self_contained": 0.1062,
+      "link_referral": 0.0382,
+      "diagnostic_ask": 0.0073,
+      "handoff_with_ask": 0.381,
+      "channel_switch_bare": 0.454,
+      "bare_ack": 0.0107,
+      "fragment": 0.0005,
+      "truncated": 0.002,
+      "median_reply_chars": 89,
+      "c4_multiturn_rate": 0.3992,
+      "c2_diversity_entropy": 0.6662,
+      "c5_escalate_pole_rate": 0.0457,
+      "c5_auto_pole_rate": 0.046,
+      "mojibake_rate": 0.0,
+      "score": 0.3463
+    },
+    {
+      "brand": "Tesco",
+      "c1_usable_pairs": 38468,
+      "n_scored": 4000,
+      "c3_usable_rate": 0.407,
+      "self_contained": 0.2198,
+      "link_referral": 0.0085,
+      "diagnostic_ask": 0.072,
+      "handoff_with_ask": 0.1067,
+      "channel_switch_bare": 0.03,
+      "bare_ack": 0.0123,
+      "fragment": 0.545,
+      "truncated": 0.0057,
+      "median_reply_chars": 118,
+      "c4_multiturn_rate": 0.3635,
+      "c2_diversity_entropy": 0.5851,
+      "c5_escalate_pole_rate": 0.0293,
+      "c5_auto_pole_rate": 0.0395,
+      "mojibake_rate": 0.0,
+      "score": 0.0833
+    }
+  ],
+  "examples": {
+    "AmazonHelp": {
+      "self_contained": [
+        "<user> I'm sorry for the conflicting information. There may be multiple listings for the item. Are you able to view the listing sent from Alexa to compare?",
+        "<user> \u3068\u3093\u3067\u3082\u306a\u3044\u3053\u3068\u3067\u3059\u3002\u4eca\u5f8c\u3068\u3082\u3054\u5229\u7528\u306e\u969b\u306b\u4f55\u304b\u304a\u56f0\u308a\u306e\u3053\u3068\u3084\u3054\u4e0d\u660e\u70b9\u304c\u3042\u308c\u3070\u3001\u3044\u3064\u3067\u3082\u3054\u9060\u616e\u306a\u304f\u304a\u554f\u3044\u5408\u308f\u305b\u304f\u3060\u3055\u3044\u3002 RI",
+        "<user> Nothing makes us more happy than delighting you. Thanks a bunch for sharing a portion of your happiness with us too."
+      ],
+      "link_referral": [
+        "<user> So sorry! That's not what we like to hear! Please reach out to us here: <url> and we can help with this!",
+        "<user> Two-Day Shipping refers to the transit time, after the order ships. Here's more info on our shipping: <url>",
+        "<user> Hey! We're unable to view orders via Twitter. What does the tracking show here: <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> Sorry to hear Luke. What was the charge in relation to? Please do not post any personal / personal info here.",
+        "<user> \ud83d\ude05 Promo\u00e7\u00f5es irresist\u00edves, n\u00e9 Milena? Quais livros voc\u00ea comprou? \ud83d\ude48",
+        "<user> I'm terribly sorry to hear that! Is this regarding a current order you have with us? Tell us more. We'd like to help!"
+      ],
+      "handoff_with_ask": [
+        "<user> Thanks for reaching out to us today. What's the delivery date given on your order confirmation e-mail? You can check your messages here: <url>",
+        "<user> Hello, we will respond to your DM now.",
+        "<user> Check the SD Card slot and make sure there is no particulate matter which may be effecting how the card is being detected."
+      ],
+      "channel_switch_bare": [
+        "<user> Ma coll\u00e8gue vous a r\u00e9pondu en DM, merci de v\u00e9rifier.",
+        "<user> I'm so sorry to hear this! What's the latest tracking status show here: <url>",
+        "<user> We've response you on DM. See you!"
+      ],
+      "bare_ack": [
+        "<user> Hi Sarah, thanks for the suggestion.",
+        "<user> De nada Matheus! Boa leitura!",
+        "<user> \u304a\u5f85\u305f\u305b\u3057\u3066\u304a\u308a\u307e\u3059\u3002 <url> YM"
+      ],
+      "fragment": [
+        "<user> The orders are shipped and mapped for the delivery based on the estimates provided during checkout.",
+        "<user> Kindly reach out to our support team here: <url> We'll definitely look into it.",
+        "<user> We've responded to you over DM, kindly check."
+      ],
+      "truncated": [
+        "<user> Con mucho gusto, estamos para ayudarte. En caso de que necesites contactar con el transportista, puedes encontrar la informaci\u00f3n mediante el siguiente enlace: <url> Por favor mantennos infomados. Un saludo,",
+        "<user> Hi Jennie. This may have been an authorization charge, were we first hold the funds. To double check can you please contact us via: <url> Thanks,",
+        "<user> If you have already shared your details through the link mentioned by my colleague '^PS', I'm sure our team would have reached out to you with a correspondence to your registered email address. You could check for the same here <url>"
+      ]
+    },
+    "AppleSupport": {
+      "self_contained": [
+        "<user> Let's give the steps in this article a try. <url> Does the issue remain?",
+        "<user> We're more than happy to help you fix this. Can you tell us which iOS version you are currently using please?",
+        "<user> Excellent. Are you using an Apple-branded adapter and lightning cable with your iPhone?"
+      ],
+      "link_referral": [
+        "<user> We want to help. Have you tried the steps here? <url>",
+        "<user> We've got you. Go to Settings &gt; Sounds &amp; Haptics, then tap on any sound. At the top of the page, tap Download All Purchased Tones to check for any previously purchased tones not currently downloaded to your device. <url> <url>",
+        "<user> Got it. Let's check your search settings to be sure those apps are included in searches. This link helps: <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> What issues are you experiencing with Assistive Touch? We want all of your features to work as expected.",
+        "<user> Hey, let's look into what's going on. Does the issue persist after a restart? Also, what's the exact iOS version?",
+        "<user> Let's see how we can help. Which iOS version do you currently have installed? You'll see this in Settings &gt; General &gt; About."
+      ],
+      "handoff_with_ask": [
+        "<user> Thanks for reaching out. We have a workaround for this here: <url> DM us if you still need help. <url>",
+        "<user> We would like to offer some guidance with this. Please send us a DM so we can assist. <url>",
+        "<user> We want to help out. Are you seeing anything in particular on your screen when booting up your Mac? Let us know more in DM, please. <url>"
+      ],
+      "channel_switch_bare": [
+        "<user> We're here to help with any iOS issues. Send us a DM and let us know your device model and the details of what's happening. <url>",
+        "<user> We'd like to gather some additional details from you. Please meet us in DM. <url>",
+        "<user> Thanks for connecting with us. Let us know in DM when exactly this pop-up appeared and we'll go from there. <url>"
+      ],
+      "bare_ack": [
+        "<user> You're welcome!",
+        "<user> You're welcome.",
+        "<user> Hi there! This should fix it: <url>"
+      ],
+      "fragment": [],
+      "truncated": [
+        "<user> That is definitely not expected. We'd like to help. Send us a DM with your iOS version. You can check in Settings &gt; General &gt; About <url>",
+        "<user> We'd like to help. Is your phone not charging or charging slowly? Also, what iOS version are you running? You can check in Settings &gt; General &gt; About",
+        "<user> We do understand the anticipation of getting a new iPhone and we're happy to point you in the right direction for help. Please reach out to our Sales Support team for assistance with your order at <url>"
+      ]
+    },
+    "Uber_Support": {
+      "self_contained": [
+        "<user> Our team has recently responded via email. Please reply there if you have additional questions.",
+        "<user> We've been overwhelmed by demand, Sam! Supply is limited, but please keep trying.",
+        "<user> Our team is currently reviewing your email and will be in touch. We appreciate your patience!"
+      ],
+      "link_referral": [
+        "<user> We can take a look! Contact us via <url> so our team can get in touch.",
+        "<user> We're sorry to hear this was your experience. Contact us via <url> and we'll be in touch.",
+        "<user> Happy to clarify - please check out <url> for additional details regarding cancellations."
+      ],
+      "diagnostic_ask": [
+        "<user> Here to help! Can you please provide us your email address? From there we'll be able to assist further.",
+        "<user> Here to help! Can you please provide us your email address? From there we'll be able to assist further.",
+        "<user> Hey Georgia! We can definitely further investigate. Can you please provide your account email? We will follow up."
+      ],
+      "handoff_with_ask": [
+        "<user> Let's have a look, Allison. Please DM us the email linked to your account, plus the promo details, so we can follow up.",
+        "<user> We're so sorry about that! Please send us a DM with your email address with details so we can connect.",
+        "<user> Here to help! Send us a DM with your email address with more info so we can assist."
+      ],
+      "channel_switch_bare": [
+        "<user> Here to help! Send us a note via <url> so our team can connect.",
+        "<user> Here to help. Send us a note at <url> so our team can connect.",
+        "<user> We want to follow up. Send us a note at the following link and a member of our team will reach out - <url>"
+      ],
+      "bare_ack": [
+        "<user> Glad to hear, Brianna!",
+        "<user> We're followed up via in-app support.",
+        "<user> We hear ya! Thanks for the feedback."
+      ],
+      "fragment": [],
+      "truncated": [
+        "<user> Ride passes are still in a preliminary testing phase, and are only available in limited numbers. find more info at <url>",
+        "<user> Hello, Shayan! We welcome all inquiries about sponsorship and partnership opportunities. Please fill out the form at <url>",
+        "<user> Hello Evaster! Can you please provide your account email and more details via DM so we can connect further? Thank you"
+      ]
+    },
+    "SpotifyCares": {
+      "self_contained": [
+        "<user> 1: Hey, sorry to hear it! We\u2019d recommend reaching out to your distributor. They'll work with our team to make sure your artist page...",
+        "<user> Hey! Don't worry, we're on it. Our developers are looking into this, and we'll keep everyone updated",
+        "<user> Thanks for sending the info. We're afraid Behind the Lyrics isn't available for that song yet. No worries, they update playlists with new content each week. Give us a shout if you have questions"
+      ],
+      "link_referral": [
+        "<user> Hey there, we\u2019ll have it available to you as soon as it\u2019s available to us! For now, check <url>",
+        "<user> Hey Katie! We\u2019ll have it available to you as soon as it\u2019s available to us. More info about Spotify content here: <url>",
+        "<user> Hey! We\u2019ve recently made some improvements to our shuffle algorithm. We\u2019d love to hear your feedback here: <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> Hey. Could you try to refresh the page? You can also give it another shot using a private browser or an incognito window. Keep us posted",
+        "<user> Hey Danna! Can you let us know what country your account is set to? We'll see what we can find",
+        "<user> Hey, that doesn't sound good! Did the app crash at any point during the 30 minutes? That can cause the ad-free time to reset"
+      ],
+      "handoff_with_ask": [
+        "<user> Hi there! Could you send us a DM with your account's email address or username? We'll take a look backstage /HC <url>",
+        "<user> That's strange. Could you send us a DM with your account's email address or username? We'll take a look backstage /CH <url>",
+        "<user> Hey Mark! Can you DM us your account's email address? We'll see what we can suggest /JL <url>"
+      ],
+      "channel_switch_bare": [
+        "<user> Hey Jordan! We understand - we\u2019re working on it as we speak. Stay tuned \ud83d\ude42",
+        "<user> Hey! We've just sent you a bit more info over DM. We'll carry on helping out there",
+        "<user> Hey! We've just sent you a bit more info over DM"
+      ],
+      "bare_ack": [
+        "<user> You're welcome. Take care! \ud83d\ude01",
+        "<user> No worries! It's all in the past. <url> \ud83d\ude09",
+        "<user> You're welcome! Have a... <url> \ud83d\udc9a"
+      ],
+      "fragment": [
+        "<user> Hey there! We're here to help. Could you let us know what device, operating system, and version of Spotify you're using? Also, is this happening over G, WiFi, or both? We'll see what we can suggest"
+      ],
+      "truncated": [
+        "<user> Hi! We\u2019d love to have all of Miley's stuff available, but we have some info about content here: <url> Hope this clears things up",
+        "<user> That doesn't sound good. Check the steps under \u201cDownloads unexpectedly removed\u201d at <url> They should help with this",
+        "<user> Got it. We don't have any info on this right now, but we'll make sure it's passed on to the right team. In the meantime, we'd recommend listening to more of your favorite tunes to improve the results. Drop us a tweet if anything else comes up"
+      ]
+    },
+    "Delta": {
+      "self_contained": [
+        "<user> Hi, Ridwan, I'm happy to hear you are excited about this new service as we are!",
+        "<user> Hi, Kathy. I'm sorry for the inconvenience.",
+        "<user> Please let us know if there is any way we could assist via Twitter."
+      ],
+      "link_referral": [
+        "<user> Hi, Kelly! For items left onboard, please fill out this form, <url> and if your item is located, someone from our Lost &amp; Found Dept. will be in contact with you.",
+        "<user> We're sorry, Karen. Please use the link to provide your confirmation #. *ABN <url>",
+        "<user> Hi there. I am so very sorry for the inconvenience. For all future travel, please reach out to our reservations desk by referring to this link, one of our agents will be able to help you. <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> Mileage Award Tickets? I can look into this. Going from where to where and what dates?",
+        "<user> Ethan, what is the flight number? Have you alerted the Inflight Crew?",
+        "<user> Very sorry. Has the Captain made an announcement as to the delay? Please ask a Flight Attendant if they are able to serve water during the delay."
+      ],
+      "handoff_with_ask": [
+        "<user> Hi, Vinay, Please DM your confirmation number and the change you would like to make and I will be happy to help you.",
+        "<user> This sounds really strange Harold! Can you give a little more detail as to what happened? Also, if you can DM the crew members name that will be helpful as well.",
+        "<user> Hi, Steve. I will be happy to take a look. Please share your confirmation number via DM. *AJZ <url>"
+      ],
+      "channel_switch_bare": [
+        "<user> You are very welcome George. We are so happy! \ud83d\ude04",
+        "<user> Hi, Kristin, please DM me your confirmation and TSA number and I'll be happy to help. Thank you. *TMB <url>",
+        "<user> Following you now."
+      ],
+      "bare_ack": [
+        "<user> Thanks, bear with me.",
+        "<user> <user> My apology for any inconvenience.",
+        "<user> You're welcome."
+      ],
+      "fragment": [
+        "<user> Yikes! This is pretty concerning. Pls follow/DM the flight number as well as detail on what happened. I'd like to get this over to...",
+        "<user> Hi, Barry! We certainly hate when delays happen. I'm really sorry for the inconvenience. We do put a heavy emphasis on, on time...",
+        "<user> Hello. We greatly appreciate and are grateful for our Military personnel. Pre-Boarding is normally reserved for our elderly..."
+      ],
+      "truncated": [
+        "<user> I am terribly sorry that you did not have a pleasant experience with our customer service. You can leave a review for our Customer Care team to address on <url>",
+        "<user> Thank you for your patience with me. My sincere apologies for you and your husbands inconvenience. I\u2019m sure this wasn\u2019t the way you both wanted to start your trip,",
+        "<user> Sean, I see you are still on the standby list for an upgrade. We only authorize a certain amount of seats for complimentary upgrades,"
+      ]
+    },
+    "Tesco": {
+      "self_contained": [
+        "<user> Hi Olivia, I'm afraid we don't sell Smeg products ourselves but they're available through our partners on Tesco Direct. Best wishes - Mike.",
+        "<user> It will be available after 8am David TY",
+        "<user> I'll need your full name, address, postcode, barcode of the buns and how much the buns were. TY"
+      ],
+      "link_referral": [
+        "<user> <user> Thinking of giving it a go? Here's the recipe if you are #EveryonesWelcome <url>",
+        "<user> Hi Richard, here is the link to the Christmas Deliveries section, <url> I hope this helps :) Ty",
+        "<user> Hi Fiona, at the moment we've not been made aware of what offers will be available. I'd advise keeping an eye on <url> as this will contain all or Christmas offerings. :) TY"
+      ],
+      "diagnostic_ask": [
+        "<user> Hi there, I'm sorry about this. Could you please tell us the date and time of the visit so that we can pass the feedback to the store? Paras",
+        "<user> Hi Shelley, I'm sorry to disappoint you but sadly we no longer accept these. Is there anything else I can help you with today? Thanks, Calum",
+        "<user> I'm sorry that your meat leaked Rosalind. Did this do any damage to your car or elsewhere? TY"
+      ],
+      "handoff_with_ask": [
+        "<user> Hi, can you explain what you mean via DM? I'd like to look into this for you. - Rocsi <url>",
+        "<user> Hi Jono, thank you for getting in touch, can you please DM your full name,old address, new address and email? I can look into this for you.",
+        "<user> Hi Louise, I'm sorry you have been able to buy an out of date item. Can you DM the barcode off pack, your receipt, full name &amp; address? I'll inform the store of this error. TY"
+      ],
+      "channel_switch_bare": [
+        "<user> Hi, I've responded via DM as I needed more characters. TY",
+        "<user> Hi AJ, we're not ignoring you, we're just busy. I've replied to your DM :)",
+        "<user> Hi Sarah, I've replied to your DM. Ty"
+      ],
+      "bare_ack": [
+        "<user> You are very welcome Emz. Ty Chloe",
+        "<user> #Essentials \ud83d\ude4c",
+        "<user> Thank you Neil :)"
+      ],
+      "fragment": [
+        "<user> Hi James, I'm sorry you were disappointed with the sandwich you purchased. This definitely isn't the quality we aim to provide.",
+        "<user> The time your order arrived, the full name, full address &amp; email address registered to your Grocery account? Ty - James <url>",
+        "<user> Hi Arun, I'm sorry your Tesco salt and vinegar sticks had no flavour &amp; I understand how disappointing this must have been."
+      ],
+      "truncated": [
+        "<user> Hi there, I'd be happy to look into this for you. In order for me to do so can you please DM your full name, full address and email address? Thank you",
+        "<user> Hi Peter, I have called the store and my colleague there will get the price on the label updated now. Thank you",
+        "<user> Hi Katherine, I'm sorry to learn that our store has this on the shelves. I would like to have this investigated and removed, can you confirm the store for me please? Thank You"
+      ]
+    },
+    "AmericanAir": {
+      "self_contained": [
+        "<user> Travel advisories are for changes to flights already booked.",
+        "<user> If you don't see the bag, please speak with our Baggage service office there at the airport.",
+        "<user> We're here to help. What's going on, Stacey?"
+      ],
+      "link_referral": [
+        "<user> We're showing the bag was unloaded from the plane at 4:36p. If you're still without it, please see a baggage agent. <url>",
+        "<user> We're sorry for your loss. Our lowest fares can be found online here: <url> Or at Reservations: <url>",
+        "<user> It allows for only 1 small carry-on that fits under the seat in front of you. Here's more info: <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> What's going on? We'd like to properly answer your question so please clarify.",
+        "<user> What's going on? Can we help in some way?",
+        "<user> Do you have a claim number? We'll be happy to take a peek."
+      ],
+      "handoff_with_ask": [
+        "<user> We'd like to forward this feedback, Brian. Please DM your record locator and let us know which flight this is.",
+        "<user> Please follow and DM your record locator, we'd like to have look!",
+        "<user> We're sorry for the delay today, Stephen. We'll get you on your was as soon as we can. We appreciate your patience."
+      ],
+      "channel_switch_bare": [
+        "<user> Blake, we love to support our Military families as much as possible. Please let us know about what happened today via DM?",
+        "<user> This isn't normal for us. Please send us a DM with detailed info and we'll try our best to assist.",
+        "<user> We expect great service for you always. Please follow and DM details."
+      ],
+      "bare_ack": [
+        "<user> What a gorgeous bird! #beAAutiful",
+        "<user> You bet.",
+        "<user> Yay! We love to hear of a job well done."
+      ],
+      "fragment": [
+        "<user> We very much appreciate your loyalty and do our best to always provide excellent service with a great experience. The email",
+        "<user> more info: <url>"
+      ],
+      "truncated": [
+        "<user> We expect our agents to always be courteous and helpful. We're sorry for the missed connection and poor communication,",
+        "<user> We do allow families to pre-board, Nisha. You'll have to give our agents enough notice to accomodate. Click here <url>",
+        "<user> Did you let our crew know about your inflight entertainment not working, and is this just at your seat? We'd like to fix this"
+      ]
+    },
+    "TMobileHelp": {
+      "self_contained": [
+        "<user> <user> Download the T-Mobile Tuesdays app and get sweet free gifts every week!",
+        "<user> <user> When adding a new line to a qualified plan you can get this sweet new offer: <url>",
+        "<user> <user> Hi Joel, we have some great news in the winning department concerning Day 1 of the #12DaysOfMagenta Giveaway! Please send a message on over to us when you have a few so we can confirm your Revvl Plus."
+      ],
+      "link_referral": [
+        "<user> <user> We'd absolutely love to have you, Jimmy. Check out our reimbursement program here <url>",
+        "<user> <user> You know it! Checkout our iPhone promo that will apply for the iPhone X as well, here: <url>",
+        "<user> <user> We're getting better every day, check out: <url> and <url> periodically for the latest."
+      ],
+      "diagnostic_ask": [
+        "<user> Do you wish to let us know what's going on with your service and customer service experience? We are here to help.",
+        "<user> Hi there! How can we help? :)",
+        "<user> What happened Brooke? The team is on your side."
+      ],
+      "handoff_with_ask": [
+        "<user> We hear you, Dani! We value you, 100% and want to make sure you get the sweet deals this year WITHOUT feeling forced to anything. :) Lets keep chattin' away, catch me over in your DMs.",
+        "<user> Whoa Brandon! Let's take a closer look so we can get this straightened out! Send us a DM, we got your back :)",
+        "<user> Hey Jay, send us a DM and we can take a look at your options."
+      ],
+      "channel_switch_bare": [
+        "<user> Pablo, we've got it available for you here <url> Please DM us. We're happy to assist you.",
+        "<user> Hey there! It depends upon which version you chose, which color, and the date you ordered. DM us here and we'll gladly look into your order with you.",
+        "<user> Good morning, Kp1832! Send us a DM and we would be happy to go over any questions you have! <url>"
+      ],
+      "bare_ack": [
+        "<user> Did you want to order on today.",
+        "<user> :D",
+        "<user> Why would you want to do that, Caelan?"
+      ],
+      "fragment": [
+        "<user> If you would like to review our privacy practices, you can check this link out for me <url>",
+        "<user> I'd love to get you all taken care of, and talk some FF with you here! <url>"
+      ],
+      "truncated": [
+        "<user> <user> Having reliable service where you need it is key. Pls DM us where you're seeing this so we can check it out <url>",
+        "<user> <user> A fast connection is important and we're here to help find out what's going on! DM me and we'll check it out <url>",
+        "<user> Hi Andrew! Sorry you're having trouble staying connected. Can we take a look with you? Send us a DM and we'll see what's going on"
+      ]
+    },
+    "comcastcares": {
+      "self_contained": [
+        "<user> be happy to review your account with you and help resolve any outstanding internet service issues.",
+        "<user> I see that you've recently posted to Comcast, how can I help?",
+        "<user> I'll be sure to pass on your feedback about OANN. We examine channel lineups often to offer the best content available."
+      ],
+      "link_referral": [
+        "<user> We constantly evaluate content availability for our customers. Please visit <url> to submit your interest.",
+        "<user> You can find all of the available XFINITY apps here: <url>",
+        "<user> We upload the content provided to us by the networks. For content requests, please visit: <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> Which episode of Ghost Adventures are you looking for? I see that Season 15 Episode 5 is the latest episode added to the On Demand library. It aired on /17.",
+        "<user> Thinking about your Twitter Customer Service experience, how likely are you to recommend XFINITY from Comcast to friends and family? Please respond using a 0 to 10 scale where 0 is 'Not at all likely' and 10 is 'Extremely likely'.",
+        "<user> Hi Natalie, thanks for reaching out to us with your concern about the cable. What exactly are you experiencing? C... <url>"
+      ],
+      "handoff_with_ask": [
+        "<user> Hello, I apologize for the troubles w/ your DVR recording. If you need assistance, please send us a DM w/ your full address &amp; phone#?",
+        "<user> Please DM me if you need assistance with anything.",
+        "<user> Hello, I'll be happy to review your account and see what we can do to lower the bill. Can you DM your account info."
+      ],
+      "channel_switch_bare": [
+        "<user> I would be happy to look further into your service issues if you would provide your full address and account associated phone # in a DM.",
+        "<user> Hi, I apologize for the frustrating experience w/ your acct. Can you please send a DM w/ your full address or phone #. I want to help.",
+        "<user> Hello, I want to see what is going on. Please DM me your address and number so I can better assist."
+      ],
+      "bare_ack": [
+        "<user> You're welcome.",
+        "<user> Hi Chris, how can I help you today?",
+        "<user> Hello, what can we assist you with?"
+      ],
+      "fragment": [],
+      "truncated": [
+        "<user> Hello, Thank you for reaching out to us. We are able to look into your service trouble. Please send us a DM with",
+        "<user> Hi, I'll be happy to check on the status of your services. Please send a DM with your full name, address,",
+        "<user> Hello, I apologize for the troubles w/ your service. Could you please follow us &amp; DM your full address &amp; phone #? I would like to"
+      ]
+    },
+    "British_Airways": {
+      "self_contained": [
+        "<user> This is disappointing to hear, Sally. Can you tell us more about what\u2019s happened?",
+        "<user> Sorry to hear about the schedule change, Beverley. You can wait air-side as long as one of our representatives is there to check your bags, which would be two hours prior to any of our flights on the day.",
+        "<user> We're sorry you feel so let down. We hope you'll have a better experience in November."
+      ],
+      "link_referral": [
+        "<user> be able to use the airside transfer buses to connect from T5 to T3. For any visa and passport info please click <url>",
+        "<user> It is frustrating when items are left on board, Ryan. Click here <url> for the contact details of Lost and Found teams",
+        "<user> We do take your concerns seriously. You can use this the following form: <url> so we can investigate your concerns."
+      ],
+      "diagnostic_ask": [
+        "<user> Hi Catherine, sorry for the late reply. Are you available now? Many thanks.",
+        "<user> Did you make your booking directly with us, Philippa? When any of our flights are cancelled, we\u2019ll always look to help with rebooking options or refund options. We don\u2019t like to cancel any services and will notify our customers as soon as we can.",
+        "<user> Has your Executive Club account number been added to your booking, Tusar? Also, when you\u2019ve reinstalled the app, have you the most recent version? It should be version 5.34."
+      ],
+      "handoff_with_ask": [
+        "<user> Hi Steph, DM us your booking reference, email address and phone number please and we'll take a look for you.",
+        "<user> Hi. We're happy to help. You can DM us your query and we'll do our best assist you. Thanks.",
+        "<user> Hi Matt, we\u2019re sorry for the problems you\u2019re facing online. Is it a change to your booking that you\u2019re trying to make? If so, can you send us a DM including your full name, booking ref and email address please? We\u2019re happy to look into this for you."
+      ],
+      "channel_switch_bare": [
+        "<user> We're following you, so feel free to DM us anytime. We're here . Many thanks.",
+        "<user> Thanks for bringing this to our attention, Rory. We've contacted the Lounge Manager to look into this further. ^David S",
+        "<user> Thanks for your amazing post, Amy. Where will you be travelling to?"
+      ],
+      "bare_ack": [
+        "<user> Thanks for the update Grant.",
+        "<user> Snuggle up in it obviously, Brian!",
+        "<user> Hi Andy. What did you have planned?"
+      ],
+      "fragment": [
+        "<user> we'll see if we can find this out for you? Thanks.",
+        "<user> carrier. Many thanks. ^Lisa",
+        "<user> on your feedback to the crew, as I'm sure they will appreciate it. Thanks again."
+      ],
+      "truncated": [
+        "<user> As long as the item fits the maximum dimensions, you can take the item in your hand baggage. You read more here, <url>",
+        "<user> Hi Bev, we're sorry to hear you're unhappy with the service you've received. Please let us know a little more about what has happened and",
+        "<user> This depends on the size Martijn. We would recommend you wrap it securely for transport. This could go in the hand or checked baggage. But be aware of the weight limits. The following link will be able to assist you <url>"
+      ]
+    },
+    "SouthwestAir": {
+      "self_contained": [
+        "<user> Hi, Richard. Drink Coupons are sent once a Customer completes 10 revenue oneway flights.",
+        "<user> Flight irregularities are frustrating for all involved, including us. We\u2019re sorry for the trouble today, Chris.",
+        "<user> Thanks for the great pic, Zach! We hope your flight is met with clear skies and friendly seat neighbors."
+      ],
+      "link_referral": [
+        "<user> Fingers crossed your #WannaGetAway dest will be in our next sale! For updates, enroll here: <url>",
+        "<user> We'll see! ^WB <url>",
+        "<user> Hi, Jay. Stay posted on our upcoming schedule here: <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> Did you need assistance rebooking your outbound flight? As long as you either rebook or cancel your outbound, then you'll be good!",
+        "<user> We try to walk the fine line between Dad Jokes and \"um, did they really just say that?\" Sometimes we even succeed. Thanks for hanging out with us and joining in the fun, Megan. Let's fly again soon!",
+        "<user> Oh no! What airport are you at? I can get you our ticket counter opening time."
+      ],
+      "handoff_with_ask": [
+        "<user> You're welcome to send us a DM with your confirmation number so we can take a look and let you know, Tom.",
+        "<user> We never want to disappoint, Kaity. Send us a DM with more info if we can assist.",
+        "<user> We're sorry for any frustration, Robert. If you'd like us to review this for you, please DM your confirmation number."
+      ],
+      "channel_switch_bare": [
+        "<user> Hey, Herschel. We're always happy to assist. Feel free to send a DM if you would like to discuss further. ^SL <url>",
+        "<user> Great to hear, Bobby! We've got another special treat if you'll DM your Rapid Rewards number... ^NA <url>",
+        "<user> Someone may have canceled their flight, which released their boarding position. When your hubs checked in, he likely got it."
+      ],
+      "bare_ack": [
+        "<user> Nice one, Mark!",
+        "<user> Glad to hear that!",
+        "<user> You as well, Steph!"
+      ],
+      "fragment": [
+        "<user> We work hard to maintain the integrity of the boarding process while remaining compliant with the",
+        "<user> allow Passengers to preboard based on the need we assume from their answers to these questions. Thank you again for reaching out.",
+        "<user> Carol, for your privacy, please delete the post with your confirmation numbers. Because our fares are based on availability they"
+      ],
+      "truncated": [
+        "<user> Since you're less than 36 hours out you can't add on EarlyBird. However, you can ask about Upgraded Boarding when you arrive! You can",
+        "<user> We don't have access to any hotel reservations. I regret your continued disappointment, but no one will be able to provide the info here"
+      ]
+    },
+    "VirginTrains": {
+      "self_contained": [
+        "<user> The ticket is purchased with us but booked to travel on Stena, therefore we cannot guarantee IF will accept the ticket, Paul",
+        "<user> Thanks for the welcome Stewart. Have a great weekend.",
+        "<user> Hi there, services should be back on the move shortly"
+      ],
+      "link_referral": [
+        "<user> Ifd you're unable to get your seat, you can claim compensation here: <url>",
+        "<user> Please make a claim for this here, Stacey. Apologies for the issues today - <url>",
+        "<user> If you don't receive the full service do please get in touch: <url>"
+      ],
+      "diagnostic_ask": [
+        "<user> Apologies Joel, this is showing as an incorrect reference number in our system. Can we just double check this number with you please? Thanks",
+        "<user> Hi Jessica, our release dates vary. Which date are you looking to travel please? Thanks",
+        "<user> Hi Dale, which service is this please? We don't operate trains from York to London, is this one for <user> ?"
+      ],
+      "handoff_with_ask": [
+        "<user> Sorry you feel this way, Iiro. You can purchase flexible tickets on our website and app without paying a booking fee",
+        "<user> Apologies Kate, this service is delayed due to a speed restriction because of severe weather.",
+        "<user> <user> Can you please DM us with your booking reference and we'll have a look."
+      ],
+      "channel_switch_bare": [
+        "<user> <user> Hi Krishan. Welcome on board",
+        "<user> I can see you message now on DM, ^CB will be in touch via DM to discuss this Callum.",
+        "<user> Hi Ian, could you please DM us with more details. ^PA <url>"
+      ],
+      "bare_ack": [
+        "<user> Glad you like it Helen :).",
+        "<user> Live Updates can be found via <url>",
+        "<user> This service is still running Rachel."
+      ],
+      "fragment": [
+        "<user> This can be done onboard pending availability, for \u00a325pp",
+        "<user> but we'd advise using our online form here: <url> Thanks",
+        "<user> we can check these and book one for you"
+      ],
+      "truncated": [
+        "<user> Unfortunately not Alison, if you still wish to travel with this ticket but are delayed for more than 30 minutes, you can claim for delay repay here <url>",
+        "<user> <user> <user> Sorry to hear this Steve, this was due to a broken down train. If you were delayed more than 30 minutes you can claim for delay repay here <url>",
+        "<user> Unfortunately replacement transport wouldn't be put in place for this as there is another available service. You can claim delay repay for this here <url>"
+      ]
+    }
+  }
+}
