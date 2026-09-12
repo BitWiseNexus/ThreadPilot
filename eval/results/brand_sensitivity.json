@@ -1,0 +1,541 @@
+{
+  "context": "C3 classifier vs independent rater: kappa 0.374; per-class agreement 0.83-0.92 except truncated (0.12) and fragment (0.47)",
+  "definitions": {
+    "A_strict_answers_only": {
+      "description": "Only replies that answer in the tweet itself or name a specific resource. Rejects anything that defers to another channel.",
+      "usable_kinds": [
+        "link_referral",
+        "self_contained"
+      ],
+      "table": [
+        {
+          "brand": "AmazonHelp",
+          "usable_rate": 0.709,
+          "c1_usable_pairs": 168814,
+          "c2_diversity_entropy": 0.6263,
+          "c4_multiturn_rate": 0.5055,
+          "c5_min_pole": 0.0393,
+          "score": 0.7927,
+          "rank": 1
+        },
+        {
+          "brand": "VirginTrains",
+          "usable_rate": 0.654,
+          "c1_usable_pairs": 27416,
+          "c2_diversity_entropy": 0.6786,
+          "c4_multiturn_rate": 0.467,
+          "c5_min_pole": 0.0483,
+          "score": 0.6696,
+          "rank": 2
+        },
+        {
+          "brand": "AmericanAir",
+          "usable_rate": 0.706,
+          "c1_usable_pairs": 36531,
+          "c2_diversity_entropy": 0.6959,
+          "c4_multiturn_rate": 0.3212,
+          "c5_min_pole": 0.0283,
+          "score": 0.643,
+          "rank": 3
+        },
+        {
+          "brand": "SpotifyCares",
+          "usable_rate": 0.4935,
+          "c1_usable_pairs": 43092,
+          "c2_diversity_entropy": 0.7306,
+          "c4_multiturn_rate": 0.3728,
+          "c5_min_pole": 0.0558,
+          "score": 0.6215,
+          "rank": 4
+        },
+        {
+          "brand": "British_Airways",
+          "usable_rate": 0.4883,
+          "c1_usable_pairs": 29290,
+          "c2_diversity_entropy": 0.7467,
+          "c4_multiturn_rate": 0.3455,
+          "c5_min_pole": 0.0495,
+          "score": 0.5778,
+          "rank": 5
+        },
+        {
+          "brand": "SouthwestAir",
+          "usable_rate": 0.682,
+          "c1_usable_pairs": 28828,
+          "c2_diversity_entropy": 0.673,
+          "c4_multiturn_rate": 0.278,
+          "c5_min_pole": 0.0227,
+          "score": 0.5433,
+          "rank": 6
+        },
+        {
+          "brand": "Uber_Support",
+          "usable_rate": 0.3412,
+          "c1_usable_pairs": 56160,
+          "c2_diversity_entropy": 0.7184,
+          "c4_multiturn_rate": 0.289,
+          "c5_min_pole": 0.0625,
+          "score": 0.4876,
+          "rank": 7
+        },
+        {
+          "brand": "Delta",
+          "usable_rate": 0.5607,
+          "c1_usable_pairs": 42114,
+          "c2_diversity_entropy": 0.6177,
+          "c4_multiturn_rate": 0.3215,
+          "c5_min_pole": 0.0293,
+          "score": 0.4448,
+          "rank": 8
+        },
+        {
+          "brand": "AppleSupport",
+          "usable_rate": 0.3688,
+          "c1_usable_pairs": 106646,
+          "c2_diversity_entropy": 0.6429,
+          "c4_multiturn_rate": 0.2933,
+          "c5_min_pole": 0.0318,
+          "score": 0.3938,
+          "rank": 9
+        },
+        {
+          "brand": "comcastcares",
+          "usable_rate": 0.235,
+          "c1_usable_pairs": 32921,
+          "c2_diversity_entropy": 0.7285,
+          "c4_multiturn_rate": 0.2737,
+          "c5_min_pole": 0.0367,
+          "score": 0.2999,
+          "rank": 10
+        },
+        {
+          "brand": "TMobileHelp",
+          "usable_rate": 0.1445,
+          "c1_usable_pairs": 34215,
+          "c2_diversity_entropy": 0.6662,
+          "c4_multiturn_rate": 0.3992,
+          "c5_min_pole": 0.0457,
+          "score": 0.2306,
+          "rank": 11
+        },
+        {
+          "brand": "Tesco",
+          "usable_rate": 0.2283,
+          "c1_usable_pairs": 38468,
+          "c2_diversity_entropy": 0.5851,
+          "c4_multiturn_rate": 0.3635,
+          "c5_min_pole": 0.0293,
+          "score": 0.1501,
+          "rank": 12
+        }
+      ]
+    },
+    "B_project_default": {
+      "description": "A, plus diagnostic questions and handoffs that name what is needed. This is what the pipeline actually uses (D21/D22).",
+      "usable_kinds": [
+        "diagnostic_ask",
+        "handoff_with_ask",
+        "link_referral",
+        "self_contained"
+      ],
+      "table": [
+        {
+          "brand": "SpotifyCares",
+          "usable_rate": 0.896,
+          "c1_usable_pairs": 43092,
+          "c2_diversity_entropy": 0.7306,
+          "c4_multiturn_rate": 0.3728,
+          "c5_min_pole": 0.0558,
+          "score": 0.7933,
+          "rank": 1
+        },
+        {
+          "brand": "AmazonHelp",
+          "usable_rate": 0.7933,
+          "c1_usable_pairs": 168814,
+          "c2_diversity_entropy": 0.6263,
+          "c4_multiturn_rate": 0.5055,
+          "c5_min_pole": 0.0393,
+          "score": 0.6982,
+          "rank": 2
+        },
+        {
+          "brand": "AmericanAir",
+          "usable_rate": 0.879,
+          "c1_usable_pairs": 36531,
+          "c2_diversity_entropy": 0.6959,
+          "c4_multiturn_rate": 0.3212,
+          "c5_min_pole": 0.0283,
+          "score": 0.6297,
+          "rank": 3
+        },
+        {
+          "brand": "Uber_Support",
+          "usable_rate": 0.7065,
+          "c1_usable_pairs": 56160,
+          "c2_diversity_entropy": 0.7184,
+          "c4_multiturn_rate": 0.289,
+          "c5_min_pole": 0.0625,
+          "score": 0.6064,
+          "rank": 4
+        },
+        {
+          "brand": "SouthwestAir",
+          "usable_rate": 0.8592,
+          "c1_usable_pairs": 28828,
+          "c2_diversity_entropy": 0.673,
+          "c4_multiturn_rate": 0.278,
+          "c5_min_pole": 0.0227,
+          "score": 0.5309,
+          "rank": 5
+        },
+        {
+          "brand": "VirginTrains",
+          "usable_rate": 0.6925,
+          "c1_usable_pairs": 27416,
+          "c2_diversity_entropy": 0.6786,
+          "c4_multiturn_rate": 0.467,
+          "c5_min_pole": 0.0483,
+          "score": 0.5262,
+          "rank": 6
+        },
+        {
+          "brand": "British_Airways",
+          "usable_rate": 0.6255,
+          "c1_usable_pairs": 29290,
+          "c2_diversity_entropy": 0.7467,
+          "c4_multiturn_rate": 0.3455,
+          "c5_min_pole": 0.0495,
+          "score": 0.5048,
+          "rank": 7
+        },
+        {
+          "brand": "AppleSupport",
+          "usable_rate": 0.7073,
+          "c1_usable_pairs": 106646,
+          "c2_diversity_entropy": 0.6429,
+          "c4_multiturn_rate": 0.2933,
+          "c5_min_pole": 0.0318,
+          "score": 0.4913,
+          "rank": 8
+        },
+        {
+          "brand": "comcastcares",
+          "usable_rate": 0.6927,
+          "c1_usable_pairs": 32921,
+          "c2_diversity_entropy": 0.7285,
+          "c4_multiturn_rate": 0.2737,
+          "c5_min_pole": 0.0367,
+          "score": 0.4907,
+          "rank": 9
+        },
+        {
+          "brand": "Delta",
+          "usable_rate": 0.6895,
+          "c1_usable_pairs": 42114,
+          "c2_diversity_entropy": 0.6177,
+          "c4_multiturn_rate": 0.3215,
+          "c5_min_pole": 0.0293,
+          "score": 0.3729,
+          "rank": 10
+        },
+        {
+          "brand": "TMobileHelp",
+          "usable_rate": 0.5327,
+          "c1_usable_pairs": 34215,
+          "c2_diversity_entropy": 0.6662,
+          "c4_multiturn_rate": 0.3992,
+          "c5_min_pole": 0.0457,
+          "score": 0.3463,
+          "rank": 11
+        },
+        {
+          "brand": "Tesco",
+          "usable_rate": 0.407,
+          "c1_usable_pairs": 38468,
+          "c2_diversity_entropy": 0.5851,
+          "c4_multiturn_rate": 0.3635,
+          "c5_min_pole": 0.0293,
+          "score": 0.0833,
+          "rank": 12
+        }
+      ]
+    },
+    "C_rater_aligned": {
+      "description": "B, plus source-truncated replies - the rater judged 89% of those usable because the visible text still contains help.",
+      "usable_kinds": [
+        "diagnostic_ask",
+        "handoff_with_ask",
+        "link_referral",
+        "self_contained",
+        "truncated"
+      ],
+      "table": [
+        {
+          "brand": "SpotifyCares",
+          "usable_rate": 0.9263,
+          "c1_usable_pairs": 43092,
+          "c2_diversity_entropy": 0.7306,
+          "c4_multiturn_rate": 0.3728,
+          "c5_min_pole": 0.0558,
+          "score": 0.7933,
+          "rank": 1
+        },
+        {
+          "brand": "AmazonHelp",
+          "usable_rate": 0.7953,
+          "c1_usable_pairs": 168814,
+          "c2_diversity_entropy": 0.6263,
+          "c4_multiturn_rate": 0.5055,
+          "c5_min_pole": 0.0393,
+          "score": 0.6779,
+          "rank": 2
+        },
+        {
+          "brand": "AmericanAir",
+          "usable_rate": 0.8805,
+          "c1_usable_pairs": 36531,
+          "c2_diversity_entropy": 0.6959,
+          "c4_multiturn_rate": 0.3212,
+          "c5_min_pole": 0.0283,
+          "score": 0.6052,
+          "rank": 3
+        },
+        {
+          "brand": "Uber_Support",
+          "usable_rate": 0.709,
+          "c1_usable_pairs": 56160,
+          "c2_diversity_entropy": 0.7184,
+          "c4_multiturn_rate": 0.289,
+          "c5_min_pole": 0.0625,
+          "score": 0.5903,
+          "rank": 4
+        },
+        {
+          "brand": "VirginTrains",
+          "usable_rate": 0.7085,
+          "c1_usable_pairs": 27416,
+          "c2_diversity_entropy": 0.6786,
+          "c4_multiturn_rate": 0.467,
+          "c5_min_pole": 0.0483,
+          "score": 0.5226,
+          "rank": 5
+        },
+        {
+          "brand": "SouthwestAir",
+          "usable_rate": 0.8598,
+          "c1_usable_pairs": 28828,
+          "c2_diversity_entropy": 0.673,
+          "c4_multiturn_rate": 0.278,
+          "c5_min_pole": 0.0227,
+          "score": 0.5065,
+          "rank": 6
+        },
+        {
+          "brand": "comcastcares",
+          "usable_rate": 0.7222,
+          "c1_usable_pairs": 32921,
+          "c2_diversity_entropy": 0.7285,
+          "c4_multiturn_rate": 0.2737,
+          "c5_min_pole": 0.0367,
+          "score": 0.4989,
+          "rank": 7
+        },
+        {
+          "brand": "British_Airways",
+          "usable_rate": 0.6325,
+          "c1_usable_pairs": 29290,
+          "c2_diversity_entropy": 0.7467,
+          "c4_multiturn_rate": 0.3455,
+          "c5_min_pole": 0.0495,
+          "score": 0.4963,
+          "rank": 8
+        },
+        {
+          "brand": "AppleSupport",
+          "usable_rate": 0.7087,
+          "c1_usable_pairs": 106646,
+          "c2_diversity_entropy": 0.6429,
+          "c4_multiturn_rate": 0.2933,
+          "c5_min_pole": 0.0318,
+          "score": 0.4743,
+          "rank": 9
+        },
+        {
+          "brand": "Delta",
+          "usable_rate": 0.6913,
+          "c1_usable_pairs": 42114,
+          "c2_diversity_entropy": 0.6177,
+          "c4_multiturn_rate": 0.3215,
+          "c5_min_pole": 0.0293,
+          "score": 0.357,
+          "rank": 10
+        },
+        {
+          "brand": "TMobileHelp",
+          "usable_rate": 0.5347,
+          "c1_usable_pairs": 34215,
+          "c2_diversity_entropy": 0.6662,
+          "c4_multiturn_rate": 0.3992,
+          "c5_min_pole": 0.0457,
+          "score": 0.3374,
+          "rank": 11
+        },
+        {
+          "brand": "Tesco",
+          "usable_rate": 0.4128,
+          "c1_usable_pairs": 38468,
+          "c2_diversity_entropy": 0.5851,
+          "c4_multiturn_rate": 0.3635,
+          "c5_min_pole": 0.0293,
+          "score": 0.0833,
+          "rank": 12
+        }
+      ]
+    },
+    "D_most_inclusive": {
+      "description": "C, plus split-reply fragments. Everything except bare acknowledgements and bare channel switches.",
+      "usable_kinds": [
+        "diagnostic_ask",
+        "fragment",
+        "handoff_with_ask",
+        "link_referral",
+        "self_contained",
+        "truncated"
+      ],
+      "table": [
+        {
+          "brand": "AmazonHelp",
+          "usable_rate": 0.931,
+          "c1_usable_pairs": 168814,
+          "c2_diversity_entropy": 0.6263,
+          "c4_multiturn_rate": 0.5055,
+          "c5_min_pole": 0.0393,
+          "score": 0.7643,
+          "rank": 1
+        },
+        {
+          "brand": "SpotifyCares",
+          "usable_rate": 0.9265,
+          "c1_usable_pairs": 43092,
+          "c2_diversity_entropy": 0.7306,
+          "c4_multiturn_rate": 0.3728,
+          "c5_min_pole": 0.0558,
+          "score": 0.7601,
+          "rank": 2
+        },
+        {
+          "brand": "British_Airways",
+          "usable_rate": 0.9515,
+          "c1_usable_pairs": 29290,
+          "c2_diversity_entropy": 0.7467,
+          "c4_multiturn_rate": 0.3455,
+          "c5_min_pole": 0.0495,
+          "score": 0.7472,
+          "rank": 3
+        },
+        {
+          "brand": "AmericanAir",
+          "usable_rate": 0.881,
+          "c1_usable_pairs": 36531,
+          "c2_diversity_entropy": 0.6959,
+          "c4_multiturn_rate": 0.3212,
+          "c5_min_pole": 0.0283,
+          "score": 0.5637,
+          "rank": 4
+        },
+        {
+          "brand": "Tesco",
+          "usable_rate": 0.9577,
+          "c1_usable_pairs": 38468,
+          "c2_diversity_entropy": 0.5851,
+          "c4_multiturn_rate": 0.3635,
+          "c5_min_pole": 0.0293,
+          "score": 0.5333,
+          "rank": 5
+        },
+        {
+          "brand": "VirginTrains",
+          "usable_rate": 0.78,
+          "c1_usable_pairs": 27416,
+          "c2_diversity_entropy": 0.6786,
+          "c4_multiturn_rate": 0.467,
+          "c5_min_pole": 0.0483,
+          "score": 0.5241,
+          "rank": 6
+        },
+        {
+          "brand": "Uber_Support",
+          "usable_rate": 0.709,
+          "c1_usable_pairs": 56160,
+          "c2_diversity_entropy": 0.7184,
+          "c4_multiturn_rate": 0.289,
+          "c5_min_pole": 0.0625,
+          "score": 0.5158,
+          "rank": 7
+        },
+        {
+          "brand": "SouthwestAir",
+          "usable_rate": 0.883,
+          "c1_usable_pairs": 28828,
+          "c2_diversity_entropy": 0.673,
+          "c4_multiturn_rate": 0.278,
+          "c5_min_pole": 0.0227,
+          "score": 0.4852,
+          "rank": 8
+        },
+        {
+          "brand": "comcastcares",
+          "usable_rate": 0.7222,
+          "c1_usable_pairs": 32921,
+          "c2_diversity_entropy": 0.7285,
+          "c4_multiturn_rate": 0.2737,
+          "c5_min_pole": 0.0367,
+          "score": 0.4269,
+          "rank": 9
+        },
+        {
+          "brand": "AppleSupport",
+          "usable_rate": 0.7087,
+          "c1_usable_pairs": 106646,
+          "c2_diversity_entropy": 0.6429,
+          "c4_multiturn_rate": 0.2933,
+          "c5_min_pole": 0.0318,
+          "score": 0.3997,
+          "rank": 10
+        },
+        {
+          "brand": "Delta",
+          "usable_rate": 0.802,
+          "c1_usable_pairs": 42114,
+          "c2_diversity_entropy": 0.6177,
+          "c4_multiturn_rate": 0.3215,
+          "c5_min_pole": 0.0293,
+          "score": 0.3971,
+          "rank": 11
+        },
+        {
+          "brand": "TMobileHelp",
+          "usable_rate": 0.5353,
+          "c1_usable_pairs": 34215,
+          "c2_diversity_entropy": 0.6662,
+          "c4_multiturn_rate": 0.3992,
+          "c5_min_pole": 0.0457,
+          "score": 0.2306,
+          "rank": 12
+        }
+      ]
+    }
+  },
+  "winners": {
+    "A_strict_answers_only": "AmazonHelp",
+    "B_project_default": "SpotifyCares",
+    "C_rater_aligned": "SpotifyCares",
+    "D_most_inclusive": "AmazonHelp"
+  },
+  "always_in_top3": [
+    "AmazonHelp"
+  ],
+  "robust": false,
+  "verdict": "NOT ROBUST - the winner changes by definition ({'A_strict_answers_only': 'AmazonHelp', 'B_project_default': 'SpotifyCares', 'C_rater_aligned': 'SpotifyCares', 'D_most_inclusive': 'AmazonHelp'}). The brand choice cannot be justified on this metric alone and must be reported as such."
+}

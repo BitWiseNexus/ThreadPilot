@@ -1,0 +1,22 @@
+# Protect committed binary artifacts from line-ending conversion.
+#
+# This is not cosmetic. data/processed/subsample.parquet and cache/llm_cache.sqlite
+# are committed so the pipeline reproduces without a Kaggle account or an API key
+# (decision_log.md D10). If git ever applied CRLF conversion to them, the file on
+# a fresh clone would differ byte-for-byte from the one here and
+# tests/test_subsample.py's byte-identity check would fail on someone else's
+# machine -- exactly where it matters most.
+*.parquet   binary
+*.sqlite    binary
+*.png       binary
+*.pkl       binary
+*.npy       binary
+
+# Normalise text so the repo is stable across platforms.
+*.py        text eol=lf
+*.md        text eol=lf
+*.json      text eol=lf
+*.jsonl     text eol=lf
+*.toml      text eol=lf
+*.txt       text eol=lf
+*.in        text eol=lf

@@ -10,10 +10,11 @@ A support-tweet triage agent for a single brand. For each inbound customer tweet
 Built on the Kaggle [Customer Support on Twitter](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter)
 dataset (~2.81M tweets).
 
-> **Status: Phase 0 of 9 complete** (environment + planning). The pipeline and evaluation
-> harness are not built yet. This README describes what exists today and is updated as
-> phases land — see `docs/phases.md` for the plan and `docs/memory.md` for exact current
-> state.
+> **Status: Phases 0-1 of 9 complete** (environment, brand selection). The pipeline and
+> evaluation harness are not built yet. Brand chosen: **AmazonHelp** — not by top score, but
+> by robustness, after a sensitivity analysis showed the composite score could not separate
+> the top two candidates. See `docs/requirements.md` 2.3. This README describes what exists
+> today and is updated as phases land; `docs/memory.md` has exact current state.
 
 ---
 
@@ -46,6 +47,12 @@ py -3.12 -m venv .venv
 
 python tasks.py setup               # core deps + editable install
 python tasks.py check               # verify the environment
+
+# The dataset subsample is NOT redistributed (see "Getting the data" below).
+# Build it once - deterministic, so you get byte-identical output to mine:
+python tasks.py data                # ~500MB Kaggle download, one time
+python tasks.py subsample           # ~20s, writes data/processed/subsample.parquet
+
 python tasks.py test
 ```
 
@@ -53,8 +60,9 @@ python tasks.py test
 
 ### Do I need an API key?
 
-**No — not to reproduce the reported numbers.** LLM responses are cached in
-`cache/llm_cache.sqlite`, which is committed, so:
+**No.** LLM responses are cached in `cache/llm_cache.sqlite`, which *is* committed — it
+holds model output plus a SHA-256 hash of each prompt, never the prompt text, so it
+redistributes no dataset content and no credentials. So:
 
 ```bash
 python tasks.py eval --offline      # regenerates all reported metrics, no key needed
@@ -67,22 +75,34 @@ this is: a replay of a recording, not a fresh run.** For live calls, put a free
 
 ### Do I need torch?
 
-**No — not to reproduce the reported numbers.** `torch` + `sentence-transformers` are
-quarantined in `requirements-embed.txt` because torch is a ~200MB wheel and the single
-biggest cost in a fresh setup. The embedding matrix is committed. You only need them to
-rebuild embeddings from scratch:
+`torch` + `sentence-transformers` are quarantined in `requirements-embed.txt` because torch
+is a ~200MB wheel and the single biggest cost in a fresh setup, so nothing installs it
+unless you need embeddings.
+
+**Whether the offline metric replay can avoid torch entirely is still open** — it depends on
+how Phase 4 stores pipeline outputs, and I would rather say so than claim a convenience that
+has not been built. Right now, rebuilding the retrieval index needs them:
 
 ```bash
 python tasks.py setup-embed
 ```
 
-### Getting the raw data (optional)
+### Getting the data (required once)
 
-Only needed to regenerate the subsample from scratch; the seeded subsample is committed.
+**The subsample is deliberately not committed.** It is a derivative of the Kaggle
+*Customer Support on Twitter* dataset, which is licensed **CC BY-NC-SA 4.0**, so this repo
+does not redistribute the tweet text. You rebuild it locally instead:
 
 ```bash
-python tasks.py data                # ~500MB, one time
+python tasks.py data                # ~500MB Kaggle download, one time
+python tasks.py subsample           # ~20s -> data/processed/subsample.parquet
 ```
+
+This is deterministic from `SEED = 20260909`, so your file is byte-identical to the one the
+reported numbers were computed on — `tests/test_subsample.py` asserts exactly that by
+rebuilding and comparing SHA-256. What *is* committed is
+`data/processed/subsample_meta.json` (counts and provenance, no tweet content), so you can
+verify your rebuild matches before trusting anything downstream.
 
 Requires a Kaggle token: get one at [kaggle.com/settings/api](https://www.kaggle.com/settings/api)
 ("Generate New Token") and save it as a single line in `~/.kaggle/access_token`. Note that
@@ -99,7 +119,7 @@ works, but the single-token file is current. The download script tries `kagglehu
 | `eval/` | Evaluation harness, golden set, judge, metrics, committed results |
 | `scripts/` | Data download, subsample builder, golden-set label drafter |
 | `tests/` | Invariants that would otherwise fail silently and invalidate results |
-| `cache/` | Committed LLM response cache (enables the no-key path) |
+| `cache/` | Committed LLM response cache — model output + prompt hashes, no tweet text (enables the no-API-key path) |
 | `tasks.py` | Task runner. Not a Makefile — `make` is absent on stock Windows |
 
 ## Stack
@@ -126,6 +146,9 @@ Stated up front rather than buried, and expanded in `docs/report.md` as results 
   reported with a bootstrap 95% CI for this reason.
 - **The committed cache is a recording.** LLM APIs are not bit-reproducible.
 - **I wrote both the system and its labels**, which is a bias no amount of process removes.
+- **The subsample is not shipped**, so reproducing requires a free Kaggle token and one
+  ~500MB download. That is a deliberate licensing choice (CC BY-NC-SA 4.0, non-redistributed),
+  not an oversight — the rebuild is deterministic and test-verified byte-for-byte.
 
 ## Citations
 
