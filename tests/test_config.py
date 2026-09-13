@@ -114,11 +114,13 @@ def test_gates_are_probabilities_and_thresholds_are_sane():
     assert config.RETRIEVAL_K >= 1
 
 
-@pytest.mark.xfail(
-    reason="Populated in Phase 2 once the taxonomy is derived from data (D12). "
-           "Deliberately empty now so it cannot be guessed a priori; this xfail "
-           "flips to a pass and becomes a real assertion then.",
-    strict=True,
-)
 def test_always_escalate_is_populated():
+    """Was a strict-xfail through Phase 1, by design: ALWAYS_ESCALATE had to
+    stay empty until the taxonomy was derived from data, so the safety gate
+    could not be quietly guessed a priori (D12). Phase 2 populated it, the
+    strict xfail failed as intended, and it is now a real assertion.
+
+    Detailed invariants live in tests/test_taxonomy.py; this one only guards
+    the wiring between config and the taxonomy.
+    """
     assert len(config.ALWAYS_ESCALATE) > 0

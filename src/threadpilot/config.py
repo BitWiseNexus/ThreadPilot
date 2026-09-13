@@ -136,9 +136,19 @@ TAU_SIM = 0.45   # G2: below this, no comparable precedent exists
 TAU_CONF = 0.60  # G3: below this, we do not even know what the message is
 
 # G1: intents that always go to a human regardless of model confidence.
-# Populated in Phase 2 once the taxonomy is derived from the data — deliberately
-# empty now so it cannot be quietly guessed a priori.
-ALWAYS_ESCALATE: tuple[str, ...] = ()
+# Sourced from the taxonomy rather than restated here, so the disposition that
+# drives the gate is the same one documented next to each intent's definition.
+# Two copies would eventually disagree and the report would then describe a
+# policy that was never run.
+#
+# Imported lazily inside the function to keep config import-cycle-free
+# (taxonomy imports nothing from config, but that could change).
+def _always_escalate() -> tuple[str, ...]:
+    from .taxonomy import ALWAYS_ESCALATE as _ae
+    return _ae
+
+
+ALWAYS_ESCALATE: tuple[str, ...] = _always_escalate()
 
 
 @dataclass(frozen=True)

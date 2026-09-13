@@ -1,23 +1,51 @@
 {
-  "generated": "2026-09-12 11:48:36",
+  "generated": "2026-09-12 19:03:39",
   "brand": "AmazonHelp",
   "seed": 20260909,
   "n_pairs": 8000,
-  "n_threads": 7512,
-  "n_usable_precedent": 6429,
+  "n_threads": 8000,
+  "n_usable_precedent": 6390,
   "n_canonical": 8000,
-  "n_implies_escalation": 422,
-  "mojibake_rows": 1,
+  "n_implies_escalation": 440,
+  "mojibake_rows": 0,
   "reply_kind_counts": {
-    "self_contained": 3567,
-    "link_referral": 2156,
-    "fragment": 1100,
-    "diagnostic_ask": 540,
-    "channel_switch_bare": 256,
-    "bare_ack": 205,
-    "handoff_with_ask": 166,
-    "truncated": 10
+    "link_referral": 2857,
+    "self_contained": 2744,
+    "fragment": 1275,
+    "diagnostic_ask": 590,
+    "channel_switch_bare": 241,
+    "handoff_with_ask": 199,
+    "bare_ack": 79,
+    "truncated": 15
   },
-  "total_brand_pairs_available": 168814,
+  "total_brand_pairs_available": 84637,
+  "funnel": {
+    "brand_replies": 169840,
+    "pairs_with_parent": 168814,
+    "after_opener_filter": 84637,
+    "dropped_non_english": 11419,
+    "dropped_language_breakdown": {
+      "ja": 3738,
+      "es": 2254,
+      "fr": 1775,
+      "de": 1330,
+      "pt": 842,
+      "it": 481,
+      "unknown": 404,
+      "da": 85,
+      "nl": 50,
+      "af": 46,
+      "hu": 41,
+      "hi": 38
+    }
+  },
+  "filters": {
+    "thread_openers_only": true,
+    "english_only": true,
+    "why": "requirements.md non-goal 5 (single-turn triage unit) and Phase 2 finding that language dominated intent clustering"
+  },
+  "lang_counts": {
+    "en": 8000
+  },
   "note": "Committed subsample. usable_precedent rows with is_canonical form the retrieval index, minus golden-set thread_ids (Phase 4 leakage guard)."
 }

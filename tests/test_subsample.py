@@ -37,6 +37,7 @@ REQUIRED_COLUMNS = {
     "brand_reply", "raw_customer", "raw_reply", "created_at", "reply_kind",
     "usable_precedent", "implies_escalation", "has_url", "has_info_request",
     "n_chars", "mojibake", "dedupe_key", "dup_count", "is_canonical",
+    "lang", "is_opener",
 }
 
 
@@ -65,15 +66,27 @@ def test_thread_ids_present(sub: pd.DataFrame) -> None:
     """thread_id is what the Phase 4 leakage guard keys on.
 
     The dataset ships no conversation id, so these are computed by walking parent
-    pointers. If they were null or all-distinct-per-row the guard would still
-    *pass* while leaking golden replies into the retrieval index -- the single
-    worst silent failure available to this project.
+    pointers. If they were null the guard would still *pass* while leaking golden
+    replies into the retrieval index -- the single worst silent failure available
+    to this project.
+
+    An earlier version asserted `nunique() < len(sub)`, on the assumption that
+    some conversations contribute several brand replies. That stopped holding
+    once the subsample was restricted to thread openers, and the right response
+    was a stronger invariant rather than a loosened one: for an opener, the
+    customer tweet IS the conversation root, so thread_id must equal parent_id.
+    That would catch a broken parent-walk, which the old inequality would not.
     """
     assert sub["thread_id"].notna().all()
     assert (sub["thread_id"] > 0).all()
-    # Threads must actually group: fewer threads than pairs, since some
-    # conversations contain more than one brand reply.
-    assert sub["thread_id"].nunique() < len(sub)
+    if sub["is_opener"].all():
+        mismatched = sub[sub["thread_id"] != sub["parent_id"]]
+        assert mismatched.empty, (
+            f"{len(mismatched)} opener rows whose thread_id != parent_id; "
+            "the parent-pointer walk is wrong"
+        )
+    else:
+        assert sub["thread_id"].nunique() <= len(sub)
 
 
 def test_no_empty_text(sub: pd.DataFrame) -> None:
@@ -126,6 +139,35 @@ def test_meta_matches_the_data(sub: pd.DataFrame, meta: dict) -> None:
     assert meta["n_threads"] == sub["thread_id"].nunique()
     assert meta["n_usable_precedent"] == int(sub["usable_precedent"].sum())
     assert meta["n_canonical"] == int(sub["is_canonical"].sum())
+
+
+def test_unit_of_analysis_is_enforced(sub: pd.DataFrame, meta: dict) -> None:
+    """The subsample must actually contain what the project claims to triage.
+
+    requirements.md non-goal 5 defines the unit as a single inbound message, and
+    Phase 2 clustering showed language outranked intent as a signal. Both filters
+    are therefore load-bearing, not cosmetic: without them the taxonomy measures
+    chitchat and language ID. Asserted here so a future edit cannot quietly drop
+    them and leave the report describing a different dataset.
+    """
+    assert meta["filters"]["thread_openers_only"] is True
+    assert meta["filters"]["english_only"] is True
+    assert sub["is_opener"].all(), "non-opener rows leaked into the subsample"
+    assert (sub["lang"] == "en").all(), "non-English rows leaked into the subsample"
+
+
+def test_exclusion_funnel_is_recorded(meta: dict) -> None:
+    """Every drop is counted, so a reviewer can disagree with the policy and
+    reproduce a different one instead of having to trust the final number."""
+    f = meta["funnel"]
+    for key in ("brand_replies", "pairs_with_parent", "after_opener_filter",
+                "dropped_non_english", "dropped_language_breakdown"):
+        assert key in f, f"funnel is missing {key}"
+    assert f["after_opener_filter"] <= f["pairs_with_parent"]
+    assert f["dropped_non_english"] > 0, (
+        "no non-English rows dropped - the language filter is probably not "
+        "running, since AmazonHelp demonstrably answers in several languages"
+    )
 
 
 def test_mojibake_is_flagged_and_rare(sub: pd.DataFrame) -> None:

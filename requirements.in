@@ -25,6 +25,14 @@ python-dotenv>=1.0
 # --- dataset acquisition (modern KGAT_ access_token auth; see D16) ---
 kagglehub>=0.3
 
+# --- language identification ---
+# AmazonHelp answers in several languages and language, not intent, turned out
+# to be the dominant clustering signal (Phase 2). Used to scope the pipeline to
+# English and to REPORT the excluded fraction rather than hide it.
+# Pure-Python, no compiled deps. NOTE: must set DetectorFactory.seed for
+# deterministic output - it is randomised by default.
+langdetect>=1.0.9
+
 # --- CLI presentation (see docs/design.md section 2) ---
 rich>=13.7
 

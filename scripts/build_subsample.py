@@ -23,6 +23,27 @@ Three things it produces that later phases depend on:
 * **reply classification** from threadpilot.data.clean, so index admission is
   decided once, here, rather than re-derived inconsistently later.
 
+Two filters define the unit of analysis, both added in Phase 2 after clustering
+showed the unfiltered pool was not what this project claims to triage:
+
+* **Thread openers only.** Half the (customer, reply) pairs were mid-thread
+  customer turns - "Thanks... :) Its delivered yesterday.", "It says on the
+  way". Those have no intent to classify and no reply worth drafting, and
+  leaving them in would have created a large chitchat cluster that inflates
+  intent accuracy for the wrong reason. This is not new scope: requirements.md
+  non-goal 5 already defines the unit of work as triage of an inbound message,
+  a single-turn decision. The subsample simply was not enforcing it.
+
+* **English only.** AmazonHelp handles several languages, and at every k the
+  dominant clustering signal was LANGUAGE rather than intent - two of six
+  clusters were pure Spanish/Portuguese and French/German. A taxonomy built on
+  that would be measuring language ID. Scoping to English keeps the taxonomy
+  about intent; the excluded fraction is counted in the meta funnel and
+  reported, not hidden.
+
+Every exclusion is counted in subsample_meta.json["funnel"], so a reviewer can
+see exactly what was dropped and reproduce a different policy if they disagree.
+
 Usage:
     python scripts/build_subsample.py
     python scripts/build_subsample.py --n-pairs 8000
@@ -46,6 +67,28 @@ from threadpilot import config  # noqa: E402
 from threadpilot.data.clean import (  # noqa: E402
     ReplyKind, classify_reply, has_mojibake, normalize,
 )
+
+# langdetect is randomised by default: without a fixed seed the same text can be
+# assigned different languages across runs, which would silently break the
+# byte-identity guarantee that tests/test_subsample.py asserts.
+from langdetect import DetectorFactory, LangDetectException, detect  # noqa: E402
+
+DetectorFactory.seed = 0
+
+
+def detect_lang(text: str) -> str:
+    """Language code, or "unknown" for text too short/noisy to call.
+
+    Placeholders are stripped first: "<user>" and "<url>" are ASCII tokens that
+    drag short non-English messages toward an English guess.
+    """
+    probe = text.replace("<user>", " ").replace("<url>", " ").strip()
+    if len(probe) < 12:
+        return "unknown"
+    try:
+        return detect(probe)
+    except LangDetectException:
+        return "unknown"
 
 STRUCTURE_PARQUET = config.INTERIM_DIR / "structure.parquet"
 OUT_PARQUET = config.SUBSAMPLE_PARQUET
@@ -101,6 +144,10 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--brand", default=config.BRAND)
     ap.add_argument("--n-pairs", type=int, default=config.SUBSAMPLE_PAIRS)
+    ap.add_argument("--keep-all-languages", action="store_true",
+                    help="skip the English filter (taxonomy becomes language-driven)")
+    ap.add_argument("--keep-mid-thread", action="store_true",
+                    help="skip the thread-opener filter (adds chitchat turns)")
     args = ap.parse_args()
 
     if not STRUCTURE_PARQUET.exists():
@@ -126,12 +173,29 @@ def main() -> int:
     if not pairs:
         sys.exit(f"no pairs for brand {args.brand!r}")
 
+    funnel = {"brand_replies": int(len(brand_rows)), "pairs_with_parent": len(pairs)}
+
+    # Thread openers: the customer tweet has no parent of its own, i.e. it starts
+    # the conversation. This is the triage unit (requirements.md non-goal 5).
+    if not args.keep_mid_thread:
+        openers = [(p_, r_) for p_, r_ in pairs
+                   if pd.isna(parent_of.get(p_, pd.NA))]
+        log(f"thread-opener filter: {len(pairs):,} -> {len(openers):,} "
+            f"({len(openers)/len(pairs):.1%} kept)")
+        funnel["after_opener_filter"] = len(openers)
+        pairs = openers
+    else:
+        funnel["after_opener_filter"] = len(pairs)
+
     # Oversample before filtering: classification and dedupe both drop rows, and
     # we want to land at n_pairs *after* those, not before.
     order = rng.permutation(len(pairs))
-    take = min(len(pairs), args.n_pairs * 4)
+    # 6x rather than 4x: the language filter and reply classification both drop
+    # rows after this point, and landing short of n_pairs would silently shrink
+    # the subsample rather than fail loudly.
+    take = min(len(pairs), args.n_pairs * 6)
     cand = [pairs[i] for i in order[:take]]
-    log(f"candidate pool: {len(cand):,} (oversampled 4x to survive filtering)")
+    log(f"candidate pool: {len(cand):,} (oversampled 6x to survive filtering)")
 
     needed = {i for pr in cand for i in pr}
     log(f"reading text for {len(needed):,} tweet_ids")
@@ -150,12 +214,21 @@ def main() -> int:
     thread_of = build_thread_ids(parent_of, [p for p, _ in cand])
 
     recs = []
+    n_dropped_lang = 0
+    dropped_langs: dict[str, int] = {}
+    log("classifying replies and detecting language "
+        f"({'all languages kept' if args.keep_all_languages else 'English only'})")
     for parent_id, reply_id in cand:
         ct, rt = texts.get(parent_id), texts.get(reply_id)
         if not isinstance(ct, str) or not isinstance(rt, str):
             continue
         cm, br = normalize(ct), normalize(rt)
         if not cm or not br:
+            continue
+        lang = detect_lang(cm)
+        if not args.keep_all_languages and lang != "en":
+            n_dropped_lang += 1
+            dropped_langs[lang] = dropped_langs.get(lang, 0) + 1
             continue
         f = classify_reply(rt)
         recs.append({
@@ -172,9 +245,16 @@ def main() -> int:
             "has_info_request": f.has_info_request,
             "n_chars": f.n_chars,
             "mojibake": has_mojibake(ct) or has_mojibake(rt),
+            "lang": lang,
+            "is_opener": bool(pd.isna(parent_of.get(parent_id, pd.NA))),
             "dedupe_key": dedupe_key(cm),
         })
     sub = pd.DataFrame(recs)
+    funnel["dropped_non_english"] = n_dropped_lang
+    funnel["dropped_language_breakdown"] = dict(
+        sorted(dropped_langs.items(), key=lambda kv: -kv[1])[:12])
+    log(f"language filter dropped {n_dropped_lang:,} "
+        f"({', '.join(f'{k}={v}' for k, v in list(funnel['dropped_language_breakdown'].items())[:6])})")
     log(f"built {len(sub):,} records")
 
     # Duplicate GROUPING, not deletion - see module docstring.
@@ -212,6 +292,15 @@ def main() -> int:
         "mojibake_rows": int(sub["mojibake"].sum()),
         "reply_kind_counts": {k: int(v) for k, v in kinds.items()},
         "total_brand_pairs_available": len(pairs),
+        "funnel": funnel,
+        "filters": {
+            "thread_openers_only": not args.keep_mid_thread,
+            "english_only": not args.keep_all_languages,
+            "why": "requirements.md non-goal 5 (single-turn triage unit) and "
+                   "Phase 2 finding that language dominated intent clustering",
+        },
+        "lang_counts": {k: int(v) for k, v in
+                        sub["lang"].value_counts().head(8).items()},
         "note": "Committed subsample. usable_precedent rows with is_canonical "
                 "form the retrieval index, minus golden-set thread_ids (Phase 4 "
                 "leakage guard).",
@@ -228,6 +317,9 @@ def main() -> int:
     print(f"index candidates{int((sub['usable_precedent'] & sub['is_canonical']).sum()):,}"
           "  (usable AND canonical)")
     print(f"escalation-signal rows {int(sub['implies_escalation'].sum()):,}")
+    print(f"\nfunnel: {funnel['pairs_with_parent']:,} pairs "
+          f"-> {funnel['after_opener_filter']:,} openers "
+          f"-> {len(sub):,} kept (English, deduped, trimmed)")
     print(f"\nreply kinds:")
     for k, v in sorted(kinds.items(), key=lambda x: -x[1]):
         print(f"  {k:<22} {v:>6,}  {v/len(sub):>6.1%}")

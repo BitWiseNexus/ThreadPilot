@@ -1,0 +1,109 @@
+{
+  "generated": "2026-09-12 19:10:15",
+  "brand": "AmazonHelp",
+  "seed": 20260909,
+  "n": 8000,
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "note": "silhouette computed on a seeded 3000-row subsample (O(n^2)); used only to compare k, never reported as a standalone quality figure",
+  "sweep": [
+    {
+      "k": 4,
+      "silhouette": 0.0653,
+      "inertia": 5449.1,
+      "balance_entropy": 0.9605,
+      "smallest_cluster": 953,
+      "smallest_pct": 0.1191,
+      "largest_pct": 0.3059
+    },
+    {
+      "k": 5,
+      "silhouette": 0.0581,
+      "inertia": 5364.8,
+      "balance_entropy": 0.9688,
+      "smallest_cluster": 912,
+      "smallest_pct": 0.114,
+      "largest_pct": 0.2921
+    },
+    {
+      "k": 6,
+      "silhouette": 0.0583,
+      "inertia": 5286.3,
+      "balance_entropy": 0.9803,
+      "smallest_cluster": 857,
+      "smallest_pct": 0.1071,
+      "largest_pct": 0.2522
+    },
+    {
+      "k": 7,
+      "silhouette": 0.0594,
+      "inertia": 5217.4,
+      "balance_entropy": 0.9877,
+      "smallest_cluster": 797,
+      "smallest_pct": 0.0996,
+      "largest_pct": 0.1953
+    },
+    {
+      "k": 8,
+      "silhouette": 0.0584,
+      "inertia": 5164.5,
+      "balance_entropy": 0.9913,
+      "smallest_cluster": 742,
+      "smallest_pct": 0.0927,
+      "largest_pct": 0.1665
+    },
+    {
+      "k": 9,
+      "silhouette": 0.056,
+      "inertia": 5118.7,
+      "balance_entropy": 0.9966,
+      "smallest_cluster": 731,
+      "smallest_pct": 0.0914,
+      "largest_pct": 0.13
+    },
+    {
+      "k": 10,
+      "silhouette": 0.0548,
+      "inertia": 5078.2,
+      "balance_entropy": 0.9948,
+      "smallest_cluster": 529,
+      "smallest_pct": 0.0661,
+      "largest_pct": 0.1242
+    },
+    {
+      "k": 11,
+      "silhouette": 0.0555,
+      "inertia": 5041.0,
+      "balance_entropy": 0.9941,
+      "smallest_cluster": 529,
+      "smallest_pct": 0.0661,
+      "largest_pct": 0.1185
+    },
+    {
+      "k": 12,
+      "silhouette": 0.0577,
+      "inertia": 5009.8,
+      "balance_entropy": 0.9882,
+      "smallest_cluster": 406,
+      "smallest_pct": 0.0508,
+      "largest_pct": 0.1185
+    },
+    {
+      "k": 13,
+      "silhouette": 0.0514,
+      "inertia": 4974.1,
+      "balance_entropy": 0.9777,
+      "smallest_cluster": 177,
+      "smallest_pct": 0.0221,
+      "largest_pct": 0.1156
+    },
+    {
+      "k": 14,
+      "silhouette": 0.051,
+      "inertia": 4948.5,
+      "balance_entropy": 0.9783,
+      "smallest_cluster": 175,
+      "smallest_pct": 0.0219,
+      "largest_pct": 0.102
+    }
+  ]
+}
