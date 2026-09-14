@@ -1,0 +1,53 @@
+{
+  "generated": "2026-09-14 18:45:30",
+  "seed": 20260909,
+  "brand": "AmazonHelp",
+  "llm_calls": 0,
+  "baselines": {
+    "trivial": {
+      "majority_intent": "delivery_delay",
+      "reply": "Sorry for the trouble. Please share a few more details and we'll look into this for you.",
+      "policy": "always escalate"
+    },
+    "simple_tfidf_silver": {
+      "train_rows": 100,
+      "train_classes": 11,
+      "source": "dev_silver, single-labeller labels"
+    },
+    "simple_tfidf_cluster": {
+      "train_rows": 6948,
+      "train_classes": 9,
+      "source": "subsample rows pseudo-labelled by Phase 2 cluster, golden+silver threads excluded"
+    },
+    "retrieval_1nn": {
+      "index_size": 6155,
+      "reply_source": "nearest precedent's brand reply, verbatim",
+      "intent_source": "simple_tfidf_cluster classifier"
+    }
+  },
+  "templates": {
+    "delivery_delay": "<user> Sorry to hear this. Has any reason been given for the delay?",
+    "delivery_failure": "<user> Have you checked the tracking where they delivered it? Regards,",
+    "order_investigation": "<user> I'm so sorry your order was canceled! Have you received an email about the order? Sometimes the emails go to SPAM as well.",
+    "refund_billing": "<user> Oh, no! I'm sorry you've been let down. Without posting personal/account details, can you let us know what's going on ?",
+    "item_condition": "<user> Oh no! We'd like to help in any way we can. You can view available options here: <url>",
+    "product_digital": "<user> I'm sorry Olly. Have you tried reinstalling the app?",
+    "prime_membership": "<user> I'm sorry for the wait. Some items aren't able to ship immediately. Is this about an existing issue that we can try to help out with? Was the date given on the confirmation e-mail missed?",
+    "service_complaint": "<user> We never intend for you to have a bad experience with us. We'd like to try to turn this around! Please tell us what's going on without sharing any account information.",
+    "unresolved_followup": "<user> I'm sorry to hear that, its not what we want you to experience. I'll pass on your feedback",
+    "account_security": "Sorry for the trouble with your account. For security we'll need to check a few details with you directly.",
+    "other": "Sorry for the trouble. Please share a few more details and we'll look into this for you."
+  },
+  "cluster_intent_map": {
+    "3": "delivery_delay",
+    "6": "delivery_failure",
+    "9": "order_investigation",
+    "2": "refund_billing",
+    "8": "item_condition",
+    "5": "product_digital",
+    "4": "prime_membership",
+    "0": "service_complaint",
+    "7": "unresolved_followup"
+  },
+  "note": "No baseline makes an LLM call. retrieval_1nn is the sharpest comparison: it isolates what generation adds over simply copying the nearest historical reply."
+}
