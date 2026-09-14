@@ -1,0 +1,19 @@
+{
+  "generated": "2026-09-14 15:45:48",
+  "brand": "AmazonHelp",
+  "seed": 20260909,
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embed_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "n_subsample": 8000,
+  "n_usable_canonical": 6390,
+  "n_held_out_threads": 300,
+  "n_excluded_by_leakage_guard": 235,
+  "n_indexed": 6155,
+  "reply_kind_counts": {
+    "link_referral": 2747,
+    "self_contained": 2642,
+    "diagnostic_ask": 572,
+    "handoff_with_ask": 194
+  },
+  "build_seconds": 7255.0
+}

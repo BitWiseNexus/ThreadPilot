@@ -94,6 +94,17 @@ def cmd_subsample(_: argparse.Namespace) -> None:
     _run(_py(), "scripts/build_subsample.py")
 
 
+def cmd_index(_: argparse.Namespace) -> None:
+    """Build the retrieval index (enforces the golden-set leakage guard)."""
+    _run(_py(), "scripts/build_index.py")
+
+
+def cmd_triage(args: argparse.Namespace) -> None:
+    """Triage a message end to end: intent, precedent, draft, decision."""
+    extra = ["--offline"] if getattr(args, "offline", False) else []
+    _run(_py(), "-m", "threadpilot.cli", "triage", *(args.rest or []), *extra)
+
+
 def cmd_test(_: argparse.Namespace) -> None:
     """Run the test suite (includes the golden/index leakage guard)."""
     _run(_py(), "-m", "pytest")
@@ -142,6 +153,8 @@ COMMANDS = {
     "check": cmd_check,
     "data": cmd_data,
     "subsample": cmd_subsample,
+    "index": cmd_index,
+    "triage": cmd_triage,
     "test": cmd_test,
     "eval": cmd_eval,
     "repro": cmd_repro,
@@ -167,6 +180,7 @@ def main() -> int:
                     help="eval: force live API calls, ignoring the cache")
     ap.add_argument("--force", action="store_true",
                     help="data: re-download even if the CSV is already present")
+    ap.add_argument("rest", nargs="*", help="triage: the message text")
     args = ap.parse_args()
 
     if not args.command:

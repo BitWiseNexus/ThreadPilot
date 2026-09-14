@@ -1,0 +1,81 @@
+{
+  "generated": "2026-09-14 15:59:24",
+  "n": 30,
+  "batch_size": 8,
+  "model": "openai/gpt-oss-120b",
+  "intent_agreement": 0.8,
+  "intent_cohen_kappa": 0.7486,
+  "mean_abs_confidence_delta": 0.0687,
+  "accuracy_vs_gold_batched": 0.7333,
+  "accuracy_vs_gold_unbatched": 0.7333,
+  "api_calls_batched": 4,
+  "api_calls_unbatched": 30,
+  "call_reduction": "30/4",
+  "seconds_batched": 0.0,
+  "seconds_unbatched": 0.0,
+  "batch_stats": {
+    "batches": 4,
+    "items": 30,
+    "invalid_batches": 0,
+    "fallback_items": 0,
+    "failed_items": 0,
+    "invalid_reasons": []
+  },
+  "verdict": "MARGINAL - report batched results next to this figure",
+  "disagreements": [
+    {
+      "pair_id": "1160620-1160619",
+      "text": "<user> why do your delivery drivers insist on trying to deliver next day items outside of commercial times? Pointless having next day.",
+      "batched": "service_complaint",
+      "batched_conf": 0.88,
+      "unbatched": "delivery_delay",
+      "unbatched_conf": 0.96,
+      "gold": "delivery_failure"
+    },
+    {
+      "pair_id": "1195821-1195819",
+      "text": "Hey <user> this probably wasn't a great way to ship a battery. Also the driver threw it on my porch. 😠 #amazon <user> #Lithium <url>",
+      "batched": "item_condition",
+      "batched_conf": 0.96,
+      "unbatched": "delivery_failure",
+      "unbatched_conf": 0.92,
+      "gold": "item_condition"
+    },
+    {
+      "pair_id": "1441922-1441920",
+      "text": "Awful service from <user> Order not fulfilled, no explaination as to why. Seriously wondering if Prime is worth the money.",
+      "batched": "delivery_failure",
+      "batched_conf": 0.88,
+      "unbatched": "prime_membership",
+      "unbatched_conf": 0.78,
+      "gold": "service_complaint"
+    },
+    {
+      "pair_id": "2152253-2152252",
+      "text": "<user> Wall Mount Bracket Is Missing From Delivered Product Order Number: 408-7747548-3485101 3 weeks have gone not got a solution yet",
+      "batched": "item_condition",
+      "batched_conf": 0.85,
+      "unbatched": "order_investigation",
+      "unbatched_conf": 0.96,
+      "gold": "unresolved_followup"
+    },
+    {
+      "pair_id": "2915758-2915757",
+      "text": "<user> there was something very odd in my box that was delivered today, definitely creeped me out. Someone appears to have left me there phone number on a note. The box was sealed when i got it. <url>",
+      "batched": "other",
+      "batched_conf": 0.9,
+      "unbatched": "item_condition",
+      "unbatched_conf": 0.92,
+      "gold": "item_condition"
+    },
+    {
+      "pair_id": "861817-861820",
+      "text": "<user> <user> I got empty box of Honor 8 intead of Mobile phone, My order No- 405-7507519-5961139. Return my money or Resend it.",
+      "batched": "item_condition",
+      "batched_conf": 0.89,
+      "unbatched": "refund_billing",
+      "unbatched_conf": 0.85,
+      "gold": "order_investigation"
+    }
+  ]
+}
