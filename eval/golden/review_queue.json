@@ -1,0 +1,328 @@
+{
+  "generated": "2026-09-14 12:16:24",
+  "instructions": "Write one JSON object per line into eval/golden/adjudications.jsonl: {\"pair_id\": \"...\", \"intent\": \"...\", \"decision\": \"auto_handle|escalate\", \"note\": \"why\", \"reviewer\": \"...\"}. Every disagreement must be adjudicated. Audit rows only need an entry if you DISAGREE with the labellers - agreeing needs no entry, but you must still have looked.",
+  "disagreements_to_adjudicate": [],
+  "audit_sample_to_review": [
+    {
+      "pair_id": "1047215-1047214",
+      "stratum": "very_short",
+      "customer_msg": "<user> When will amazon restock this item? <url>",
+      "agreed_intent": "other",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.95
+    },
+    {
+      "pair_id": "1089221-1089220",
+      "stratum": "account_security",
+      "customer_msg": "<user> account hacked , my email account linked with amazon changed without authorisation. Need immediate help.",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.98
+    },
+    {
+      "pair_id": "1245906-1245905",
+      "stratum": "cluster_7",
+      "customer_msg": "<user> Is this an acceptable contact for <url> orders? Need some quick help",
+      "agreed_intent": "other",
+      "agreed_decision": "escalate",
+      "confidence": 0.85
+    },
+    {
+      "pair_id": "1246877-1246875",
+      "stratum": "cluster_0",
+      "customer_msg": "<user> thx for the great customer service lol #CustomerService #kthxbye #funny <url>",
+      "agreed_intent": "service_complaint",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "1284537-1284538",
+      "stratum": "account_security",
+      "customer_msg": "<user> Amazon fraud policy: load your money to Amazon Pay Balance Rupees We will neither give you a product nor will you refund money. <url>",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.8
+    },
+    {
+      "pair_id": "1342572-1342569",
+      "stratum": "novel",
+      "customer_msg": "F you <user> you lost my corgi onesie and now Halloween is ruined",
+      "agreed_intent": "delivery_failure",
+      "agreed_decision": "escalate",
+      "confidence": 0.86
+    },
+    {
+      "pair_id": "1461541-1461540",
+      "stratum": "cluster_0",
+      "customer_msg": "<user> customer service is woeful. No help whatsoever.",
+      "agreed_intent": "service_complaint",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "152036-152033",
+      "stratum": "very_short",
+      "customer_msg": "<user> need help..pretty sure accounts been hacked",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.98
+    },
+    {
+      "pair_id": "1572978-1572979",
+      "stratum": "novel",
+      "customer_msg": "<user> please include legendary shows like x-files etc into your library with Musical Live concerts.. to make it more appealing.",
+      "agreed_intent": "product_digital",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "1625480-1625479",
+      "stratum": "account_security",
+      "customer_msg": "<user> I just had 18 password assistance code emails in 10 minutes would this be someone trying to access my account?",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.98
+    },
+    {
+      "pair_id": "1645644-1645643",
+      "stratum": "account_security",
+      "customer_msg": "Surprisingly my amazon.in account is hacked. <user> <user> , how can our trust is reposed to your e-commerce site security? My credit cards and address information were stored there 😢! My email was replaced by hacker's email id....",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.98
+    },
+    {
+      "pair_id": "166349-166348",
+      "stratum": "cluster_8",
+      "customer_msg": "Finally received my missing package today from <user> ...the great packaging though meant that the £110 boxset inside was damaged and another item totally missing 😡😡😡 <url>",
+      "agreed_intent": "item_condition",
+      "agreed_decision": "escalate",
+      "confidence": 0.95
+    },
+    {
+      "pair_id": "1680459-1680457",
+      "stratum": "cluster_8",
+      "customer_msg": "Wish this Diwali <user> provided us with smooth and hassle less payment options. Not done. <user> <user>",
+      "agreed_intent": "service_complaint",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.85
+    },
+    {
+      "pair_id": "1693548-1693546",
+      "stratum": "cluster_4",
+      "customer_msg": "Fucking HELL. My <user> Prime membership came out of my debit card instead of credit. So much for food til next payday :(",
+      "agreed_intent": "refund_billing",
+      "agreed_decision": "escalate",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "1714259-1714257",
+      "stratum": "cluster_7",
+      "customer_msg": "Anyone else getting signed up for <user> subscriptions without authorization?",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.85
+    },
+    {
+      "pair_id": "1869787-1869786",
+      "stratum": "very_short",
+      "customer_msg": "Big market for for a player like <user> is health checkup.",
+      "agreed_intent": "other",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.97
+    },
+    {
+      "pair_id": "1879204-1879203",
+      "stratum": "cluster_7",
+      "customer_msg": "Thank you <user> newbie author and bouncy puppy causing set up errors on author page - but swiftly Amazon to the rescue!",
+      "agreed_intent": "other",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.92
+    },
+    {
+      "pair_id": "2073906-2073904",
+      "stratum": "account_security",
+      "customer_msg": "So with my amazon account suspended (which makes me unable to login) they still charged my amazon prime subscription. <user> then I tried to cancel &amp; get my refund calling the customer care service and I’m not able to. Who’s the worst? You amazon",
+      "agreed_intent": "refund_billing",
+      "agreed_decision": "escalate",
+      "confidence": 0.85
+    },
+    {
+      "pair_id": "2119275-2119273",
+      "stratum": "cluster_5",
+      "customer_msg": "<user> Hi, prime is available for Belgium, does that include music too? Thank you.",
+      "agreed_intent": "prime_membership",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.98
+    },
+    {
+      "pair_id": "2139802-2139800",
+      "stratum": "cluster_8",
+      "customer_msg": "<user> Look what came today!! 🎉🙏🏻 n a soaking wet box <user> glad they stayed dry #rainydays <url>",
+      "agreed_intent": "item_condition",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.97
+    },
+    {
+      "pair_id": "2147976-2147975",
+      "stratum": "cluster_8",
+      "customer_msg": "Dear <user> . While I appreciate &amp; use your service often, may I suggest making better packaging decisions? My tiny little replacement battery did not need this large box &amp; bubble pack. A letter envelope would have sufficed. Thanks and I look forward to saving the planet w/ you. <url>",
+      "agreed_intent": "item_condition",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "226109-226108",
+      "stratum": "novel",
+      "customer_msg": "<user> ... the India amazon team doesn’t know what “golden hour” means .. some training required ? <url>",
+      "agreed_intent": "service_complaint",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.92
+    },
+    {
+      "pair_id": "2287113-2287112",
+      "stratum": "cluster_7",
+      "customer_msg": "Is <user> search engine down? I can't do a sucessful search for any item on the website.",
+      "agreed_intent": "product_digital",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.73
+    },
+    {
+      "pair_id": "2459125-2459124",
+      "stratum": "cluster_7",
+      "customer_msg": "Thanks <user> for resolving my issue by your top end promptly",
+      "agreed_intent": "other",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.99
+    },
+    {
+      "pair_id": "2467611-2467610",
+      "stratum": "order_id",
+      "customer_msg": "<user> Hi Team... my cash back for ORDER # 404-7252871-8483513 is not received as yet. Pls do the needful at __email__",
+      "agreed_intent": "refund_billing",
+      "agreed_decision": "escalate",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "2558595-2558597",
+      "stratum": "order_id",
+      "customer_msg": "<user> Hi Amazon, Order id # 405-7742295-7390718. I raised request for above order id around 25 days back at Amazon as well as BPL brand also. But Still I didn't get any call from Amazon and BPL. Is the service Amazon provide to customers. It's not fair and worst service.",
+      "agreed_intent": "unresolved_followup",
+      "agreed_decision": "escalate",
+      "confidence": 0.95
+    },
+    {
+      "pair_id": "2571337-2571336",
+      "stratum": "account_security",
+      "customer_msg": "<user> I sent u private message yesterday. Can u resolve the a-z harm to me from the repeated fraud perpetrated on your platform?",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.92
+    },
+    {
+      "pair_id": "2613257-2613256",
+      "stratum": "novel",
+      "customer_msg": "He's part cat and part boy. Notice him playing in a small cardboard box. Thanks <user> for the hours of entertainment. <url>",
+      "agreed_intent": "other",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.99
+    },
+    {
+      "pair_id": "2748308-2748307",
+      "stratum": "cluster_7",
+      "customer_msg": "<user> How do I delete a skill that is no longer available? It shows in my list of skill but can’t be used or disabled",
+      "agreed_intent": "product_digital",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.97
+    },
+    {
+      "pair_id": "2769065-2769064",
+      "stratum": "very_short",
+      "customer_msg": "<user> I'm really frustrated with ur poor delivery service.",
+      "agreed_intent": "service_complaint",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "2821115-2821116",
+      "stratum": "cluster_1",
+      "customer_msg": "<user> time of delivery I have given 1900 to delivery agent and Rs: 1220 is my product price and the remaining payment 680 still not show in my amazon pay balance. Against order no 407-7656202-8185933",
+      "agreed_intent": "refund_billing",
+      "agreed_decision": "escalate",
+      "confidence": 0.95
+    },
+    {
+      "pair_id": "286313-286314",
+      "stratum": "cluster_5",
+      "customer_msg": ". <user> when am I getting that Echo plus invitation. my smart Hue lights are waiting for voice activation.",
+      "agreed_intent": "product_digital",
+      "agreed_decision": "escalate",
+      "confidence": 0.85
+    },
+    {
+      "pair_id": "318790-318791",
+      "stratum": "cluster_9",
+      "customer_msg": "<user> I am very sorry that my complain in in pending for 2 week. About return, no agent came to take product.. <url>",
+      "agreed_intent": "unresolved_followup",
+      "agreed_decision": "escalate",
+      "confidence": 0.92
+    },
+    {
+      "pair_id": "430624-430622",
+      "stratum": "account_security",
+      "customer_msg": "<user> seems your saved card data is hacked or compromised. suspicious transaction from someone using my card.",
+      "agreed_intent": "account_security",
+      "agreed_decision": "escalate",
+      "confidence": 0.97
+    },
+    {
+      "pair_id": "448309-448307",
+      "stratum": "order_id",
+      "customer_msg": "#AmazonIndia Amazon delivery sucks; either they deliver late or they cancel the order. Very irresponsible. Cancelled 408-2690711-0478705",
+      "agreed_intent": "order_investigation",
+      "agreed_decision": "escalate",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "465041-465040",
+      "stratum": "cluster_1",
+      "customer_msg": "<user> <user> Order# 405-3872074-7181966 refund/returned order because of deliver issue of amazon but can't use same offer again and Amazon accept there system limitation. LOL <url>",
+      "agreed_intent": "refund_billing",
+      "agreed_decision": "escalate",
+      "confidence": 0.9
+    },
+    {
+      "pair_id": "516581-516580",
+      "stratum": "cluster_5",
+      "customer_msg": "Got my resistance bands from <user> today, bout to be out here on pliability shit like the 🐐 Mr. Tom Brady himself!",
+      "agreed_intent": "other",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "544481-544479",
+      "stratum": "cluster_4",
+      "customer_msg": "Anyone else that's a Prime member feel like they are getting screwed by . <user> on the 2 day shipping? Seems to me that <user> has changed 2 day shipping into 4-5 day shipping.",
+      "agreed_intent": "delivery_delay",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.96
+    },
+    {
+      "pair_id": "779520-779529",
+      "stratum": "cluster_5",
+      "customer_msg": "<user> Arrogance leads 2 downfall. 15 dys since I paid for&amp; didn't receive kindle content. Earlier content wiped out! Only Empty promises.",
+      "agreed_intent": "product_digital",
+      "agreed_decision": "escalate",
+      "confidence": 0.95
+    },
+    {
+      "pair_id": "974310-974309",
+      "stratum": "cluster_5",
+      "customer_msg": "Can anybody link pe up to PS4, 500gb on Amazon (India) / Flipkart? Thanks.",
+      "agreed_intent": "other",
+      "agreed_decision": "auto_handle",
+      "confidence": 0.85
+    }
+  ],
+  "errored": []
+}

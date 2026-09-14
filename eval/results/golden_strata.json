@@ -1,0 +1,59 @@
+{
+  "generated": "2026-09-13 13:08:32",
+  "seed": 20260909,
+  "brand": "AmazonHelp",
+  "n_golden": 200,
+  "n_silver": 100,
+  "strata": {
+    "cluster_0": 13,
+    "cluster_1": 13,
+    "cluster_2": 13,
+    "cluster_3": 13,
+    "cluster_4": 13,
+    "cluster_5": 13,
+    "cluster_6": 13,
+    "cluster_7": 13,
+    "cluster_8": 13,
+    "cluster_9": 13,
+    "account_security": 20,
+    "order_id": 10,
+    "very_short": 10,
+    "multi_intent": 10,
+    "novel": 10,
+    "sarcasm": 10
+  },
+  "true_cluster_shares": {
+    "0": 0.0661,
+    "1": 0.0975,
+    "2": 0.1162,
+    "3": 0.1242,
+    "4": 0.0912,
+    "5": 0.0931,
+    "6": 0.1134,
+    "7": 0.1001,
+    "8": 0.0996,
+    "9": 0.0984
+  },
+  "golden_cluster_shares": {
+    "0": 0.085,
+    "1": 0.11,
+    "2": 0.09,
+    "3": 0.08,
+    "4": 0.115,
+    "5": 0.13,
+    "6": 0.08,
+    "7": 0.11,
+    "8": 0.095,
+    "9": 0.105
+  },
+  "hard_case_counts_in_golden": {
+    "very_short": 17,
+    "order_id": 22,
+    "account": 21,
+    "sarcasm": 11,
+    "multi_intent": 12,
+    "novel": 19
+  },
+  "thread_disjoint_from_silver": true,
+  "warning": "The golden set is DELIBERATELY not distribution-matched: clusters are equally allocated, account_security is oversampled ~8x, and hard cases are deliberately sought. Headline accuracy on this set is therefore NOT an estimate of production accuracy. See report 'what is misleading'."
+}

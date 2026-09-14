@@ -1,0 +1,40 @@
+{
+  "generated": "2026-09-14 12:17:52",
+  "n_final": 200,
+  "n_agreed": 87,
+  "n_disagreed": 113,
+  "n_errored": 0,
+  "provenance_counts": {
+    "human_adjudicated_disagreement": 113,
+    "both_labellers_agreed": 47,
+    "human_confirmed_agreement": 34,
+    "human_override_of_agreement": 6
+  },
+  "intent_distribution": {
+    "other": 34,
+    "delivery_delay": 22,
+    "order_investigation": 21,
+    "service_complaint": 20,
+    "delivery_failure": 20,
+    "refund_billing": 19,
+    "account_security": 15,
+    "product_digital": 15,
+    "unresolved_followup": 12,
+    "item_condition": 11,
+    "prime_membership": 11
+  },
+  "decision_distribution": {
+    "escalate": 110,
+    "auto_handle": 90
+  },
+  "ambiguity_flagged": 124,
+  "audit": {
+    "sample_size": 40,
+    "reviewed": 40,
+    "overrides_found": 6,
+    "estimated_residual_label_noise": 0.15,
+    "method": "Seeded random sample of rows where both labellers agreed. The override rate here estimates how often BOTH labellers were wrong together, which agreement alone cannot detect. Applies to the un-audited agreed rows."
+  },
+  "total_human_overrides": 119,
+  "caveat": "The golden set is NOT distribution-matched (see golden_strata.json). Labels were drafted by two LLMs from different families and reviewed per the process above; rows with provenance 'both_labellers_agreed' were NOT individually inspected, and the audit estimates their error rate."
+}

@@ -55,6 +55,18 @@ class EmptyContentError(LLMError):
     """Model returned no content. See D20 - never treated as a valid answer."""
 
 
+class DailyQuotaExhausted(LLMError):
+    """The model's per-DAY token budget is gone.
+
+    Distinct from a per-minute limit, and the distinction is worth real time.
+    A per-minute limit clears in seconds, so retrying with backoff is correct.
+    A per-day limit cannot clear within a run, so the same retry policy burns
+    six attempts and ~2 minutes of backoff per call and then fails anyway.
+    Measured cost of conflating them: a 200-row labelling pass spent ~5 hours
+    almost entirely in backoff against an exhausted daily quota.
+    """
+
+
 class CacheMissInOfflineMode(LLMError):
     def __init__(self, key: str, model: str) -> None:
         super().__init__(
@@ -160,8 +172,21 @@ def _client():
     return _CLIENT
 
 
+def _is_daily_quota(exc: BaseException) -> bool:
+    """True for a per-day budget error, which no amount of waiting fixes.
+
+    Groq phrases these as "tokens per day (TPD)" / "requests per day (RPD)".
+    Matching on the per-day wording specifically is what separates them from
+    the per-minute limits that SHOULD be retried.
+    """
+    s = f"{exc}".lower()
+    return ("per day" in s) or ("tpd" in s) or ("rpd" in s)
+
+
 def _is_retryable(exc: BaseException) -> bool:
     s = f"{type(exc).__name__}: {exc}".lower()
+    if _is_daily_quota(exc):
+        return False
     return any(t in s for t in (
         "rate limit", "429", "timeout", "timed out", "connection",
         "500", "502", "503", "504", "overloaded", "apistatuserror",
@@ -189,6 +214,20 @@ class _Counter:
 
 
 STATS = _Counter()
+
+# Models whose daily budget is known to be exhausted in THIS process. Once a
+# model reports a per-day limit, every subsequent call to it will fail the same
+# way, so calling it again only wastes wall-clock. Cleared per process, since
+# the quota resets on Groq's clock, not ours.
+_EXHAUSTED: set[str] = set()
+
+
+def exhausted_models() -> set[str]:
+    return set(_EXHAUSTED)
+
+
+def reset_exhausted() -> None:
+    _EXHAUSTED.clear()
 
 
 def complete(
@@ -234,6 +273,12 @@ def complete(
     if offline:
         raise CacheMissInOfflineMode(key, model)
 
+    if model in _EXHAUSTED:
+        raise DailyQuotaExhausted(
+            f"{model} hit its per-day token budget earlier in this run; "
+            f"skipping without calling. Cached responses still work, and "
+            f"`--offline` replays them without any API access.")
+
     STATS.misses += 1
     attempts = 0
 
@@ -255,6 +300,11 @@ def complete(
                 max_tokens=budget, **extra
             )
         except Exception as exc:  # noqa: BLE001
+            if _is_daily_quota(exc):
+                _EXHAUSTED.add(model)
+                log.error("%s daily quota exhausted - no further calls this run",
+                          model)
+                raise DailyQuotaExhausted(f"{model}: {exc}") from exc
             if _is_retryable(exc):
                 log.warning("retryable LLM error (attempt %d): %s", attempts, exc)
                 raise _Retryable(str(exc)) from exc
