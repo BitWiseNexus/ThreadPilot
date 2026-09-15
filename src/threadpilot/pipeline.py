@@ -80,7 +80,7 @@ def triage_many(
     use_retrieval: bool = True,
     offline: bool = False,
     classify_batch_size: int = batching.DEFAULT_BATCH_SIZE,
-    draft_batch_size: int = 4,
+    draft_batch_size: int = 6,
     model: str | None = None,
     stats: RunStats | None = None,
 ) -> list[TriageResult]:

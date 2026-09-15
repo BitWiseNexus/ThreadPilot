@@ -51,7 +51,12 @@ For each item you get the customer's message, its intent, and PRECEDENT: real me
 
 ## Then assess your own draft
 
-{rubric}
+Would a competent agent send your draft UNEDITED? If yes -> auto_handle. If no -> escalate.
+Escalate if: it needs private account data AND no useful generic reply exists (E1); a correct
+reply would commit money or a specific remedy (E2); the account may be compromised or fraud is
+alleged (E3); there is a legal or safety angle (E4); the customer is angry enough that an
+automated reply would worsen it (E5); or it is too ambiguous to answer safely (E6).
+Do not escalate merely because an intent sounds sensitive.
 
 Return for each item:
   "id": the item number
@@ -97,8 +102,11 @@ class DraftInput:
         if d:
             lines.append(f"INTENT MEANS: {d.definition}")
         if self.precedents:
+            # Only the top 3 go into the prompt, though 5 are retrieved: the
+            # tail rarely changes a draft but costs tokens linearly, and gate
+            # G2 still sees the full set when computing max similarity.
             lines.append("PRECEDENT:")
-            for i, p in enumerate(self.precedents, 1):
+            for i, p in enumerate(self.precedents[:3], 1):
                 lines.append(f"  ({i}) {p.render()}")
         else:
             # Stated explicitly rather than left as an empty section: a silent
@@ -133,15 +141,17 @@ def draft_many(
     items: list[DraftInput],
     *,
     model: str | None = None,
-    batch_size: int = 4,
+    batch_size: int = 6,
     offline: bool = False,
     stats: batching.BatchStats | None = None,
 ) -> list[Draft]:
     """Draft replies and collect the model's own decision proposal.
 
-    batch_size is 4 rather than 8: each item carries its precedent block, so
-    batches get long, and generation degrades with context length faster than
-    classification does.
+    batch_size 6 rather than 8: each item carries a precedent block, so batches
+    grow fast and generation degrades with context length quicker than
+    classification does. 6 was chosen against the token budget, not by taste -
+    at batch 4 with 5 full-length precedents a 200-row run cost ~185k tokens
+    against a 200k/day cap, which is what exhausted the quota mid-run once.
     """
     results = batching.complete_batch(
         items,

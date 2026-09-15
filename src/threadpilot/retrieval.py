@@ -69,7 +69,10 @@ class Precedent:
     similarity: float
     implies_escalation: bool
 
-    def render(self, max_chars: int = 240) -> str:
+    def render(self, max_chars: int = 130) -> str:
+        """Compact by design. Precedent text dominates the drafting prompt -
+        at 240 chars x 2 fields x 5 precedents it was ~2,400 chars per item,
+        which put a 200-row run over the 200k token/day budget on its own."""
         return (f'[sim {self.similarity:.2f}] customer: "{self.customer_msg[:max_chars]}"\n'
                 f'            we replied: "{self.brand_reply[:max_chars]}"')
 

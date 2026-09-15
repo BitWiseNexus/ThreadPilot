@@ -149,6 +149,14 @@ def complete_batch(
             parsed = [parse_item(by_id[i]) for i in ids]
         except llm.CacheMissInOfflineMode:
             raise
+        except llm.DailyQuotaExhausted:
+            # NOT a bad batch - the budget is gone and every remaining item
+            # would "fail" identically. Swallowing this once recorded 184 empty
+            # drafts as legitimate predictions on a 200-row run: a silent
+            # corruption of the evaluation, which is exactly what the rest of
+            # this module exists to prevent. Stop instead, so the caller can
+            # resume from cache when the quota resets.
+            raise
         except Exception as exc:  # noqa: BLE001
             stats.invalid_batches += 1
             reason = f"{type(exc).__name__}: {exc}"[:160]
@@ -190,6 +198,8 @@ def _per_item_fallback(chunk, *, system, render_item, parse_item, model,
             res.append(parse_item(d) if d is not None else None)
         except llm.CacheMissInOfflineMode:
             raise
+        except llm.DailyQuotaExhausted:
+            raise           # see complete_batch: never becomes a None result
         except Exception as exc:  # noqa: BLE001
             stats.failed_items += 1
             log.warning("per-item fallback failed: %s", exc)
