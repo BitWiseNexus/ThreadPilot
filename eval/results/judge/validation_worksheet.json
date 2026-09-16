@@ -1,0 +1,888 @@
+{
+  "generated": "2026-09-17 00:40:29",
+  "system": "pipeline",
+  "n": 40,
+  "instructions": "Score each item WITHOUT looking at eval/results/judge/pipeline.json. Append one JSON object per line to eval/results/judge/human_scores.jsonl with keys: pair_id, grounded, on_intent, no_overcommit, voice, actionable (1-5), send_unedited (bool), note. Rubric is in eval/judge.py.",
+  "items": [
+    {
+      "pair_id": "1051383-1051381",
+      "customer_msg": "<user> why can't I win any quiz contest even after being eligible to win it ? I wonder how you guys select winners?",
+      "reply": "<user> We've escalated this to our team internally for an update. Kindly stay tuned.",
+      "precedent": [
+        {
+          "asked": "As a regular customer of <user> I really wait every day for amazon app quiz, which has amazing prizes and also a genuin competition is held through it. #AmazonPayAppQuiz",
+          "brand_replied": "<user> Aww thank you, we appreciate the kind words. It's nice of you to follow up with a tweet. :)",
+          "similarity": 0.528
+        },
+        {
+          "asked": "<user> when will you tweet the winner list of the LG q6 quiz",
+          "brand_replied": "<user> We've escalated this to our team internally for an update. Kindly stay tuned.",
+          "similarity": 0.525
+        },
+        {
+          "asked": "<user> when are the #amazonfestiveriddles winners getting announced?? Looking forward to win atleast one quiz.",
+          "brand_replied": "<user> Winners will be announced by 15th Nov 2017. The winners will be contacted directly by email.",
+          "similarity": 0.509
+        }
+      ]
+    },
+    {
+      "pair_id": "1099261-1099267",
+      "customer_msg": "<user> <user> <user> #405-3161422-8924357 I was informed about the Guaranteed delivery yesterday and it never got delivered",
+      "reply": "I’m sorry for the delay. Have you received an updated delivery date? If so, please let us know.",
+      "precedent": [
+        {
+          "asked": "<user> When did Guaranteed Delivery date become you will get it when we feel like delivering it? Customer service can do nothing but say I'm sorry it is the carriers fault. You promise to investigate ",
+          "brand_replied": "<user> I am so sorry your packages have been delayed! Do you current have a package that has been delayed? When you packages are being delayed are noticing this is happening with a certain carrier? We",
+          "similarity": 0.791
+        },
+        {
+          "asked": "<user> Your logistics people tell me that they can’t guarantee deliveries to my house. Dozens of packages have been misdelivered. Yet when I place an order, the website reads “guaranteed delivery” by ",
+          "brand_replied": "<user> Hey Richard! We would very much like to look into this, at your convenience please provide some additional details using the form provided here: <url>",
+          "similarity": 0.778
+        },
+        {
+          "asked": "<user> WTH! guaranteed delivery on Oct 27, and my account says GET IT NEXT WEEK! This is atrocious! I need this today. <url>",
+          "brand_replied": "<user> I'm sorry. Have you received a new delivery date? If so, what did it change to? Keep us posted, we're here to help!",
+          "similarity": 0.776
+        }
+      ]
+    },
+    {
+      "pair_id": "1160620-1160619",
+      "customer_msg": "<user> why do your delivery drivers insist on trying to deliver next day items outside of commercial times? Pointless having next day.",
+      "reply": "Orders placed with next‑day delivery arrive one business day after dispatch. More info: <url>",
+      "precedent": [
+        {
+          "asked": "<user> What’s point of offering same-day delivery if your drivers always end up delivering the next day? I needed item yesterday. Also, an idea: ask them to ring the doorbell and wait a couple minutes",
+          "brand_replied": "<user> Sorry to hear about your recent experience with deliveries- Have you since received your order? Was it the same order you mentioned was left at door?",
+          "similarity": 0.792
+        },
+        {
+          "asked": "When is next day delivery not next day delivery? When you buy from <user> . Why offer a service &amp; not bother to fulfill orders on time? #ChristmasRuined",
+          "brand_replied": "<user> Orders placed with next day delivery arrive 1 business day after the item is dispatched. You can find more information about Prime delivery here: <url> Can you tell us if you have a current ord",
+          "similarity": 0.754
+        },
+        {
+          "asked": "What’s the point paying extra for next day delivery if it don’t turn up to so late in the day! <user> #shouldbegiventhemoneyback",
+          "brand_replied": "<user> I'm sorry for this experience. Did your order miss the delivery estimate given at Checkout?",
+          "similarity": 0.738
+        }
+      ]
+    },
+    {
+      "pair_id": "1228011-1228010",
+      "customer_msg": "That moment that <user> takes a picture of the package being delivered and it is in the completely wrong building.",
+      "reply": "I'm so sorry! Please provide your information for us and my team will be in touch! <url>",
+      "precedent": [
+        {
+          "asked": "Wtf I’m so annoyed. My package from <user> says it was delivered yesterday and “handed to a resident” but I never got it. Now another package says it was delivered today and I don’t see it anywhere in",
+          "brand_replied": "<user> I'm terribly sorry for any inconvenience! Have you reported these occurrences to us: <url> If so, what options did we provide?",
+          "similarity": 0.722
+        },
+        {
+          "asked": "<user> I got a delivery notification with a picture showing that my package was delivered to the wrong address, help!",
+          "brand_replied": "<user> Hello, Michael. I'm so sorry! Please provide your information for us and my team will be in touch! <url>",
+          "similarity": 0.721
+        },
+        {
+          "asked": "For the second time this week, <user> has delivered my package to the wrong house...and sent me a pic to prove it. SMH.",
+          "brand_replied": "<user> I am terribly sorry about the delivery troubles, Sarah! A specialist from my team would like to reach out to you and look into this personally. Please share a little info here: <url>",
+          "similarity": 0.7
+        }
+      ]
+    },
+    {
+      "pair_id": "1245906-1245905",
+      "customer_msg": "<user> Is this an acceptable contact for <url> orders? Need some quick help",
+      "reply": "Sorry for the hassle. Please report this to our support team here: <url> and we'll check this.",
+      "precedent": [
+        {
+          "asked": "<user> Please help <user> to deliver order to me :( <url>",
+          "brand_replied": "<user> Sorry for the hassle. Please report this to our support team here: <url> and we'll check this.",
+          "similarity": 0.715
+        },
+        {
+          "asked": "<user> <user> Hello is this a spam email because I haven't ordered this... <url>",
+          "brand_replied": "<user> Hi, please have a look to see if you are an active Prime customer with the link provided: <url>",
+          "similarity": 0.673
+        },
+        {
+          "asked": "<user> who do I contact regarding an issue with my order?",
+          "brand_replied": "<user> Hello! To get in contact with our Prime Now team contact us here: <url>",
+          "similarity": 0.667
+        }
+      ]
+    },
+    {
+      "pair_id": "1276274-1276272",
+      "customer_msg": "<user> got a question couple days ago I pre order star wars battlefront 2 but i just notice i accidently got the digital copy how cance",
+      "reply": "Hi, you should get a code for pre-ordering the physical copy. When did you place the pre-order?",
+      "precedent": [
+        {
+          "asked": "<user> No code for preordering Star Wars Battlefront II physically, and now I can’t use my Amazon store card to buy it digitally? Why??",
+          "brand_replied": "<user> Hi, you should get a code for pre-ordering the physical copy. When did you place the pre-order?",
+          "similarity": 0.75
+        },
+        {
+          "asked": "What the heck I pre ordered Star Wars battlefront 2 deluxe to get it 3 days early but amazon says I won't get till the 16th That's not right. <user> <user> <user> <user>",
+          "brand_replied": "<user> We'd like to assist! Which version/platform did you Pre-order? What shipping speed are you seeing: <url>",
+          "similarity": 0.731
+        },
+        {
+          "asked": "<user> I pre-ordered Star Wars Battlefront II before October, and <user> refuses to give me a code for the Beta. What gives?",
+          "brand_replied": "<user> If it has been 24 hours since you placed your order, please contact us here: <url>",
+          "similarity": 0.702
+        }
+      ]
+    },
+    {
+      "pair_id": "128794-128792",
+      "customer_msg": "<user> Where can we get announcement details of the #AppQuiz conducted by #Amazon ? Previous #AppQuiz details also.",
+      "reply": "<user> The next App Quiz details haven’t been announced yet. Please stay tuned for updates.",
+      "precedent": [
+        {
+          "asked": "Where is the result? #AmazonRechargeQuiz <user> <user>",
+          "brand_replied": "<user> As suggested earlier the result is yet to be declared. Please stay tuned and the winners list will be out soon.",
+          "similarity": 0.588
+        },
+        {
+          "asked": "<user> I have a complaint.can you help me #AmazonIndia",
+          "brand_replied": "<user> We'll be happy to help. Kindly elaborate your concern.",
+          "similarity": 0.565
+        },
+        {
+          "asked": "As a regular customer of <user> I really wait every day for amazon app quiz, which has amazing prizes and also a genuin competition is held through it. #AmazonPayAppQuiz",
+          "brand_replied": "<user> Aww thank you, we appreciate the kind words. It's nice of you to follow up with a tweet. :)",
+          "similarity": 0.563
+        }
+      ]
+    },
+    {
+      "pair_id": "1353489-1353487",
+      "customer_msg": "Hey <user> my account has been locked for a few days with no reason and now I can't even login to contact support nor place an order.",
+      "reply": "<user> Sorry your account is locked. Please reach out here: <url> (select “Skip Sign In”) so we can help.",
+      "precedent": [
+        {
+          "asked": "<user> my account has been lock please unlock",
+          "brand_replied": "<user> You must have received an email correspondence from our account specialist team. Please revert on the same.",
+          "similarity": 0.811
+        },
+        {
+          "asked": "<user> my account has been locked. I can't login to access the helpline. Please assist",
+          "brand_replied": "<user> Hey Scott, please reach out - <url> (select Skip Sign In) so we can escalate your concern.",
+          "similarity": 0.809
+        },
+        {
+          "asked": "<user> Still locked out of my account. 3 weeks now. Your support by telephone and email is awful",
+          "brand_replied": "<user> Hi, sorry to hear that. Have you received an email from the account specialists? Please check spam/junk folders also.",
+          "similarity": 0.765
+        }
+      ]
+    },
+    {
+      "pair_id": "141042-141040",
+      "customer_msg": "<user> i ordered two products as xmas gifts which arrived today and they’re in terrible condition considering they’re meant to be brand new, how can this be rectified please?",
+      "reply": "<user> Oh no! This is definitely not what we want to see. Please call or chat for options here: <url>",
+      "precedent": [
+        {
+          "asked": "Really <user> ?! I know I bought stuff on sale, but come on. Damaged and broken packaging is completely unacceptable. I bought these as NEW condition items. That's not what these are. <url>",
+          "brand_replied": "<user> Oh no! This is definitely not what we want to see. Please call or chat in for available options here: <url>",
+          "similarity": 0.613
+        },
+        {
+          "asked": "<user> hey, received my delivery, and the packaging is damaged. This is a gift, what's the next best steps please? Thanks",
+          "brand_replied": "<user> Sorry for the trouble! We'd love to help out. Have you reviewed available options here?: <url>",
+          "similarity": 0.609
+        },
+        {
+          "asked": "It's a good thing I inspect my <user> gifts before I give them. They shipped me USED GARMENTS priced as new. This is disgusting and I WILL be returning this.",
+          "brand_replied": "<user> Oh no! I'm really sorry you received your order like that. We'd love to help! You can see all refund and replacement options for the item here: <url>",
+          "similarity": 0.598
+        }
+      ]
+    },
+    {
+      "pair_id": "1449131-1449130",
+      "customer_msg": "<user> is cheater, not delivering my order No. # 406-8495245-0801101",
+      "reply": "Sorry to hear that. Please share your details here: <url>",
+      "precedent": [
+        {
+          "asked": "<user> <user> Didn't receive my order as the delivery person refused to do so!",
+          "brand_replied": "<user> Sorry to hear that. Have you reported this to our support team here: <url>",
+          "similarity": 0.737
+        },
+        {
+          "asked": "<user> pathetic service. My order got updated as delivered and never reached me. After waiting for 3 days as suggested by cust care",
+          "brand_replied": "<user> We'd like to look into this, please share your details here: <url>",
+          "similarity": 0.711
+        },
+        {
+          "asked": "<user> Ordered on 24 September 2017 Order# 408-3424812-8857141 still not delivered no intimation pls help",
+          "brand_replied": "<user> Apologies for the experience. I'd request you to fill in your details here: <url> and we will help you.",
+          "similarity": 0.71
+        }
+      ]
+    },
+    {
+      "pair_id": "1472695-1472694",
+      "customer_msg": "<user> Delayed shipment, lost packages, delivery to wrong house. Your delivery service awful. Why am I paying for #Prime?",
+      "reply": "We aim to meet the 2‑day delivery estimate shown at checkout; you can view delivery details here: <url>",
+      "precedent": [
+        {
+          "asked": "<user> - Your prime service has gone to hell. Deliveries NEVER make it in 2 days anymore. Ever. Why am I paying for this service?",
+          "brand_replied": "<user> We aim to deliver by the estimate at checkout. Once shipped, it'll take 2 biz days to reach you: <url>",
+          "similarity": 0.86
+        },
+        {
+          "asked": "<user> Funny how you apparently tried to deliver my parcel without success today, when I’ve been home all day and no one has appeared. Pay for Prime, get crap service in return 💩😡",
+          "brand_replied": "<user> Oh goodness! I'm sorry you haven't received your parcel. We'd like to take a closer look with you. Please reach us by phone or chat here: <url> Thanks KJ!",
+          "similarity": 0.815
+        },
+        {
+          "asked": "<user> Is anyone else having problems with #prime? I pay for two days.... and lately my orders are getting here at three or four days. Why am I paying for two day shipping and not getting it?",
+          "brand_replied": "<user> I'm sorry for the poor experience! Do you have a current order that is late or delayed that we can help you with?",
+          "similarity": 0.811
+        }
+      ]
+    },
+    {
+      "pair_id": "1501853-1501851",
+      "customer_msg": "Come on Amazon where’s my case at? I need to protect my new baby 😛",
+      "reply": "I’m sorry for the trouble! We’d like to take a closer look; please reach out to us at your earliest convenience here: <url>",
+      "precedent": [
+        {
+          "asked": "My order from Amazon came in time, but the case is shattered in one of the corners. 😭😭😭",
+          "brand_replied": "<user> So sorry about this Rick, you can return the item here <url>",
+          "similarity": 0.633
+        },
+        {
+          "asked": "me struggling bc <user> charged me $99.00 for amazon prime when i️ didn’t even want it.. they said it was gonna be free and all i️ wanted was an iphone waterproof case thanks <user> <url>",
+          "brand_replied": "<user> I'm sorry for the trouble! We'd like to take a closer look at this. Please reach out to us at your earliest convenience here: <url>",
+          "similarity": 0.516
+        },
+        {
+          "asked": "<user> ordered this case over a week ago on November 22nd through Amazon Prime w/express shipping. It hasnt been shipped. Wondering as to whats going on. <url>",
+          "brand_replied": "<user> Items can be shipped and delivered on the same day. Please keep us updated on its arrival!",
+          "similarity": 0.514
+        }
+      ]
+    },
+    {
+      "pair_id": "1507241-1507238",
+      "customer_msg": "Arriving today but it's not been dispatched, don't worry only preordered 6 months ago <user> <url>",
+      "reply": "I’m sorry for the delay! Was your order eligible for release‑day delivery? More info here: <url>",
+      "precedent": [
+        {
+          "asked": "<user> where's my pre order - no it wasn't delivered this morning at 0713!!!! <url>",
+          "brand_replied": "<user> I'm sorry for the delay! Was your order eligible for release day delivery? For more info: <url>",
+          "similarity": 0.756
+        },
+        {
+          "asked": "<user> I placed an order on Monday and it hasn’t been dispatched yet?",
+          "brand_replied": "<user> Hi, when is the delivery estimate for your order?",
+          "similarity": 0.752
+        },
+        {
+          "asked": "👊 to <user> &amp; <user> Package was supposed to arrive on , received it today. 5 DAYS EARLY!!",
+          "brand_replied": "<user> 👊 I'm glad to hear we've been able to deliver so much faster than expected, thanks! 😃",
+          "similarity": 0.746
+        }
+      ]
+    },
+    {
+      "pair_id": "1616332-1616330",
+      "customer_msg": "<user> you’ve sent the wrong book and after looking @ your returns policy apparently I have to pay for it to be sent back.... is this correct???",
+      "reply": "Sorry for the mix‑up! We can’t view your order here—please DM us your order number or start a return via your account.",
+      "precedent": [
+        {
+          "asked": "<user> I started the return process to return a book that I don't need, but this is the message I got. Do I really not need to ship it back? <url>",
+          "brand_replied": "<user> Thank you for reaching out to us! We are unable to access account information via Twitter, but we would still like to help! When you have a moment, please reach out to us here: <url>",
+          "similarity": 0.694
+        },
+        {
+          "asked": "<user> I have not received my book that I ordered for work.",
+          "brand_replied": "<user> I'm sorry you haven't received your order! What is the current order and shipping status: <url>",
+          "similarity": 0.671
+        },
+        {
+          "asked": "<user> So, if I return it, y spend 31$, plus delivery costs, and get no book. It’s really unfair and stupid",
+          "brand_replied": "<user> I'm sorry for the frustration! We'd like to help if we can, Solange. Can you tell us what website you used to place your order? For example, .com, .co.uk, .es, etc. Let us know!",
+          "similarity": 0.665
+        }
+      ]
+    },
+    {
+      "pair_id": "1714259-1714257",
+      "customer_msg": "Anyone else getting signed up for <user> subscriptions without authorization?",
+      "reply": "Can you tell us a bit more about what's happening with the subscriptions?",
+      "precedent": [
+        {
+          "asked": "<user> Impressive. I've been trying to sign up for almost four months now, and still can't get your support to approve my account.",
+          "brand_replied": "<user> I'm sorry for any difficulties. Without disclosing your personal information. Will you tell us more about the issue you're experiencing with creating an Amazon Pay account? What suggestions wer",
+          "similarity": 0.584
+        },
+        {
+          "asked": "<user> hello how do I talk to someone/ make a complaint about the subscriptions on my account?",
+          "brand_replied": "<user> Can you tell us a bit more about what's going on with your subscriptions?",
+          "similarity": 0.584
+        },
+        {
+          "asked": "<user> <user> I manage to get into my account but you’re still blocking my purchases.",
+          "brand_replied": "<user> I'm sorry for the delay. We don't have access to your account via Twitter. Would you please let a member of our team assist via phone? This link can be used to contact us: <url>",
+          "similarity": 0.582
+        }
+      ]
+    },
+    {
+      "pair_id": "1806515-1806514",
+      "customer_msg": "Looks like <user> lost another package with items that can’t be replaced. This time: all four new BotW amiibo.",
+      "reply": "<user> Oh no! We'd like to see what options are available for your order. Call or chat with us here: <url>",
+      "precedent": [
+        {
+          "asked": "Yet again my final Amiibo keeps getting shuffled around by <user> Says I should have got it on Oct 25 now and it never shipped...",
+          "brand_replied": "<user> I'm so sorry for the delay. Have you had a chance so contact us so we could look into our options: <url>",
+          "similarity": 0.589
+        },
+        {
+          "asked": "My freakin <user> package is still not here 😡 and now it might be lost?! Sad thing is, I still want the items. Ughh just send me my stuff 😩",
+          "brand_replied": "<user> Oh no! We'd like to see what options are available for your order. Call or chat with us here: <url>",
+          "similarity": 0.574
+        },
+        {
+          "asked": "Hey <user> you lost my package, offered a replacement, and then told me a replacement isn’t possible. What gives?!?!",
+          "brand_replied": "<user> Hi Grace, without providing any personal information. Can you advise us of why the replacement wasn't possible?",
+          "similarity": 0.57
+        }
+      ]
+    },
+    {
+      "pair_id": "184872-184869",
+      "customer_msg": "Well, that's FANTASTIC. My #amwriting music is gone right now because the <user> app for my laptop NEEDED to update, and now it's not working. LOVELY.",
+      "reply": "<user> We’d like to help, can you please tell us more about the issue you’re seeing?",
+      "precedent": [
+        {
+          "asked": "Trying to control music on <user> using the app in the #iPhone is the most frustrating task #igiveup #amazonfail",
+          "brand_replied": "<user> We're always looking to improve Alexa &amp; would be happy to accept your feedback through the Alexa app: <url>",
+          "similarity": 0.561
+        },
+        {
+          "asked": "Hey <user> , just bought <user> version of <user> #theEscape &amp; opted for added audio but that appears to be missing in app? 😐",
+          "brand_replied": "<user> I'm sorry the Audible Narration isn't showing in your Kindle app. Did you receive an order confirmation from Audible confirming the audiobook purchase",
+          "similarity": 0.543
+        },
+        {
+          "asked": "<user> please fix the app! The recent update had rendered it useless",
+          "brand_replied": "<user> We would like to help, Araxie! Can you please elaborate a little more about what's going on?",
+          "similarity": 0.539
+        }
+      ]
+    },
+    {
+      "pair_id": "1869787-1869786",
+      "customer_msg": "Big market for for a player like <user> is health checkup.",
+      "reply": "<user> Thanks for sharing! Could you let us know more about the issue?",
+      "precedent": [
+        {
+          "asked": "<user> has the best customer service ever",
+          "brand_replied": "<user> Only because we have the best customers ever! 😁",
+          "similarity": 0.431
+        },
+        {
+          "asked": "<user> is a terrible service. I will forever make sure everyone I know never uses it",
+          "brand_replied": "<user> That's not what we want to hear! Without providing any sensitive info could you tell us more about the issue?",
+          "similarity": 0.429
+        },
+        {
+          "asked": "<user> is far better in all when compared to <user> #seriously",
+          "brand_replied": "<user> That is quite a remark, Seths. Please let us know what went wrong and we will be happy to help you accordingly.",
+          "similarity": 0.426
+        }
+      ]
+    },
+    {
+      "pair_id": "1997915-1997914",
+      "customer_msg": "<user> Any reason why I didn't get my GT Sport Limited Edition Code? I got one for standard edition....",
+      "reply": "<user> Sorry you didn’t receive the correct code. Please contact us here: <url>",
+      "precedent": [
+        {
+          "asked": "<user> messed up my order again, no GT Sport sent out, but money was taken for it, this company is getting right crap.",
+          "brand_replied": "<user> Hi, sorry to hear there's been an issue. Has the delivery date in your order confirmation email changed?",
+          "similarity": 0.586
+        },
+        {
+          "asked": "<user> ordered GT Sport on 10th not received it, was told it was out for delivery at 10am, spent 50 mins on phone to be told tomorrow",
+          "brand_replied": "<user> Hey Phil! I'm really sorry about the bad experience you've had. What does the tracking currently state on your order?",
+          "similarity": 0.525
+        },
+        {
+          "asked": "<user> hi, I preordered Call of Duty but the code I was emailed has been used apparently. I've not redeemed anything so a bit confused <url>",
+          "brand_replied": "<user> Oh no! Sorry about this, Samuel! Please contact us here: <url> so we can get this resolved!",
+          "similarity": 0.512
+        }
+      ]
+    },
+    {
+      "pair_id": "20482-20480",
+      "customer_msg": "<user> why isn’t the brighton morrissey date on the presale website?",
+      "reply": "<user> Please reach out here so we can check on that: <url>",
+      "precedent": [
+        {
+          "asked": "<user> why don’t you have the Royal Albert Hall Morrissey date on the pre-sale? 🤔",
+          "brand_replied": "<user> Pls reach out here so we can look into this for you <url>",
+          "similarity": 0.719
+        },
+        {
+          "asked": "<user> is Blackpool not available for <user> presale tomorrow? Can't see link on site",
+          "brand_replied": "<user> Hi Laura! You can view the Blackpool presale page here: <url> Let us know if you need further assistance.",
+          "similarity": 0.615
+        },
+        {
+          "asked": "But I (perhaps foolishly) assumed <user> would get it to us for the release date. What a shame. Could have just bought it in a store! (4)",
+          "brand_replied": "<user> Hi Hayley - I am very sorry to hear of the delays. Did we provide a new delivery date ?",
+          "similarity": 0.508
+        }
+      ]
+    },
+    {
+      "pair_id": "2119275-2119273",
+      "customer_msg": "<user> Hi, prime is available for Belgium, does that include music too? Thank you.",
+      "reply": "<user> Yes, Prime in Belgium includes Prime Music, which offers a selection of songs you can stream and download.",
+      "precedent": [
+        {
+          "asked": "<user> hi, I have prime membership but can only listen to certain songs on the amazon music app? Does the prime membership not include prime music or?",
+          "brand_replied": "<user> The Prime membership includes Prime Music which has select titles available to stream and download for free. More details here: <url>",
+          "similarity": 0.584
+        },
+        {
+          "asked": "<user> I'm a prime member. I was wondering if the prime music and videos will work while I'm abroad? I'll be traveling to South Korea.",
+          "brand_replied": "<user> That's a good question! To be sure you get the correct information, will you confirm which marketplace your account is under?",
+          "similarity": 0.576
+        },
+        {
+          "asked": "Music experience is not all that nice on #ECHODOT India.no personalised <url> #prime #music is down in India which is only available on echo devices. Still the prime music is not up and running on ech",
+          "brand_replied": "<user> Please let us know when did you receive your Echodot.",
+          "similarity": 0.552
+        }
+      ]
+    },
+    {
+      "pair_id": "2152253-2152252",
+      "customer_msg": "<user> Wall Mount Bracket Is Missing From Delivered Product Order Number: 408-7747548-3485101 3 weeks have gone not got a solution yet",
+      "reply": "<user> Sorry to hear that. Please provide your details here so we can investigate: <url>",
+      "precedent": [
+        {
+          "asked": "Seriously, <user> has best costumer service on the phone! I was stressed bc haven’t got my package even tho it said delivered. I called them n Sameisha solved the problem quickly with friendliness! Th",
+          "brand_replied": "<user> Always glad to hear that we could help! 😁",
+          "similarity": 0.43
+        },
+        {
+          "asked": "<user> Ordered on 24 September 2017 Order# 408-3424812-8857141 still not delivered no intimation pls help",
+          "brand_replied": "<user> Apologies for the experience. I'd request you to fill in your details here: <url> and we will help you.",
+          "similarity": 0.425
+        },
+        {
+          "asked": "The past two out of three orders with <user> have been screwed up, this is beyond a joke. One item damaged and another missing.",
+          "brand_replied": "<user> Oh no, we're sorry to hear this! Have you had a chance to contact us regarding these orders: <url>",
+          "similarity": 0.42
+        }
+      ]
+    },
+    {
+      "pair_id": "2286021-2286020",
+      "customer_msg": "Have spent literally hours with other companies on phone and in chats trying to resolve issues. Five minute chat with <user> and problem is fixed. #greatcustomerservice",
+      "reply": "<user> Thanks for sharing the love! We hope you enjoy the rest of the day!",
+      "precedent": [
+        {
+          "asked": "Just had the most amazing customer service from <user> . Used the chat feature and it was quick and painless and issue resolved. I wish all customer service was like that.",
+          "brand_replied": "<user> Thanks for sharing the love! We hope you enjoy the rest of the day!",
+          "similarity": 0.806
+        },
+        {
+          "asked": "<user> <user> <user> this still hasn't been resolved and it's been 24hours. Shocking level of customer service <url>",
+          "brand_replied": "<user> Hi, apologies, I can confirm that your details are now in the UK queue and we'll be in touch as soon as possible.",
+          "similarity": 0.665
+        },
+        {
+          "asked": "<user> <user> why is your customer service so terrible now? Spent hours on chat got nowhere.",
+          "brand_replied": "<user> I'm so sorry for the trouble! This is not something we want for our customers. Without providing specific account or personal information, will you tell us more about the situation and what's g",
+          "similarity": 0.657
+        }
+      ]
+    },
+    {
+      "pair_id": "2289002-2289001",
+      "customer_msg": "Wth is going on with amazon prime??? I bought one phone case and it’s freakin lost so I had to get a refund and now my second package is late too???? When will I get a new case? Omfg I’m dying here",
+      "reply": "<user> That's not the experience we hoped you have, Mami! Do you notice a trend in carrier when delays occur?",
+      "precedent": [
+        {
+          "asked": "<user> this is the fourth package ordered through Amazon Prime that comes days late. Amazon Prime sucks! Boooooo! :(",
+          "brand_replied": "<user> That's not the experience we hoped you have, Mami! Do you notice a trend in carrier when delays occur?",
+          "similarity": 0.712
+        },
+        {
+          "asked": "<user> damn I finally get amazon prime and both of the first two packages I order are days late and I really needed them smh \"2 Day Shipping\" my ass",
+          "brand_replied": "<user> I'm sorry to hear of the delays, Jon! We're here to help! Are both packages shipping with the same carrier? If unsure, please see here: <url>",
+          "similarity": 0.702
+        },
+        {
+          "asked": "<user> Amazon prime is not prime anymore, even the prime products take 4-5 days to deliver. :(",
+          "brand_replied": "<user> Delivery estimates are calculated on multiple criteria such as the delivery Pincode and the courier that is assigned. Please let us know if any of your order has missed the estimated delivery d",
+          "similarity": 0.688
+        }
+      ]
+    },
+    {
+      "pair_id": "2374468-2374467",
+      "customer_msg": "<user> <user> Your customer care rep says MRP is different for different parts of India. Are your customers fools , doesn’t know about meaning of MRP. It’s pure cheating. Call me @ 8800093507. <url>",
+      "reply": "<user> We aim to match the MRP shown online with what's delivered. Please DM us your order details so we can review this.",
+      "precedent": [
+        {
+          "asked": "<user> <user> Have you guys started cheating customers ? MRP is 292 and you guys charge 375 ?? And moreover the customer care people tho k the customers are fool by saying different regions have diffe",
+          "brand_replied": "<user> We try to ensure that the MRP mentioned on the website is same as the MRP mentioned on the product that is delivered to you. However, this could happen due to the time lag in updating prices po",
+          "similarity": 0.654
+        },
+        {
+          "asked": "If a product is being delivered by India Post I think I'd seriously have to reconsider ordering from <user> . Terrible service from them",
+          "brand_replied": "<user> I'd like to help you with this. Kindly fill in your details here: <url> and I'll reach out to you.",
+          "similarity": 0.584
+        },
+        {
+          "asked": "<user> <user> <user> india is a huge market, but amazingly poor customer support wont help at all.. one of the worst.",
+          "brand_replied": "<user> I'm sorry about the disappointment. Kindly share your details here: <url> and I'll look into this.",
+          "similarity": 0.573
+        }
+      ]
+    },
+    {
+      "pair_id": "2523373-2523371",
+      "customer_msg": "Someone entered my home without permission and left an <user> package behind. Just got off the phone with the police to report the b&amp;e and suspicious package.",
+      "reply": "<user> Sorry about this. Please reach out to us directly here: <url> and we can look into this.",
+      "precedent": [
+        {
+          "asked": "I think someone stole the <user> package that was supposed to be delivered earlier today from our lawn.",
+          "brand_replied": "<user> Sorry about this. Please reach out to us directly here: <url> and we can look into this.",
+          "similarity": 0.684
+        },
+        {
+          "asked": "<user> my parcel was left right outside my front door for anyone to steal! I even have a safe place set up which the delivery person ignored! Fuming!!!! <url>",
+          "brand_replied": "<user> I'm so sorry for the difficulty! Please call or chat with us using the link provided here: <url>",
+          "similarity": 0.681
+        },
+        {
+          "asked": "<user> So I'm just curious. At what point is my privacy being violated when a delivery person sneaks a picture of me on my property?? I really don't care for this delivery company and I wish my packag",
+          "brand_replied": "<user> Hi! I apologize for the violation of your privacy. We want to investigate this matter further. Can you tell us who was the carrier, and if the driver was delivering a package to you? Let us kno",
+          "similarity": 0.646
+        }
+      ]
+    },
+    {
+      "pair_id": "2563976-2563975",
+      "customer_msg": "<user> Please can you tell me the email address for customer services?",
+      "reply": "You can connect with us here: <url>.",
+      "precedent": [
+        {
+          "asked": "<user> what is the email address for customer care?",
+          "brand_replied": "<user> .You can connect with us from here: <url> Hope this helps.",
+          "similarity": 0.862
+        },
+        {
+          "asked": "<user> What is your customer support email address?",
+          "brand_replied": "<user> You can contact us by phone, chat, or e-mail here 24 hours a day, 7 days a week: <url>",
+          "similarity": 0.835
+        },
+        {
+          "asked": "<user> where is your customer service number??? 😩😤😡",
+          "brand_replied": "<user> We're here to help, if we can, or you can reach us best by phone or chat here: <url>",
+          "similarity": 0.675
+        }
+      ]
+    },
+    {
+      "pair_id": "2697167-2697165",
+      "customer_msg": "Day 5 of no access to <user> acc. Email sent day 1. No reply. Phoned day 3. Promised update &amp; call in 24h. Nothing. Service is a joke.",
+      "reply": "<user> The info you provided when you called in will be sent to our account specialists, they will contact you within 24 hrs.",
+      "precedent": [
+        {
+          "asked": "<user> why when I call customer service to get in my account am I told someone will call me back in 24 hours? Not great cust service",
+          "brand_replied": "<user> The info you provided when you called in will be sent to our account specialists, they will contact you within 24 hrs",
+          "similarity": 0.639
+        },
+        {
+          "asked": "<user> Account was hacked and email address was changed. Customer service marginal when I called. Took a long time to resolve.",
+          "brand_replied": "<user> So sorry for the poor experience, Tiffany! You can submit feedback in the email you received when the call ended.",
+          "similarity": 0.624
+        },
+        {
+          "asked": "<user> Useless cust service on phone. Waiting 3 weeks for a refund, made 3 calls and still nothing. No call back yesterday as promised. Very disappointed and I need the money back now.",
+          "brand_replied": "<user> Sorry you're still waiting Jo- What was advised when you spoke with us directly on the phone?",
+          "similarity": 0.619
+        }
+      ]
+    },
+    {
+      "pair_id": "2748308-2748307",
+      "customer_msg": "<user> How do I delete a skill that is no longer available? It shows in my list of skill but can’t be used or disabled",
+      "reply": "Sorry the skill isn’t working – you may need to disable it and re‑enable it.",
+      "precedent": [
+        {
+          "asked": "<user> skill not working on <user> dot. When I hit enable and link to email skill closes and not appearing on skills. I have hub v1.",
+          "brand_replied": "<user> Has the Hue Hub worked with the Echo before? Just to make sure, is the software up to date: <url>",
+          "similarity": 0.577
+        },
+        {
+          "asked": "Um. Why is the <user> skill no longer working on our echo dot, <user> ?! <url>",
+          "brand_replied": "<user> Oh no! I'm sorry the Jeopardy skill isn't working on your Echo Dot! You may need to disable the skill and re-enable it. Here's how: <url> I hope this helps!",
+          "similarity": 0.506
+        },
+        {
+          "asked": "<user> Hello, I need a book listing removed. How do I go about doing that?",
+          "brand_replied": "<user> We're happy to try to help! To confirm, did you list the book for sale on the website? Did you use CreateSpace?",
+          "similarity": 0.439
+        }
+      ]
+    },
+    {
+      "pair_id": "2837016-2837014",
+      "customer_msg": "<user> poor service as my order for Asus laptop cancelled. Well done #Amazon you always know how to keep your customer happy NOT!",
+      "reply": "<user> I'm sorry for the trouble. Have you received any email with a reason for the cancellation?",
+      "precedent": [
+        {
+          "asked": "Can you believe, <user> is not able to deliver my order in 30 days. Happy to buy new laptop with <user> .",
+          "brand_replied": "<user> That is unusual, Ranjan. Did you happen to report about this here: <url>",
+          "similarity": 0.701
+        },
+        {
+          "asked": "<user> <user> well done for yet another cancelled order. Your customer service is shocking.",
+          "brand_replied": "<user> I'm sorry for the trouble, Ben! We'd like to help. Have you received any e-mails with a reason for the cancellation?",
+          "similarity": 0.677
+        },
+        {
+          "asked": "Ordered Lenovo Z2 Plus for the second time from <user> and again they cancelled it on the day of delivering. Order# 406-1020722-6875566 Tracking# 447207503857 So much hype for your service? which is a",
+          "brand_replied": "<user> I'm sorry that your order is canceled. Kindly reach out to us here: <url> and we'll check it for you. Please don't provide your order details, as we consider it to be personal information. Our ",
+          "similarity": 0.653
+        }
+      ]
+    },
+    {
+      "pair_id": "2899618-2899617",
+      "customer_msg": "Hey <user> I ordered some white board pens, not a fragile glass vase. Why so much packaging? That's your profit margin gone. <url>",
+      "reply": "<user> Thanks for letting us know. You can share your packaging feedback here: <url>",
+      "precedent": [
+        {
+          "asked": "Really is there such a need for so much packaging when you post out such a small item? A shocking waste of paper and card. <user> <user> <url>",
+          "brand_replied": "<user> We're always looking for ways to improve! If you'd like, you can leave your feedback with us here: <url>",
+          "similarity": 0.63
+        },
+        {
+          "asked": ". <user> go from giving shit loads of packaging to nothing. And now the delivery stickers have ruined the packaging for a gift 🙄😡 <url>",
+          "brand_replied": "<user> Oh no! We'd like to help in any way we can. You can view available options here: <url>",
+          "similarity": 0.597
+        },
+        {
+          "asked": "Think you might be overdoing it on the packaging <user> ? This is for a packet of stickers <url>",
+          "brand_replied": "<user> Thanks for making us aware of this! You can provide feedback directly to our Packaging team here: <url>",
+          "similarity": 0.594
+        }
+      ]
+    },
+    {
+      "pair_id": "2976549-2976548",
+      "customer_msg": "<user> who can I talk to about one day shipping? I am DESPERATE. 😭",
+      "reply": "You can share your feedback about one‑day shipping here: <url>",
+      "precedent": [
+        {
+          "asked": "Hey <user> , either stop offering 1 day shipping or get a better shipper than <user> .",
+          "brand_replied": "<user> I'm sorry for the delivery trouble. Without including personal information, can you tell us more about what happened? Is your order delayed or damaged?",
+          "similarity": 0.719
+        },
+        {
+          "asked": "Hey <user> I have a shipping complaint. Who do I talk to?",
+          "brand_replied": "<user> Hello Alisha! You can reach out to us here so we can help file the proper feedback: <url>",
+          "similarity": 0.707
+        },
+        {
+          "asked": "Hey <user> who do I contact about my shipment? They think I live at a business.... 😒 <url>",
+          "brand_replied": "<user> Intelcom is delivery this package. You can find their contact info here: <url>",
+          "similarity": 0.695
+        }
+      ]
+    },
+    {
+      "pair_id": "423829-423828",
+      "customer_msg": "<user> Dear are you irresponsive.I asked about my order status of order number ORDER # 404-5940794-4552302. You have shipped it through",
+      "reply": "My apologies for the trouble. Please reach out to us via: <url> and we will have this checked.",
+      "precedent": [
+        {
+          "asked": "<user> Very sloppy and irresponsible handling of my order placed with you. Without actual delivery, status updated as delivered!!",
+          "brand_replied": "<user> My apologies for the trouble, Somesh. Please reach out to us via: <url> and we will have this checked.",
+          "similarity": 0.72
+        },
+        {
+          "asked": "<user> My order is supposed to be delivered today but the contact number of your representative that I received isn’t responding.",
+          "brand_replied": "<user> We've responded to your query via DM. Please check.",
+          "similarity": 0.707
+        },
+        {
+          "asked": "<user> <user> Your customer Dept cannot provie exact status of my order. Pathetic . Hell bad .For human sake Help me Plz !",
+          "brand_replied": "<user> I'm sorry for the delay in delivery. Please fill this form: <url> we’ll contact you at the earliest.",
+          "similarity": 0.689
+        }
+      ]
+    },
+    {
+      "pair_id": "448309-448307",
+      "customer_msg": "#AmazonIndia Amazon delivery sucks; either they deliver late or they cancel the order. Very irresponsible. Cancelled 408-2690711-0478705",
+      "reply": "Apologies for the trouble. Kindly fill in your details here: <url> and we'll get this sorted for you.",
+      "precedent": [
+        {
+          "asked": "Shame on #AmazonIndia fully paid order of 15 Sep 2017 still not delivered 8 Oct #frustrated #poorservice",
+          "brand_replied": "<user> I'm sorry about delay in delivering your order. Have you escalated this to our support team here: <url> ?",
+          "similarity": 0.809
+        },
+        {
+          "asked": "<user> <user> <user> Order # 403-0259932-7929974. Amazon Agent refusing delivery since 2 days including today. Worst experience !",
+          "brand_replied": "<user> Please don't provide your order details, we consider it personal information. Our Twitter page is visible to public.",
+          "similarity": 0.773
+        },
+        {
+          "asked": "Worst experience with #Amazon after following up more than 48 hrs got reply that tried to attempt delivery but failed. Without contacting me",
+          "brand_replied": "<user> Apologies for the trouble. Kindly fill in your details here: <url> and we'll get this sorted for you.",
+          "similarity": 0.757
+        }
+      ]
+    },
+    {
+      "pair_id": "465041-465040",
+      "customer_msg": "<user> <user> Order# 405-3872074-7181966 refund/returned order because of deliver issue of amazon but can't use same offer again and Amazon accept there system limitation. LOL <url>",
+      "reply": "Sorry for the trouble with your refund. Please share your details here: <url> and we’ll look into it.",
+      "precedent": [
+        {
+          "asked": "<user> I am just tired with Amazon for fighting for my own money refund. Experienced worst customer service. Mb. 9958318011",
+          "brand_replied": "<user> Sorry for the trouble with your refund. Kindly fill in your details here: <url> and we'll look into this.",
+          "similarity": 0.75
+        },
+        {
+          "asked": "<user> I have had an unpleasant experience dealing with Amazon with reference to order no # 408-5217257-7653153, from delivery, to return pickup and now refund has been delayed a lot",
+          "brand_replied": "<user> Sorry for the trouble you have faced so far with the order. I understand how upsetting it could be. Please fill this form: <url> and we'll have a closer look at your concern. Once you do the ne",
+          "similarity": 0.722
+        },
+        {
+          "asked": "<user> The worst experience I have got from Amazon on order no.408-8731383-6100325.Amazon is not refunding my money for sending the wrong item to me. The returned item is still reached its destination",
+          "brand_replied": "<user> I'm sorry about the situation with your order. Kindly share your details here: <url> and I'll look into this. Also, please don’t provide your order details as we consider them to be personal in",
+          "similarity": 0.718
+        }
+      ]
+    },
+    {
+      "pair_id": "478591-478590",
+      "customer_msg": "<user> where is the lgq6 appquiz contest result.?",
+      "reply": "Apologies for the delay in the results being announced. Our team is looking into it and will share the winner list soon.",
+      "precedent": [
+        {
+          "asked": "<user> Where is the result of #OnePlus5TAppQuiz &amp; #LGQ6AppQuiz ?🙄",
+          "brand_replied": "<user> Apologies for the delay in the results being announced. Our team is currently on this, the list of winner should be out soon. Appreciate your patience and understanding.",
+          "similarity": 0.678
+        },
+        {
+          "asked": "<user> when will you tweet the winner list of the LG q6 quiz",
+          "brand_replied": "<user> We've escalated this to our team internally for an update. Kindly stay tuned.",
+          "similarity": 0.662
+        },
+        {
+          "asked": "<user> <user> <user> How do i come to know abt the wining ? Coz everytime i answer it right. But then nothing happens #LGQ6AppQuiz <url>",
+          "brand_replied": "<user> We publish the list of winners on our website. The winners are then contacted personally for further details.",
+          "similarity": 0.593
+        }
+      ]
+    },
+    {
+      "pair_id": "598059-598058",
+      "customer_msg": "It must be holiday season: Amazon's carrier - #AMZL - has already lost two packages and December just started. I don't pay for Prime for their TV or music; just shipping (and they can't even get that right).",
+      "reply": "<user> I'm terribly sorry for the delivery trouble. We'd like to look into this further; please share your details here: <url>",
+      "precedent": [
+        {
+          "asked": "Amazon, honey, I do not pay for prime so that AMZL can mark things as delivered, not deliver, and then mysteriously drop them off 2wks later.",
+          "brand_replied": "<user> I'm terribly sorry for this conflicting information. We'd like to look into this further. Please pass your details to us here: <url>",
+          "similarity": 0.683
+        },
+        {
+          "asked": "Really frustrating when Amazon's #amzl shipping fails to deliver your order for the 2nd time in a week. Customer service doesn't help either – I don't want another refund, I want the things I've order",
+          "brand_replied": "<user> I'm sorry for the frustrating experience, Bekka! When you reached out to us, what additional information was provided?",
+          "similarity": 0.641
+        },
+        {
+          "asked": "<user> fix your AMZL delivery and logistics for the SF area or globally. I cannot rely on amazon to deliver a package on time anymore",
+          "brand_replied": "<user> I'm sorry for the delivery trouble! I'd like to escalate this for you, please send us more detail here: <url>",
+          "similarity": 0.62
+        }
+      ]
+    },
+    {
+      "pair_id": "606154-606153",
+      "customer_msg": "Simply brilliant packaging from <user> so looking forward to the new season <user> 🚗🔥 <url>",
+      "reply": "<user> Thanks for the feedback! If you’d like to share more about the packaging, you can do so here: <url>",
+      "precedent": [
+        {
+          "asked": "Really <user> that’s a lot of packaging?!? <url>",
+          "brand_replied": "<user> Hi, you can send us on your feedback about the packaging here: <url>",
+          "similarity": 0.649
+        },
+        {
+          "asked": "Come on <user> ... this packaging is a bit over the top! 🙈#savetheplanet <url>",
+          "brand_replied": "<user> We're always looking for ways to improve! Please provide us with your feedback here: <url>",
+          "similarity": 0.632
+        },
+        {
+          "asked": "An outrageous amount of packaging for a small Christmas present <user> . Good job the <user> December issue has got a feature coming up on excess packaging! #OComeAllYeWasteful <url>",
+          "brand_replied": "<user> Thanks for reaching out to us. Jo! I'm sorry about this! Please provide your packaging feedback here so we can improve in the future: <url> Please let us know if you need any additional assista",
+          "similarity": 0.604
+        }
+      ]
+    },
+    {
+      "pair_id": "727109-727105",
+      "customer_msg": "<user> Again confirmed order which is expected deliver today according to Amazon. So far no call and no confirmation abt dely........",
+      "reply": "I’m sorry to hear this. If it doesn’t arrive by 20:00, please reach out to us by phone or chat here: <url>.",
+      "precedent": [
+        {
+          "asked": "<user> ORDER # 408-0387500-3836361 never delivered and showen as delievered directly in the hands of the customer, whats happening?",
+          "brand_replied": "<user> I'm sorry about the unpleasant experience. Please drop in your details here: <url> We will look into it.",
+          "similarity": 0.674
+        },
+        {
+          "asked": "Hey <user> . Got a confirmation that my order has been delivered and received by me. Neither have I got the product nor did the delivery agent call me. What's happening?",
+          "brand_replied": "<user> Sorry to hear about the tracking of the order. Let us look into it. Have you reported it to the support team here: <url> ?",
+          "similarity": 0.659
+        },
+        {
+          "asked": "<user> your delivery man came to my door yet did not deliver my package. Spoken to customer service twice in 48hrs who assure me that it will be delivered yesterday and today. It hasn't - rubbish serv",
+          "brand_replied": "<user> I'm sorry to hear this. If it doesn''t arrive by 20:00 please reach out to us by phone or chat here: <url>",
+          "similarity": 0.657
+        }
+      ]
+    },
+    {
+      "pair_id": "931379-931377",
+      "customer_msg": "<user> I hv a sony andorid tv with prime video app installed. Not able to find the sign in button. Plz help. TIA",
+      "reply": "Sorry you can’t find the sign‑in button. Please follow the steps here: <url>.",
+      "precedent": [
+        {
+          "asked": "<user> I can't find it on my prime account or how to put it in my video selection",
+          "brand_replied": "<user> Thanks for reaching out! Is the movie a Disney Anywhere title? If so, let's follow the steps here: <url>",
+          "similarity": 0.641
+        },
+        {
+          "asked": "<user> How can I get <user> App on my LED TV of 2016? <url>",
+          "brand_replied": "<user> You may find the steps to download the Prime video App for your TV here: <url>",
+          "similarity": 0.604
+        },
+        {
+          "asked": "<user> Bought the stick. Unable to view Prime Video. Ive a valid mship on <user> . But <user> says u no longer a Prime member.",
+          "brand_replied": "<user> That's strange! We'd like to help you with this. Please contact us here: <url> and we'll help.",
+          "similarity": 0.602
+        }
+      ]
+    }
+  ]
+}

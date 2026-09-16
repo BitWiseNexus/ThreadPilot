@@ -1,0 +1,11 @@
+{
+  "generated": "2026-09-17 00:37:51",
+  "n_golden": 200,
+  "offline": false,
+  "index_size": 6155,
+  "systems": {
+    "pipeline_no_retr": "200 rows in 319s"
+  },
+  "llm": "llm calls=155 cache_hits=127 (82%) live=28 retries=0 out_tokens=19,131 models={'openai/gpt-oss-120b': 155}",
+  "note": "Predictions are saved separately from scoring so metric code can be re-run without spending tokens."
+}

@@ -1,0 +1,40 @@
+{"pair_id":"1051383-1051381","grounded":3,"on_intent":2,"no_overcommit":4,"voice":4,"actionable":2,"send_unedited":false,"note":"Asks how winners are selected; reply says escalated internally and answers nothing."}
+{"pair_id":"1099261-1099267","grounded":4,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":4,"send_unedited":true,"note":"Sensible diagnostic question, well matched to precedent."}
+{"pair_id":"1160620-1160619","grounded":3,"on_intent":2,"no_overcommit":5,"voice":4,"actionable":3,"send_unedited":false,"note":"Complaint is about time-of-day delivery to a business; reply recites the definition of next-day."}
+{"pair_id":"1228011-1228010","grounded":4,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Appropriate handoff for a misdelivery."}
+{"pair_id":"1245906-1245905","grounded":3,"on_intent":2,"no_overcommit":5,"voice":3,"actionable":3,"send_unedited":false,"note":"Apologises for a hassle none was described; never answers whether this channel is right."}
+{"pair_id":"1276274-1276272","grounded":2,"on_intent":1,"no_overcommit":4,"voice":4,"actionable":2,"send_unedited":false,"note":"Customer wants to CANCEL a digital copy; reply talks about codes for the physical one. Wrong precedent applied."}
+{"pair_id":"128794-128792","grounded":4,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":3,"send_unedited":true,"note":"Matches the brand standard not-yet-announced pattern."}
+{"pair_id":"1353489-1353487","grounded":4,"on_intent":5,"no_overcommit":5,"voice":4,"actionable":5,"send_unedited":true,"note":"Best reply in the set: the Skip Sign In detail directly solves cannot log in to contact support."}
+{"pair_id":"141042-141040","grounded":4,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Standard damaged-goods handoff, grounded in precedent."}
+{"pair_id":"1449131-1449130","grounded":4,"on_intent":3,"no_overcommit":5,"voice":3,"actionable":3,"send_unedited":true,"note":"Safe and standard, though the order number was already supplied."}
+{"pair_id":"1472695-1472694","grounded":4,"on_intent":2,"no_overcommit":4,"voice":2,"actionable":2,"send_unedited":false,"note":"Customer is angry about repeated failures; reply recites the delivery-estimate policy. Tone-deaf."}
+{"pair_id":"1501853-1501851","grounded":4,"on_intent":4,"no_overcommit":4,"voice":3,"actionable":4,"send_unedited":true,"note":"Slightly heavy for a light-hearted message, but safe."}
+{"pair_id":"1507241-1507238","grounded":4,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":4,"send_unedited":true,"note":"Good diagnostic, closely follows precedent."}
+{"pair_id":"1616332-1616330","grounded":4,"on_intent":2,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":false,"note":"The actual question - must I pay return postage for your error - is never answered."}
+{"pair_id":"1714259-1714257","grounded":4,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":3,"send_unedited":true,"note":"Reasonable diagnostic for a possible unauthorised-subscription issue."}
+{"pair_id":"1806515-1806514","grounded":4,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Fine handoff for a lost package."}
+{"pair_id":"184872-184869","grounded":4,"on_intent":2,"no_overcommit":5,"voice":3,"actionable":2,"send_unedited":false,"note":"Customer already described the fault precisely; asking for more detail reads as not having read it."}
+{"pair_id":"1869787-1869786","grounded":3,"on_intent":1,"no_overcommit":5,"voice":3,"actionable":1,"send_unedited":false,"note":"Not a support request at all - a business musing. Reply asks about the issue when there is none."}
+{"pair_id":"1997915-1997914","grounded":4,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Correct handoff for a missing edition code."}
+{"pair_id":"20482-20480","grounded":5,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":4,"send_unedited":true,"note":"Near-identical precedent applied correctly."}
+{"pair_id":"2119275-2119273","grounded":3,"on_intent":5,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Answers directly; the Belgium-specific confirmation slightly outruns the precedent but is plausible."}
+{"pair_id":"2152253-2152252","grounded":3,"on_intent":3,"no_overcommit":4,"voice":3,"actionable":3,"send_unedited":false,"note":"Three weeks unresolved and an order number already given; asking for your details ignores both. Weak precedent at 0.43."}
+{"pair_id":"2286021-2286020","grounded":5,"on_intent":5,"no_overcommit":5,"voice":5,"actionable":3,"send_unedited":true,"note":"Praise handled correctly from a near-identical precedent."}
+{"pair_id":"2289002-2289001","grounded":1,"on_intent":3,"no_overcommit":5,"voice":2,"actionable":2,"send_unedited":false,"note":"FABRICATION: addresses the customer as Mami, a name copied out of the precedent. Wrong person name in an outgoing reply."}
+{"pair_id":"2374468-2374467","grounded":4,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Handles an MRP pricing dispute in line with precedent."}
+{"pair_id":"2523373-2523371","grounded":3,"on_intent":2,"no_overcommit":4,"voice":2,"actionable":3,"send_unedited":false,"note":"A break-in with police involved, answered with sorry about this. Severely under-weights the situation."}
+{"pair_id":"2563976-2563975","grounded":5,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":4,"send_unedited":true,"note":"Precedent 0.86 and the brand genuine answer to this exact question."}
+{"pair_id":"2697167-2697165","grounded":3,"on_intent":2,"no_overcommit":2,"voice":3,"actionable":2,"send_unedited":false,"note":"Repeats the exact 24-hour promise the customer says already failed. Actively harmful."}
+{"pair_id":"2748308-2748307","grounded":3,"on_intent":2,"no_overcommit":4,"voice":4,"actionable":2,"send_unedited":false,"note":"Customer says the skill CANNOT be disabled; reply suggests disabling it."}
+{"pair_id":"2837016-2837014","grounded":4,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":4,"send_unedited":true,"note":"Good diagnostic question for an unexplained cancellation."}
+{"pair_id":"2899618-2899617","grounded":4,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":4,"send_unedited":true,"note":"Packaging feedback routed exactly as precedent does."}
+{"pair_id":"2976549-2976548","grounded":3,"on_intent":1,"no_overcommit":5,"voice":2,"actionable":2,"send_unedited":false,"note":"Asks WHO they can talk to and says DESPERATE; reply routes them to a feedback form."}
+{"pair_id":"423829-423828","grounded":4,"on_intent":3,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Standard handoff; matches precedent closely."}
+{"pair_id":"448309-448307","grounded":4,"on_intent":3,"no_overcommit":3,"voice":4,"actionable":4,"send_unedited":true,"note":"Promising to get this sorted mildly overcommits but is the brand own idiom."}
+{"pair_id":"465041-465040","grounded":4,"on_intent":3,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Handoff is fine though the offer-reuse question goes unanswered."}
+{"pair_id":"478591-478590","grounded":4,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":3,"send_unedited":true,"note":"Well matched to precedent for a contest-result query."}
+{"pair_id":"598059-598058","grounded":4,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":true,"note":"Appropriate for repeated lost packages."}
+{"pair_id":"606154-606153","grounded":3,"on_intent":3,"no_overcommit":5,"voice":3,"actionable":3,"send_unedited":false,"note":"This is PRAISE for the packaging; reply routes it to a feedback form as though it were a complaint."}
+{"pair_id":"727109-727105","grounded":2,"on_intent":4,"no_overcommit":4,"voice":4,"actionable":4,"send_unedited":false,"note":"States a specific 20:00 cutoff that appears nowhere in the precedent - an invented specific."}
+{"pair_id":"931379-931377","grounded":3,"on_intent":4,"no_overcommit":5,"voice":4,"actionable":4,"send_unedited":true,"note":"Generic help link, reasonable; precedent was unrelated."}

@@ -84,6 +84,8 @@ def main() -> int:
     ap.add_argument("--judge-n", type=int, default=100,
                     help="paired subsample size for cross-system judging")
     ap.add_argument("--skip-judge", action="store_true")
+    ap.add_argument("--judge-systems", nargs="*", default=None,
+                    help="restrict judging to these systems")
     ap.add_argument("--boot", type=int, default=M.DEFAULT_BOOTSTRAP)
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s",
@@ -142,7 +144,23 @@ def main() -> int:
         print(f"\njudging on a paired subsample of {len(paired_ids)} rows "
               f"with {config.JUDGE_MODEL}")
         st = batching.BatchStats()
-        for name in available:
+        # Judge in PRIORITY order, not SYSTEM_ORDER. Under a daily token cap the
+        # run can stop part-way, and stopping before the main system is scored
+        # wastes the whole budget on baselines - which is what happened once.
+        JUDGE_PRIORITY = ["pipeline", "pipeline_no_gates", "pipeline_no_retr",
+                          "retrieval_1nn", "simple_tfidf_cluster",
+                          "simple_tfidf_silver", "trivial"]
+        to_judge = [n for n in JUDGE_PRIORITY if n in available]
+        if args.judge_systems:
+            to_judge = [n for n in to_judge if n in set(args.judge_systems)]
+        for name in to_judge:
+            if (JUDGE_DIR / f"{name}.json").exists():
+                results[name]["judge"] = {
+                    k: v for k, v in
+                    json.loads((JUDGE_DIR / f"{name}.json").read_text("utf-8")).items()
+                    if k != "scores"}
+                print(f"  {name:<22} already judged, reusing")
+                continue
             preds = {p["pair_id"]: p for p in load_preds(name)}
             items, ids = [], []
             for pid in paired_ids:
@@ -234,7 +252,7 @@ def main() -> int:
             "accuracy": M.Interval(**{k: v for k, v in c["accuracy"].items()}).fmt(),
             "macro F1": f"{c['macro_f1']['point']:.3f}",
             "coverage": f"{d['coverage']['point']:.1%}",
-            "false auto-handle": f"{d['false_auto_handle']['point']:.1%}",
+            "false auto-handle": f"{d['false_auto_handle_rate']['point']:.1%}",
             "send unedited": (f"{j['send_unedited_rate']['point']:.1%}"
                               if j else "-"),
         })

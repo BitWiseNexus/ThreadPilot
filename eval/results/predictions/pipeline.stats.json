@@ -1,0 +1,33 @@
+{
+  "n": 200,
+  "seconds": 2.4,
+  "classify": {
+    "batches": 25,
+    "items": 200,
+    "invalid_batches": 12,
+    "fallback_items": 96,
+    "failed_items": 0,
+    "invalid_reasons": [
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3, 4, 5, 6, 7]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3, 4, 5]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3, 4]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3, 4]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3, 4, 5, 6]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1]",
+      "BatchInvalid: id mismatch: expected [1, 2, 3, 4, 5, 6, 7, 8], got [1, 2, 3, 4, 5]"
+    ]
+  },
+  "draft": {
+    "batches": 34,
+    "items": 200,
+    "invalid_batches": 0,
+    "fallback_items": 0,
+    "failed_items": 0,
+    "invalid_reasons": []
+  }
+}

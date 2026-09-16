@@ -1,0 +1,1021 @@
+{
+  "system": "pipeline_no_retr",
+  "n": 100,
+  "n_failed": 0,
+  "judge_model": "qwen/qwen3.8-27b",
+  "send_unedited_rate": {
+    "point": 0.52,
+    "lo": 0.42,
+    "hi": 0.6102,
+    "n": 100
+  },
+  "criteria_means": {
+    "grounded": 3.59,
+    "on_intent": 3.86,
+    "no_overcommit": 4.86,
+    "voice": 3.61,
+    "actionable": 3.57
+  },
+  "scores": {
+    "1046744-1046743": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 5,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.8,
+      "why": "Matches precedent tone for positive feedback; no specific claims made."
+    },
+    "1051383-1051381": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Standard escalation path; addresses lack of public info with clear next step."
+    },
+    "1057310-1057308": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 5,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 5.0,
+      "why": "Appropriately moves PII to DM, matching precedent security protocols."
+    },
+    "1099261-1099267": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 5,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 5.0,
+      "why": "Concise, empathetic, and directs to private channel for order-specific help."
+    },
+    "113798-113796": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Concise, addresses charge issue, requests necessary info without overpromising."
+    },
+    "1145964-1145963": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Directly addresses delay, requests order number for status check."
+    },
+    "1160620-1160619": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Acknowledges frustration, requests order number to investigate timing."
+    },
+    "1195821-1195819": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Apologizes for experience, requests details to investigate shipping/delivery."
+    },
+    "1228011-1228010": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Concise, addresses wrong address, clear next step."
+    },
+    "1245906-1245905": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate pivot to DM for order details."
+    },
+    "1272329-1272330": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Standard request for details to assist."
+    },
+    "1276274-1276272": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Directly addresses pre-order mix-up, clear next step."
+    },
+    "1284537-1284538": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Generic; precedent provides specific support link for balance issues."
+    },
+    "128794-128792": {
+      "grounded": 1,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Invents 'Promotions section' not found in precedent or customer msg."
+    },
+    "1342572-1342569": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Lacks specific link used in precedent; tone slightly too dry."
+    },
+    "1349094-1349093": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Concise, matches brand voice, addresses the compliment directly."
+    },
+    "1353489-1353487": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Invents 'account recovery page' not in precedent; ignores email/skip sign-in steps."
+    },
+    "1376060-1376059": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Asks for order details for a pre-purchase shipping question; ignores provided link."
+    },
+    "1385721-1385720": {
+      "grounded": 3,
+      "on_intent": 3,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Generic 'DM us' deviates from precedent's specific link/email escalation paths."
+    },
+    "141042-141040": {
+      "grounded": 3,
+      "on_intent": 3,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Misses specific refund/replacement link provided in precedent; vague next step."
+    },
+    "1441922-1441920": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Concise, addresses frustration, requests necessary info without overpromising."
+    },
+    "1449131-1449130": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Directly addresses missing order, requests details for investigation."
+    },
+    "1461541-1461540": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Acknowledges poor experience, invites specific details to assist."
+    },
+    "1472695-1472694": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Apologizes for delivery issues, requests account info for review."
+    },
+    "1501853-1501851": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Concise, addresses delay, requests necessary info without overpromising."
+    },
+    "1507241-1507238": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Appropriate response to shipping status inquiry, requests order number."
+    },
+    "1572978-1572979": {
+      "grounded": 2,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Invents specific 'Prime Video feedback page' not in precedent; tone mismatch."
+    },
+    "1616332-1616330": {
+      "grounded": 3,
+      "on_intent": 5,
+      "no_overcommit": 4,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Addresses wrong item, requests info to resolve, standard support procedure."
+    },
+    "1623886-1623885": {
+      "grounded": 2,
+      "on_intent": 4,
+      "no_overcommit": 2,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Promises refund processing not supported by precedent links."
+    },
+    "1627637-1627636": {
+      "grounded": 2,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Invented policy explanation not found in provided precedents."
+    },
+    "1714259-1714257": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 4,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.0,
+      "why": "Matches precedent style and requests necessary info safely."
+    },
+    "1777713-1777712": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 4,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.0,
+      "why": "Appropriate empathy and next step consistent with brand voice."
+    },
+    "1806515-1806514": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Concise, grounded, and directs to DM for investigation."
+    },
+    "184872-184869": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate response to app issue, requests details via DM."
+    },
+    "1869787-1869786": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Customer made a statement, not a complaint; draft assumes trouble."
+    },
+    "1997915-1997914": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Directly addresses missing code and requests order details."
+    },
+    "20482-20480": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Vague 'DM us' lacks the specific link or direct assistance shown in precedent."
+    },
+    "210395-210394": {
+      "grounded": 2,
+      "on_intent": 4,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Precedent directs to EA or specific URL; draft invents internal investigation process."
+    },
+    "2119275-2119273": {
+      "grounded": 2,
+      "on_intent": 3,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Vague answer ignores precedent's specific 'select titles' detail and link; 'DM us' is weak."
+    },
+    "21405-21404": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Precedent uses specific support links; 'DM us' is less actionable and slightly off-register."
+    },
+    "2142978-2142976": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Vague request for details ignores precedent pattern of providing direct support links."
+    },
+    "2147976-2147975": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Lacks the specific feedback link provided in precedents for packaging issues."
+    },
+    "2152253-2152252": {
+      "grounded": 2,
+      "on_intent": 4,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Asks for order number already provided; 'DM' is not standard support channel."
+    },
+    "21861-21859": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Generic deflection to Help Center instead of specific troubleshooting or contact link."
+    },
+    "226109-226108": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Generic response ignores specific complaint about 'golden hour' training."
+    },
+    "2286021-2286020": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 5,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 5.0,
+      "why": "Perfectly matches precedent tone for positive feedback."
+    },
+    "2289002-2289001": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Concise, addresses delay, and provides clear next step."
+    },
+    "2318611-2318609": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate apology and request for details to investigate."
+    },
+    "2318872-2318870": {
+      "grounded": 5,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Concise, grounded, and provides a clear next step for investigation."
+    },
+    "235728-235729": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Appropriate response to pricing complaint, requests necessary info to proceed."
+    },
+    "2374468-2374467": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Standard, safe response to pricing dispute, avoids overcommitting on MRP specifics."
+    },
+    "2459125-2459124": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Polite acknowledgment of positive feedback, matches brand voice for thanks."
+    },
+    "2461305-2461303": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Generic advice ignores precedent's need to clarify seller type."
+    },
+    "2467611-2467610": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Misses specific support link provided in all precedents."
+    },
+    "2508095-2508093": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Lacks specific troubleshooting link or phone option from precedent."
+    },
+    "2523373-2523371": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Vague 'contact service' lacks specific link or investigation offer."
+    },
+    "2541088-2541087": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 4.2,
+      "why": "Lacks specific support link used in precedents."
+    },
+    "2550658-2550657": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Vague 'try again' is less helpful than specific browser advice."
+    },
+    "2563976-2563975": {
+      "grounded": 2,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Contradicts precedent which provides email/contact links."
+    },
+    "2571337-2571336": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Ignores fraud claim, gives generic security advice instead."
+    },
+    "2678073-2678071": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Accurate, concise, and directly answers the eligibility question."
+    },
+    "2697167-2697165": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Appropriate escalation step for account access issues."
+    },
+    "2710423-2710421": {
+      "grounded": 2,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Invents specific 24-48h timeframe not in precedent."
+    },
+    "2734334-2734332": {
+      "grounded": 4,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.6,
+      "why": "Matches precedent style of requesting order details."
+    },
+    "2748308-2748307": {
+      "grounded": 2,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Invents specific UI steps not in precedent; lacks link."
+    },
+    "276485-276486": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Ignores precedent request for details; generic advice only."
+    },
+    "2800415-2800414": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate apology and clear next step for complaint."
+    },
+    "2810301-2810299": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Correctly directs to self-service or CS for cancellation."
+    },
+    "2821115-2821116": {
+      "grounded": 2,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Ignores precedent's direct support link; generic advice is unhelpful."
+    },
+    "2837016-2837014": {
+      "grounded": 3,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Misses specific cancellation inquiry; generic 'Help Center' is less direct than precedent."
+    },
+    "2849114-2849113": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Invents 'carrier preferences' feature not supported by precedent or customer context."
+    },
+    "2850731-2850729": {
+      "grounded": 1,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.4,
+      "why": "Invents specific eligibility rule; precedent shows no such policy exists."
+    },
+    "2853772-2853771": {
+      "grounded": 2,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Ignores specific shipping math question; generic deflection."
+    },
+    "2872468-2872467": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate troubleshooting step for login issues."
+    },
+    "2884240-2884238": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Standard request for details to investigate charge."
+    },
+    "2887955-2887954": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Standard escalation request for delivery failure."
+    },
+    "2899618-2899617": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Ignores feedback intent; precedent directs to feedback link, not DM."
+    },
+    "2915758-2915757": {
+      "grounded": 3,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Precedent uses direct link; DM request is less standard/grounded."
+    },
+    "2928447-2928446": {
+      "grounded": 3,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Precedent asks for status/tracking; DM request is less specific."
+    },
+    "2945430-2945428": {
+      "grounded": 3,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Precedent uses email/link; DM request is not standard for this brand."
+    },
+    "2976549-2976548": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Ignores request for contact; invents Prime eligibility claim."
+    },
+    "2978881-2978880": {
+      "grounded": 3,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Lacks specific feedback link provided in all precedents."
+    },
+    "298462-298463": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriately asks for details to assist with vague complaint."
+    },
+    "302246-302245": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Clear next step to investigate missing package via DM."
+    },
+    "389619-389618": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Ignores provided order number; precedent uses links, not DM requests."
+    },
+    "423829-423828": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Ignores provided order number; precedent uses links, not DM requests."
+    },
+    "448309-448307": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Ignores provided order number; precedent uses links, not DM requests."
+    },
+    "465041-465040": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Ignores provided order number; precedent uses links, not DM requests."
+    },
+    "470187-470185": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.0,
+      "why": "Standard support response; asks for details to investigate specific claim."
+    },
+    "478591-478590": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Ignores known precedent that results are published on website."
+    },
+    "526202-526201": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Lacks the 'forwarded to team' action shown in precedent."
+    },
+    "569159-569158": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Matches precedent style of asking for order details to help."
+    },
+    "598059-598058": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.8,
+      "why": "Concise, addresses complaint, requests necessary details for investigation."
+    },
+    "606154-606153": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Appropriate positive acknowledgment; no action needed for praise."
+    },
+    "727109-727105": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.8,
+      "why": "Standard support response for delivery issues, requests details."
+    },
+    "784066-784064": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 4.8,
+      "why": "Empathetic, requests details to resolve vague complaint."
+    },
+    "818866-818865": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Concise, addresses issue, requests necessary info without overpromising."
+    },
+    "861817-861820": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate escalation request for missing item, matches brand tone."
+    },
+    "931379-931377": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Directly addresses technical issue by requesting specific device details."
+    },
+    "99986-99984": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Standard troubleshooting step for login issues, concise and helpful."
+    }
+  }
+}

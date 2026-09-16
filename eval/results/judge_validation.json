@@ -1,0 +1,143 @@
+{
+  "generated": "2026-09-17 00:43:13",
+  "system": "pipeline",
+  "n": 40,
+  "judge_model": "qwen/qwen3.8-27b",
+  "rater": "AI assistant that built this repo, scoring blind against the written rubric. NOT an independent human annotator - weaker evidence than the phrase 'human validation' usually implies.",
+  "send_unedited": {
+    "raw_agreement": 0.7,
+    "cohen_kappa": 0.3333,
+    "human_rate": 0.6,
+    "judge_rate": 0.75
+  },
+  "ordinals": {
+    "grounded": {
+      "exact_agreement": 0.15,
+      "within_one": 0.75,
+      "quadratic_weighted_kappa": 0.3043,
+      "human_mean": 3.6,
+      "judge_mean": 4.5,
+      "judge_bias": 0.9
+    },
+    "on_intent": {
+      "exact_agreement": 0.275,
+      "within_one": 0.675,
+      "quadratic_weighted_kappa": 0.3968,
+      "human_mean": 3.225,
+      "judge_mean": 4.3,
+      "judge_bias": 1.075
+    },
+    "no_overcommit": {
+      "exact_agreement": 0.575,
+      "within_one": 0.975,
+      "quadratic_weighted_kappa": 0.4565,
+      "human_mean": 4.4,
+      "judge_mean": 4.85,
+      "judge_bias": 0.45
+    },
+    "voice": {
+      "exact_agreement": 0.225,
+      "within_one": 0.775,
+      "quadratic_weighted_kappa": 0.1127,
+      "human_mean": 3.625,
+      "judge_mean": 4.6,
+      "judge_bias": 0.975
+    },
+    "actionable": {
+      "exact_agreement": 0.225,
+      "within_one": 0.725,
+      "quadratic_weighted_kappa": 0.3861,
+      "human_mean": 3.3,
+      "judge_mean": 4.275,
+      "judge_bias": 0.975
+    }
+  },
+  "verdict": "WEAK - judge-derived quality numbers should not carry the report",
+  "n_disagreements": 12,
+  "disagreements": [
+    {
+      "pair_id": "1051383-1051381",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "Asks how winners are selected; reply says escalated internally and answers nothing.",
+      "judge_why": "Directly mirrors precedent response for similar inquiry about quiz outcomes."
+    },
+    {
+      "pair_id": "1245906-1245905",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "Apologises for a hassle none was described; never answers whether this channel is right.",
+      "judge_why": "Directly addresses contact verification with standard support link."
+    },
+    {
+      "pair_id": "128794-128792",
+      "human_send": true,
+      "judge_send": false,
+      "human_note": "Matches the brand standard not-yet-announced pattern.",
+      "judge_why": "Invents specific status 'not announced' not in precedent."
+    },
+    {
+      "pair_id": "1616332-1616330",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "The actual question - must I pay return postage for your error - is never answered.",
+      "judge_why": "Correctly redirects to private channel for account-specific issues."
+    },
+    {
+      "pair_id": "184872-184869",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "Customer already described the fault precisely; asking for more detail reads as not having read it.",
+      "judge_why": "Appropriate clarification request matching brand voice for app issues."
+    },
+    {
+      "pair_id": "2119275-2119273",
+      "human_send": true,
+      "judge_send": false,
+      "human_note": "Answers directly; the Belgium-specific confirmation slightly outruns the precedent but is plausible.",
+      "judge_why": "Lacks link; assumes availability without verification."
+    },
+    {
+      "pair_id": "2152253-2152252",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "Three weeks unresolved and an order number already given; asking for your details ignores both. Weak precedent at 0.43.",
+      "judge_why": "Standard escalation path for missing items matches precedent."
+    },
+    {
+      "pair_id": "2523373-2523371",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "A break-in with police involved, answered with sorry about this. Severely under-weights the situation.",
+      "judge_why": "Matches precedent for security/delivery issues; appropriate next step."
+    },
+    {
+      "pair_id": "2976549-2976548",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "Asks WHO they can talk to and says DESPERATE; reply routes them to a feedback form.",
+      "judge_why": "Matches precedent for feedback links; addresses shipping complaint intent."
+    },
+    {
+      "pair_id": "606154-606153",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "This is PRAISE for the packaging; reply routes it to a feedback form as though it were a complaint.",
+      "judge_why": "Appropriately handles positive feedback with standard link."
+    },
+    {
+      "pair_id": "727109-727105",
+      "human_send": false,
+      "judge_send": true,
+      "human_note": "States a specific 20:00 cutoff that appears nowhere in the precedent - an invented specific.",
+      "judge_why": "Mirrors precedent exactly, including specific time constraint."
+    },
+    {
+      "pair_id": "931379-931377",
+      "human_send": true,
+      "judge_send": false,
+      "human_note": "Generic help link, reasonable; precedent was unrelated.",
+      "judge_why": "Generic link may not address specific 'sign-in button' UI issue."
+    }
+  ]
+}

@@ -1,0 +1,2516 @@
+{
+  "generated": "2026-09-17 00:48:59",
+  "brand": "AmazonHelp",
+  "seed": 20260909,
+  "n_golden": 200,
+  "inter_labeller_ceiling": 0.75,
+  "gen_model": "openai/gpt-oss-120b",
+  "judge_model": "qwen/qwen3.8-27b",
+  "judge_paired_n": 100,
+  "bootstrap_resamples": 400,
+  "systems": {
+    "trivial": {
+      "n": 200,
+      "classification": {
+        "accuracy": {
+          "point": 0.11,
+          "lo": 0.0699,
+          "hi": 0.15,
+          "n": 200
+        },
+        "macro_f1": {
+          "point": 0.018,
+          "lo": 0.0119,
+          "hi": 0.0237,
+          "n": 200
+        },
+        "per_class": {
+          "account_security": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15,
+            "reliable": false
+          },
+          "delivery_delay": {
+            "precision": 0.11,
+            "recall": 1.0,
+            "f1": 0.1982,
+            "support": 22,
+            "reliable": true
+          },
+          "delivery_failure": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 20,
+            "reliable": true
+          },
+          "item_condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 11,
+            "reliable": false
+          },
+          "order_investigation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 21,
+            "reliable": true
+          },
+          "other": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 34,
+            "reliable": true
+          },
+          "prime_membership": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 11,
+            "reliable": false
+          },
+          "product_digital": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15,
+            "reliable": false
+          },
+          "refund_billing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 19,
+            "reliable": false
+          },
+          "service_complaint": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 20,
+            "reliable": true
+          },
+          "unresolved_followup": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 12,
+            "reliable": false
+          }
+        },
+        "confusion": {
+          "account_security": {
+            "account_security": 0,
+            "delivery_delay": 15,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "delivery_delay": {
+            "account_security": 0,
+            "delivery_delay": 22,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "delivery_failure": {
+            "account_security": 0,
+            "delivery_delay": 20,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "item_condition": {
+            "account_security": 0,
+            "delivery_delay": 11,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "order_investigation": {
+            "account_security": 0,
+            "delivery_delay": 21,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "other": {
+            "account_security": 0,
+            "delivery_delay": 34,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "prime_membership": {
+            "account_security": 0,
+            "delivery_delay": 11,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "product_digital": {
+            "account_security": 0,
+            "delivery_delay": 15,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "refund_billing": {
+            "account_security": 0,
+            "delivery_delay": 19,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "service_complaint": {
+            "account_security": 0,
+            "delivery_delay": 20,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "unresolved_followup": {
+            "account_security": 0,
+            "delivery_delay": 12,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          }
+        },
+        "labels": [
+          "account_security",
+          "delivery_delay",
+          "delivery_failure",
+          "item_condition",
+          "order_investigation",
+          "other",
+          "prime_membership",
+          "product_digital",
+          "refund_billing",
+          "service_complaint",
+          "unresolved_followup"
+        ],
+        "inter_labeller_ceiling": 0.75,
+        "ceiling_relative_accuracy": 0.1467
+      },
+      "top_confusions": [
+        {
+          "true": "other",
+          "predicted": "delivery_delay",
+          "n": 34
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "delivery_delay",
+          "n": 21
+        },
+        {
+          "true": "delivery_failure",
+          "predicted": "delivery_delay",
+          "n": 20
+        },
+        {
+          "true": "service_complaint",
+          "predicted": "delivery_delay",
+          "n": 20
+        },
+        {
+          "true": "refund_billing",
+          "predicted": "delivery_delay",
+          "n": 19
+        },
+        {
+          "true": "account_security",
+          "predicted": "delivery_delay",
+          "n": 15
+        },
+        {
+          "true": "product_digital",
+          "predicted": "delivery_delay",
+          "n": 15
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "delivery_delay",
+          "n": 12
+        }
+      ],
+      "decision": {
+        "coverage": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 200
+        },
+        "escalate_recall": {
+          "point": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 110
+        },
+        "escalate_precision": {
+          "point": 0.55,
+          "lo": 0.4799,
+          "hi": 0.6101,
+          "n": 200
+        },
+        "false_auto_handle_rate": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 0
+        },
+        "false_escalate_rate": {
+          "point": 0.45,
+          "lo": 0.3899,
+          "hi": 0.5201,
+          "n": 200
+        },
+        "n": 200,
+        "note": "auto-handled nothing, so false-auto-handle is trivially 0.0 - the exact reason a single safety number is gameable (D9/D49)"
+      }
+    },
+    "simple_tfidf_silver": {
+      "n": 200,
+      "classification": {
+        "accuracy": {
+          "point": 0.3,
+          "lo": 0.2399,
+          "hi": 0.3601,
+          "n": 200
+        },
+        "macro_f1": {
+          "point": 0.2625,
+          "lo": 0.2067,
+          "hi": 0.3133,
+          "n": 200
+        },
+        "per_class": {
+          "account_security": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15,
+            "reliable": false
+          },
+          "delivery_delay": {
+            "precision": 0.2414,
+            "recall": 0.3182,
+            "f1": 0.2745,
+            "support": 22,
+            "reliable": true
+          },
+          "delivery_failure": {
+            "precision": 0.2941,
+            "recall": 0.75,
+            "f1": 0.4225,
+            "support": 20,
+            "reliable": true
+          },
+          "item_condition": {
+            "precision": 0.2857,
+            "recall": 0.3636,
+            "f1": 0.32,
+            "support": 11,
+            "reliable": false
+          },
+          "order_investigation": {
+            "precision": 0.4615,
+            "recall": 0.2857,
+            "f1": 0.3529,
+            "support": 21,
+            "reliable": true
+          },
+          "other": {
+            "precision": 0.4545,
+            "recall": 0.1471,
+            "f1": 0.2222,
+            "support": 34,
+            "reliable": true
+          },
+          "prime_membership": {
+            "precision": 0.35,
+            "recall": 0.6364,
+            "f1": 0.4516,
+            "support": 11,
+            "reliable": false
+          },
+          "product_digital": {
+            "precision": 0.3333,
+            "recall": 0.3333,
+            "f1": 0.3333,
+            "support": 15,
+            "reliable": false
+          },
+          "refund_billing": {
+            "precision": 0.2273,
+            "recall": 0.2632,
+            "f1": 0.2439,
+            "support": 19,
+            "reliable": false
+          },
+          "service_complaint": {
+            "precision": 0.24,
+            "recall": 0.3,
+            "f1": 0.2667,
+            "support": 20,
+            "reliable": true
+          },
+          "unresolved_followup": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 12,
+            "reliable": false
+          }
+        },
+        "confusion": {
+          "account_security": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 8,
+            "service_complaint": 2,
+            "unresolved_followup": 0
+          },
+          "delivery_delay": {
+            "account_security": 0,
+            "delivery_delay": 7,
+            "delivery_failure": 5,
+            "item_condition": 1,
+            "order_investigation": 1,
+            "other": 1,
+            "prime_membership": 6,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "delivery_failure": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 15,
+            "item_condition": 1,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 2,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "item_condition": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 5,
+            "item_condition": 4,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "order_investigation": {
+            "account_security": 0,
+            "delivery_delay": 3,
+            "delivery_failure": 7,
+            "item_condition": 4,
+            "order_investigation": 6,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "other": {
+            "account_security": 0,
+            "delivery_delay": 6,
+            "delivery_failure": 7,
+            "item_condition": 3,
+            "order_investigation": 1,
+            "other": 5,
+            "prime_membership": 1,
+            "product_digital": 4,
+            "refund_billing": 2,
+            "service_complaint": 5,
+            "unresolved_followup": 0
+          },
+          "prime_membership": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 7,
+            "product_digital": 1,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "product_digital": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 3,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 1,
+            "product_digital": 5,
+            "refund_billing": 2,
+            "service_complaint": 3,
+            "unresolved_followup": 0
+          },
+          "refund_billing": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 2,
+            "item_condition": 0,
+            "order_investigation": 2,
+            "other": 1,
+            "prime_membership": 3,
+            "product_digital": 4,
+            "refund_billing": 5,
+            "service_complaint": 2,
+            "unresolved_followup": 0
+          },
+          "service_complaint": {
+            "account_security": 0,
+            "delivery_delay": 5,
+            "delivery_failure": 3,
+            "item_condition": 1,
+            "order_investigation": 1,
+            "other": 3,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 1,
+            "service_complaint": 6,
+            "unresolved_followup": 0
+          },
+          "unresolved_followup": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 2,
+            "item_condition": 0,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 4,
+            "service_complaint": 3,
+            "unresolved_followup": 0
+          }
+        },
+        "labels": [
+          "account_security",
+          "delivery_delay",
+          "delivery_failure",
+          "item_condition",
+          "order_investigation",
+          "other",
+          "prime_membership",
+          "product_digital",
+          "refund_billing",
+          "service_complaint",
+          "unresolved_followup"
+        ],
+        "inter_labeller_ceiling": 0.75,
+        "ceiling_relative_accuracy": 0.4
+      },
+      "top_confusions": [
+        {
+          "true": "account_security",
+          "predicted": "refund_billing",
+          "n": 8
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "delivery_failure",
+          "n": 7
+        },
+        {
+          "true": "other",
+          "predicted": "delivery_failure",
+          "n": 7
+        },
+        {
+          "true": "delivery_delay",
+          "predicted": "prime_membership",
+          "n": 6
+        },
+        {
+          "true": "other",
+          "predicted": "delivery_delay",
+          "n": 6
+        },
+        {
+          "true": "delivery_delay",
+          "predicted": "delivery_failure",
+          "n": 5
+        },
+        {
+          "true": "item_condition",
+          "predicted": "delivery_failure",
+          "n": 5
+        },
+        {
+          "true": "other",
+          "predicted": "service_complaint",
+          "n": 5
+        }
+      ],
+      "decision": {
+        "coverage": {
+          "point": 0.585,
+          "lo": 0.5198,
+          "hi": 0.645,
+          "n": 200
+        },
+        "escalate_recall": {
+          "point": 0.4364,
+          "lo": 0.3273,
+          "hi": 0.5275,
+          "n": 110
+        },
+        "escalate_precision": {
+          "point": 0.5783,
+          "lo": 0.4819,
+          "hi": 0.6867,
+          "n": 83
+        },
+        "false_auto_handle_rate": {
+          "point": 0.5299,
+          "lo": 0.4359,
+          "hi": 0.6154,
+          "n": 117
+        },
+        "false_escalate_rate": {
+          "point": 0.4217,
+          "lo": 0.3133,
+          "hi": 0.5181,
+          "n": 83
+        },
+        "n": 200,
+        "note": ""
+      }
+    },
+    "simple_tfidf_cluster": {
+      "n": 200,
+      "classification": {
+        "accuracy": {
+          "point": 0.36,
+          "lo": 0.295,
+          "hi": 0.43,
+          "n": 200
+        },
+        "macro_f1": {
+          "point": 0.332,
+          "lo": 0.276,
+          "hi": 0.3858,
+          "n": 200
+        },
+        "per_class": {
+          "account_security": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15,
+            "reliable": false
+          },
+          "delivery_delay": {
+            "precision": 0.45,
+            "recall": 0.4091,
+            "f1": 0.4286,
+            "support": 22,
+            "reliable": true
+          },
+          "delivery_failure": {
+            "precision": 0.5294,
+            "recall": 0.45,
+            "f1": 0.4865,
+            "support": 20,
+            "reliable": true
+          },
+          "item_condition": {
+            "precision": 0.36,
+            "recall": 0.8182,
+            "f1": 0.5,
+            "support": 11,
+            "reliable": false
+          },
+          "order_investigation": {
+            "precision": 0.4828,
+            "recall": 0.6667,
+            "f1": 0.56,
+            "support": 21,
+            "reliable": true
+          },
+          "other": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 34,
+            "reliable": true
+          },
+          "prime_membership": {
+            "precision": 0.3333,
+            "recall": 0.8182,
+            "f1": 0.4737,
+            "support": 11,
+            "reliable": false
+          },
+          "product_digital": {
+            "precision": 0.4211,
+            "recall": 0.5333,
+            "f1": 0.4706,
+            "support": 15,
+            "reliable": false
+          },
+          "refund_billing": {
+            "precision": 0.4091,
+            "recall": 0.4737,
+            "f1": 0.439,
+            "support": 19,
+            "reliable": false
+          },
+          "service_complaint": {
+            "precision": 0.3571,
+            "recall": 0.25,
+            "f1": 0.2941,
+            "support": 20,
+            "reliable": true
+          },
+          "unresolved_followup": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 12,
+            "reliable": false
+          }
+        },
+        "confusion": {
+          "account_security": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 3,
+            "service_complaint": 0,
+            "unresolved_followup": 10
+          },
+          "delivery_delay": {
+            "account_security": 0,
+            "delivery_delay": 9,
+            "delivery_failure": 3,
+            "item_condition": 1,
+            "order_investigation": 2,
+            "other": 0,
+            "prime_membership": 5,
+            "product_digital": 1,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "delivery_failure": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 9,
+            "item_condition": 4,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 4,
+            "product_digital": 1,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "item_condition": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 2,
+            "item_condition": 9,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "order_investigation": {
+            "account_security": 0,
+            "delivery_delay": 3,
+            "delivery_failure": 0,
+            "item_condition": 2,
+            "order_investigation": 14,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "other": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 0,
+            "item_condition": 8,
+            "order_investigation": 3,
+            "other": 0,
+            "prime_membership": 1,
+            "product_digital": 3,
+            "refund_billing": 5,
+            "service_complaint": 5,
+            "unresolved_followup": 7
+          },
+          "prime_membership": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 9,
+            "product_digital": 1,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "product_digital": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 2,
+            "product_digital": 8,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 4
+          },
+          "refund_billing": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 2,
+            "other": 0,
+            "prime_membership": 4,
+            "product_digital": 0,
+            "refund_billing": 9,
+            "service_complaint": 1,
+            "unresolved_followup": 3
+          },
+          "service_complaint": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 2,
+            "item_condition": 1,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 1,
+            "product_digital": 2,
+            "refund_billing": 3,
+            "service_complaint": 5,
+            "unresolved_followup": 3
+          },
+          "unresolved_followup": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 5,
+            "other": 0,
+            "prime_membership": 1,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 2,
+            "unresolved_followup": 0
+          }
+        },
+        "labels": [
+          "account_security",
+          "delivery_delay",
+          "delivery_failure",
+          "item_condition",
+          "order_investigation",
+          "other",
+          "prime_membership",
+          "product_digital",
+          "refund_billing",
+          "service_complaint",
+          "unresolved_followup"
+        ],
+        "inter_labeller_ceiling": 0.75,
+        "ceiling_relative_accuracy": 0.48
+      },
+      "top_confusions": [
+        {
+          "true": "account_security",
+          "predicted": "unresolved_followup",
+          "n": 10
+        },
+        {
+          "true": "other",
+          "predicted": "item_condition",
+          "n": 8
+        },
+        {
+          "true": "other",
+          "predicted": "unresolved_followup",
+          "n": 7
+        },
+        {
+          "true": "delivery_delay",
+          "predicted": "prime_membership",
+          "n": 5
+        },
+        {
+          "true": "other",
+          "predicted": "refund_billing",
+          "n": 5
+        },
+        {
+          "true": "other",
+          "predicted": "service_complaint",
+          "n": 5
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "order_investigation",
+          "n": 5
+        },
+        {
+          "true": "delivery_failure",
+          "predicted": "item_condition",
+          "n": 4
+        }
+      ],
+      "decision": {
+        "coverage": {
+          "point": 0.82,
+          "lo": 0.76,
+          "hi": 0.87,
+          "n": 200
+        },
+        "escalate_recall": {
+          "point": 0.1909,
+          "lo": 0.1182,
+          "hi": 0.2727,
+          "n": 110
+        },
+        "escalate_precision": {
+          "point": 0.5833,
+          "lo": 0.4167,
+          "hi": 0.75,
+          "n": 36
+        },
+        "false_auto_handle_rate": {
+          "point": 0.5427,
+          "lo": 0.4634,
+          "hi": 0.628,
+          "n": 164
+        },
+        "false_escalate_rate": {
+          "point": 0.4167,
+          "lo": 0.25,
+          "hi": 0.5833,
+          "n": 36
+        },
+        "n": 200,
+        "note": ""
+      }
+    },
+    "retrieval_1nn": {
+      "n": 200,
+      "classification": {
+        "accuracy": {
+          "point": 0.36,
+          "lo": 0.295,
+          "hi": 0.43,
+          "n": 200
+        },
+        "macro_f1": {
+          "point": 0.332,
+          "lo": 0.276,
+          "hi": 0.3858,
+          "n": 200
+        },
+        "per_class": {
+          "account_security": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15,
+            "reliable": false
+          },
+          "delivery_delay": {
+            "precision": 0.45,
+            "recall": 0.4091,
+            "f1": 0.4286,
+            "support": 22,
+            "reliable": true
+          },
+          "delivery_failure": {
+            "precision": 0.5294,
+            "recall": 0.45,
+            "f1": 0.4865,
+            "support": 20,
+            "reliable": true
+          },
+          "item_condition": {
+            "precision": 0.36,
+            "recall": 0.8182,
+            "f1": 0.5,
+            "support": 11,
+            "reliable": false
+          },
+          "order_investigation": {
+            "precision": 0.4828,
+            "recall": 0.6667,
+            "f1": 0.56,
+            "support": 21,
+            "reliable": true
+          },
+          "other": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 34,
+            "reliable": true
+          },
+          "prime_membership": {
+            "precision": 0.3333,
+            "recall": 0.8182,
+            "f1": 0.4737,
+            "support": 11,
+            "reliable": false
+          },
+          "product_digital": {
+            "precision": 0.4211,
+            "recall": 0.5333,
+            "f1": 0.4706,
+            "support": 15,
+            "reliable": false
+          },
+          "refund_billing": {
+            "precision": 0.4091,
+            "recall": 0.4737,
+            "f1": 0.439,
+            "support": 19,
+            "reliable": false
+          },
+          "service_complaint": {
+            "precision": 0.3571,
+            "recall": 0.25,
+            "f1": 0.2941,
+            "support": 20,
+            "reliable": true
+          },
+          "unresolved_followup": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 12,
+            "reliable": false
+          }
+        },
+        "confusion": {
+          "account_security": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 3,
+            "service_complaint": 0,
+            "unresolved_followup": 10
+          },
+          "delivery_delay": {
+            "account_security": 0,
+            "delivery_delay": 9,
+            "delivery_failure": 3,
+            "item_condition": 1,
+            "order_investigation": 2,
+            "other": 0,
+            "prime_membership": 5,
+            "product_digital": 1,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "delivery_failure": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 9,
+            "item_condition": 4,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 4,
+            "product_digital": 1,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "item_condition": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 2,
+            "item_condition": 9,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "order_investigation": {
+            "account_security": 0,
+            "delivery_delay": 3,
+            "delivery_failure": 0,
+            "item_condition": 2,
+            "order_investigation": 14,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "other": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 0,
+            "item_condition": 8,
+            "order_investigation": 3,
+            "other": 0,
+            "prime_membership": 1,
+            "product_digital": 3,
+            "refund_billing": 5,
+            "service_complaint": 5,
+            "unresolved_followup": 7
+          },
+          "prime_membership": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 9,
+            "product_digital": 1,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "product_digital": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 2,
+            "product_digital": 8,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 4
+          },
+          "refund_billing": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 2,
+            "other": 0,
+            "prime_membership": 4,
+            "product_digital": 0,
+            "refund_billing": 9,
+            "service_complaint": 1,
+            "unresolved_followup": 3
+          },
+          "service_complaint": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 2,
+            "item_condition": 1,
+            "order_investigation": 1,
+            "other": 0,
+            "prime_membership": 1,
+            "product_digital": 2,
+            "refund_billing": 3,
+            "service_complaint": 5,
+            "unresolved_followup": 3
+          },
+          "unresolved_followup": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 5,
+            "other": 0,
+            "prime_membership": 1,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 2,
+            "unresolved_followup": 0
+          }
+        },
+        "labels": [
+          "account_security",
+          "delivery_delay",
+          "delivery_failure",
+          "item_condition",
+          "order_investigation",
+          "other",
+          "prime_membership",
+          "product_digital",
+          "refund_billing",
+          "service_complaint",
+          "unresolved_followup"
+        ],
+        "inter_labeller_ceiling": 0.75,
+        "ceiling_relative_accuracy": 0.48
+      },
+      "top_confusions": [
+        {
+          "true": "account_security",
+          "predicted": "unresolved_followup",
+          "n": 10
+        },
+        {
+          "true": "other",
+          "predicted": "item_condition",
+          "n": 8
+        },
+        {
+          "true": "other",
+          "predicted": "unresolved_followup",
+          "n": 7
+        },
+        {
+          "true": "delivery_delay",
+          "predicted": "prime_membership",
+          "n": 5
+        },
+        {
+          "true": "other",
+          "predicted": "refund_billing",
+          "n": 5
+        },
+        {
+          "true": "other",
+          "predicted": "service_complaint",
+          "n": 5
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "order_investigation",
+          "n": 5
+        },
+        {
+          "true": "delivery_failure",
+          "predicted": "item_condition",
+          "n": 4
+        }
+      ],
+      "decision": {
+        "coverage": {
+          "point": 0.785,
+          "lo": 0.7249,
+          "hi": 0.84,
+          "n": 200
+        },
+        "escalate_recall": {
+          "point": 0.2,
+          "lo": 0.1273,
+          "hi": 0.2818,
+          "n": 110
+        },
+        "escalate_precision": {
+          "point": 0.5116,
+          "lo": 0.3721,
+          "hi": 0.6517,
+          "n": 43
+        },
+        "false_auto_handle_rate": {
+          "point": 0.5605,
+          "lo": 0.4841,
+          "hi": 0.6307,
+          "n": 157
+        },
+        "false_escalate_rate": {
+          "point": 0.4884,
+          "lo": 0.3483,
+          "hi": 0.6279,
+          "n": 43
+        },
+        "n": 200,
+        "note": ""
+      }
+    },
+    "pipeline_no_retr": {
+      "n": 200,
+      "classification": {
+        "accuracy": {
+          "point": 0.805,
+          "lo": 0.75,
+          "hi": 0.865,
+          "n": 200
+        },
+        "macro_f1": {
+          "point": 0.7902,
+          "lo": 0.7185,
+          "hi": 0.852,
+          "n": 200
+        },
+        "per_class": {
+          "account_security": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15,
+            "reliable": false
+          },
+          "delivery_delay": {
+            "precision": 0.5882,
+            "recall": 0.9091,
+            "f1": 0.7143,
+            "support": 22,
+            "reliable": true
+          },
+          "delivery_failure": {
+            "precision": 0.7,
+            "recall": 0.7,
+            "f1": 0.7,
+            "support": 20,
+            "reliable": true
+          },
+          "item_condition": {
+            "precision": 0.8333,
+            "recall": 0.9091,
+            "f1": 0.8696,
+            "support": 11,
+            "reliable": false
+          },
+          "order_investigation": {
+            "precision": 1.0,
+            "recall": 0.619,
+            "f1": 0.7647,
+            "support": 21,
+            "reliable": true
+          },
+          "other": {
+            "precision": 0.7907,
+            "recall": 1.0,
+            "f1": 0.8831,
+            "support": 34,
+            "reliable": true
+          },
+          "prime_membership": {
+            "precision": 0.8571,
+            "recall": 0.5455,
+            "f1": 0.6667,
+            "support": 11,
+            "reliable": false
+          },
+          "product_digital": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15,
+            "reliable": false
+          },
+          "refund_billing": {
+            "precision": 0.8947,
+            "recall": 0.8947,
+            "f1": 0.8947,
+            "support": 19,
+            "reliable": false
+          },
+          "service_complaint": {
+            "precision": 0.8824,
+            "recall": 0.75,
+            "f1": 0.8108,
+            "support": 20,
+            "reliable": true
+          },
+          "unresolved_followup": {
+            "precision": 1.0,
+            "recall": 0.4167,
+            "f1": 0.5882,
+            "support": 12,
+            "reliable": false
+          }
+        },
+        "confusion": {
+          "account_security": {
+            "account_security": 14,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "delivery_delay": {
+            "account_security": 0,
+            "delivery_delay": 20,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 1,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "delivery_failure": {
+            "account_security": 0,
+            "delivery_delay": 4,
+            "delivery_failure": 14,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "item_condition": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 10,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "order_investigation": {
+            "account_security": 0,
+            "delivery_delay": 3,
+            "delivery_failure": 0,
+            "item_condition": 2,
+            "order_investigation": 13,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "other": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 34,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "prime_membership": {
+            "account_security": 0,
+            "delivery_delay": 4,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 6,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "product_digital": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 13,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "refund_billing": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 2,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 17,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "service_complaint": {
+            "account_security": 1,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 3,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 15,
+            "unresolved_followup": 0
+          },
+          "unresolved_followup": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 3,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 5
+          }
+        },
+        "labels": [
+          "account_security",
+          "delivery_delay",
+          "delivery_failure",
+          "item_condition",
+          "order_investigation",
+          "other",
+          "prime_membership",
+          "product_digital",
+          "refund_billing",
+          "service_complaint",
+          "unresolved_followup"
+        ],
+        "inter_labeller_ceiling": 0.75,
+        "ceiling_relative_accuracy": 1.0733
+      },
+      "top_confusions": [
+        {
+          "true": "delivery_failure",
+          "predicted": "delivery_delay",
+          "n": 4
+        },
+        {
+          "true": "prime_membership",
+          "predicted": "delivery_delay",
+          "n": 4
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "delivery_delay",
+          "n": 3
+        },
+        {
+          "true": "service_complaint",
+          "predicted": "other",
+          "n": 3
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "delivery_failure",
+          "n": 3
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "item_condition",
+          "n": 2
+        },
+        {
+          "true": "refund_billing",
+          "predicted": "other",
+          "n": 2
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "delivery_delay",
+          "n": 2
+        }
+      ],
+      "decision": {
+        "coverage": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 200
+        },
+        "escalate_recall": {
+          "point": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 110
+        },
+        "escalate_precision": {
+          "point": 0.55,
+          "lo": 0.4799,
+          "hi": 0.6101,
+          "n": 200
+        },
+        "false_auto_handle_rate": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 0
+        },
+        "false_escalate_rate": {
+          "point": 0.45,
+          "lo": 0.3899,
+          "hi": 0.5201,
+          "n": 200
+        },
+        "n": 200,
+        "note": "auto-handled nothing, so false-auto-handle is trivially 0.0 - the exact reason a single safety number is gameable (D9/D49)"
+      },
+      "judge": {
+        "system": "pipeline_no_retr",
+        "n": 100,
+        "n_failed": 0,
+        "judge_model": "qwen/qwen3.8-27b",
+        "send_unedited_rate": {
+          "point": 0.52,
+          "lo": 0.42,
+          "hi": 0.6102,
+          "n": 100
+        },
+        "criteria_means": {
+          "grounded": 3.59,
+          "on_intent": 3.86,
+          "no_overcommit": 4.86,
+          "voice": 3.61,
+          "actionable": 3.57
+        }
+      }
+    },
+    "pipeline_no_gates": {
+      "n": 200,
+      "classification": {
+        "accuracy": {
+          "point": 0.805,
+          "lo": 0.75,
+          "hi": 0.865,
+          "n": 200
+        },
+        "macro_f1": {
+          "point": 0.7902,
+          "lo": 0.7185,
+          "hi": 0.852,
+          "n": 200
+        },
+        "per_class": {
+          "account_security": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15,
+            "reliable": false
+          },
+          "delivery_delay": {
+            "precision": 0.5882,
+            "recall": 0.9091,
+            "f1": 0.7143,
+            "support": 22,
+            "reliable": true
+          },
+          "delivery_failure": {
+            "precision": 0.7,
+            "recall": 0.7,
+            "f1": 0.7,
+            "support": 20,
+            "reliable": true
+          },
+          "item_condition": {
+            "precision": 0.8333,
+            "recall": 0.9091,
+            "f1": 0.8696,
+            "support": 11,
+            "reliable": false
+          },
+          "order_investigation": {
+            "precision": 1.0,
+            "recall": 0.619,
+            "f1": 0.7647,
+            "support": 21,
+            "reliable": true
+          },
+          "other": {
+            "precision": 0.7907,
+            "recall": 1.0,
+            "f1": 0.8831,
+            "support": 34,
+            "reliable": true
+          },
+          "prime_membership": {
+            "precision": 0.8571,
+            "recall": 0.5455,
+            "f1": 0.6667,
+            "support": 11,
+            "reliable": false
+          },
+          "product_digital": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15,
+            "reliable": false
+          },
+          "refund_billing": {
+            "precision": 0.8947,
+            "recall": 0.8947,
+            "f1": 0.8947,
+            "support": 19,
+            "reliable": false
+          },
+          "service_complaint": {
+            "precision": 0.8824,
+            "recall": 0.75,
+            "f1": 0.8108,
+            "support": 20,
+            "reliable": true
+          },
+          "unresolved_followup": {
+            "precision": 1.0,
+            "recall": 0.4167,
+            "f1": 0.5882,
+            "support": 12,
+            "reliable": false
+          }
+        },
+        "confusion": {
+          "account_security": {
+            "account_security": 14,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "delivery_delay": {
+            "account_security": 0,
+            "delivery_delay": 20,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 1,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "delivery_failure": {
+            "account_security": 0,
+            "delivery_delay": 4,
+            "delivery_failure": 14,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "item_condition": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 10,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "order_investigation": {
+            "account_security": 0,
+            "delivery_delay": 3,
+            "delivery_failure": 0,
+            "item_condition": 2,
+            "order_investigation": 13,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "other": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 34,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "prime_membership": {
+            "account_security": 0,
+            "delivery_delay": 4,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 6,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "product_digital": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 13,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "refund_billing": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 2,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 17,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "service_complaint": {
+            "account_security": 1,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 3,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 15,
+            "unresolved_followup": 0
+          },
+          "unresolved_followup": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 3,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 5
+          }
+        },
+        "labels": [
+          "account_security",
+          "delivery_delay",
+          "delivery_failure",
+          "item_condition",
+          "order_investigation",
+          "other",
+          "prime_membership",
+          "product_digital",
+          "refund_billing",
+          "service_complaint",
+          "unresolved_followup"
+        ],
+        "inter_labeller_ceiling": 0.75,
+        "ceiling_relative_accuracy": 1.0733
+      },
+      "top_confusions": [
+        {
+          "true": "delivery_failure",
+          "predicted": "delivery_delay",
+          "n": 4
+        },
+        {
+          "true": "prime_membership",
+          "predicted": "delivery_delay",
+          "n": 4
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "delivery_delay",
+          "n": 3
+        },
+        {
+          "true": "service_complaint",
+          "predicted": "other",
+          "n": 3
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "delivery_failure",
+          "n": 3
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "item_condition",
+          "n": 2
+        },
+        {
+          "true": "refund_billing",
+          "predicted": "other",
+          "n": 2
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "delivery_delay",
+          "n": 2
+        }
+      ],
+      "decision": {
+        "coverage": {
+          "point": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 200
+        },
+        "escalate_recall": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 110
+        },
+        "escalate_precision": {
+          "point": NaN,
+          "lo": NaN,
+          "hi": NaN,
+          "n": 0
+        },
+        "false_auto_handle_rate": {
+          "point": 0.55,
+          "lo": 0.4799,
+          "hi": 0.6101,
+          "n": 200
+        },
+        "false_escalate_rate": {
+          "point": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 0
+        },
+        "n": 200,
+        "note": ""
+      }
+    },
+    "pipeline": {
+      "n": 200,
+      "classification": {
+        "accuracy": {
+          "point": 0.805,
+          "lo": 0.75,
+          "hi": 0.865,
+          "n": 200
+        },
+        "macro_f1": {
+          "point": 0.7902,
+          "lo": 0.7185,
+          "hi": 0.852,
+          "n": 200
+        },
+        "per_class": {
+          "account_security": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15,
+            "reliable": false
+          },
+          "delivery_delay": {
+            "precision": 0.5882,
+            "recall": 0.9091,
+            "f1": 0.7143,
+            "support": 22,
+            "reliable": true
+          },
+          "delivery_failure": {
+            "precision": 0.7,
+            "recall": 0.7,
+            "f1": 0.7,
+            "support": 20,
+            "reliable": true
+          },
+          "item_condition": {
+            "precision": 0.8333,
+            "recall": 0.9091,
+            "f1": 0.8696,
+            "support": 11,
+            "reliable": false
+          },
+          "order_investigation": {
+            "precision": 1.0,
+            "recall": 0.619,
+            "f1": 0.7647,
+            "support": 21,
+            "reliable": true
+          },
+          "other": {
+            "precision": 0.7907,
+            "recall": 1.0,
+            "f1": 0.8831,
+            "support": 34,
+            "reliable": true
+          },
+          "prime_membership": {
+            "precision": 0.8571,
+            "recall": 0.5455,
+            "f1": 0.6667,
+            "support": 11,
+            "reliable": false
+          },
+          "product_digital": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15,
+            "reliable": false
+          },
+          "refund_billing": {
+            "precision": 0.8947,
+            "recall": 0.8947,
+            "f1": 0.8947,
+            "support": 19,
+            "reliable": false
+          },
+          "service_complaint": {
+            "precision": 0.8824,
+            "recall": 0.75,
+            "f1": 0.8108,
+            "support": 20,
+            "reliable": true
+          },
+          "unresolved_followup": {
+            "precision": 1.0,
+            "recall": 0.4167,
+            "f1": 0.5882,
+            "support": 12,
+            "reliable": false
+          }
+        },
+        "confusion": {
+          "account_security": {
+            "account_security": 14,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "delivery_delay": {
+            "account_security": 0,
+            "delivery_delay": 20,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 1,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "delivery_failure": {
+            "account_security": 0,
+            "delivery_delay": 4,
+            "delivery_failure": 14,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 1,
+            "unresolved_followup": 0
+          },
+          "item_condition": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 10,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "order_investigation": {
+            "account_security": 0,
+            "delivery_delay": 3,
+            "delivery_failure": 0,
+            "item_condition": 2,
+            "order_investigation": 13,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "other": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 34,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "prime_membership": {
+            "account_security": 0,
+            "delivery_delay": 4,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 6,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "product_digital": {
+            "account_security": 0,
+            "delivery_delay": 1,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 1,
+            "prime_membership": 0,
+            "product_digital": 13,
+            "refund_billing": 0,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "refund_billing": {
+            "account_security": 0,
+            "delivery_delay": 0,
+            "delivery_failure": 0,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 2,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 17,
+            "service_complaint": 0,
+            "unresolved_followup": 0
+          },
+          "service_complaint": {
+            "account_security": 1,
+            "delivery_delay": 0,
+            "delivery_failure": 1,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 3,
+            "prime_membership": 0,
+            "product_digital": 0,
+            "refund_billing": 0,
+            "service_complaint": 15,
+            "unresolved_followup": 0
+          },
+          "unresolved_followup": {
+            "account_security": 0,
+            "delivery_delay": 2,
+            "delivery_failure": 3,
+            "item_condition": 0,
+            "order_investigation": 0,
+            "other": 0,
+            "prime_membership": 0,
+            "product_digital": 1,
+            "refund_billing": 1,
+            "service_complaint": 0,
+            "unresolved_followup": 5
+          }
+        },
+        "labels": [
+          "account_security",
+          "delivery_delay",
+          "delivery_failure",
+          "item_condition",
+          "order_investigation",
+          "other",
+          "prime_membership",
+          "product_digital",
+          "refund_billing",
+          "service_complaint",
+          "unresolved_followup"
+        ],
+        "inter_labeller_ceiling": 0.75,
+        "ceiling_relative_accuracy": 1.0733
+      },
+      "top_confusions": [
+        {
+          "true": "delivery_failure",
+          "predicted": "delivery_delay",
+          "n": 4
+        },
+        {
+          "true": "prime_membership",
+          "predicted": "delivery_delay",
+          "n": 4
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "delivery_delay",
+          "n": 3
+        },
+        {
+          "true": "service_complaint",
+          "predicted": "other",
+          "n": 3
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "delivery_failure",
+          "n": 3
+        },
+        {
+          "true": "order_investigation",
+          "predicted": "item_condition",
+          "n": 2
+        },
+        {
+          "true": "refund_billing",
+          "predicted": "other",
+          "n": 2
+        },
+        {
+          "true": "unresolved_followup",
+          "predicted": "delivery_delay",
+          "n": 2
+        }
+      ],
+      "decision": {
+        "coverage": {
+          "point": 0.62,
+          "lo": 0.545,
+          "hi": 0.685,
+          "n": 200
+        },
+        "escalate_recall": {
+          "point": 0.5364,
+          "lo": 0.4455,
+          "hi": 0.6364,
+          "n": 110
+        },
+        "escalate_precision": {
+          "point": 0.7763,
+          "lo": 0.6711,
+          "hi": 0.8684,
+          "n": 76
+        },
+        "false_auto_handle_rate": {
+          "point": 0.4113,
+          "lo": 0.3306,
+          "hi": 0.4921,
+          "n": 124
+        },
+        "false_escalate_rate": {
+          "point": 0.2237,
+          "lo": 0.1316,
+          "hi": 0.3289,
+          "n": 76
+        },
+        "n": 200,
+        "note": ""
+      },
+      "coverage_risk_curve": [
+        {
+          "tau": 0.0,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.042,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.083,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.125,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.167,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.208,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.25,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.292,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.333,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.375,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.417,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.458,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.5,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.542,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.583,
+          "coverage": 1.0,
+          "false_auto_handle": 0.55,
+          "n_auto": 200
+        },
+        {
+          "tau": 0.625,
+          "coverage": 0.99,
+          "false_auto_handle": 0.5455,
+          "n_auto": 198
+        },
+        {
+          "tau": 0.667,
+          "coverage": 0.98,
+          "false_auto_handle": 0.5459,
+          "n_auto": 196
+        },
+        {
+          "tau": 0.708,
+          "coverage": 0.965,
+          "false_auto_handle": 0.5389,
+          "n_auto": 193
+        },
+        {
+          "tau": 0.75,
+          "coverage": 0.95,
+          "false_auto_handle": 0.5316,
+          "n_auto": 190
+        },
+        {
+          "tau": 0.792,
+          "coverage": 0.905,
+          "false_auto_handle": 0.5249,
+          "n_auto": 181
+        },
+        {
+          "tau": 0.833,
+          "coverage": 0.895,
+          "false_auto_handle": 0.5251,
+          "n_auto": 179
+        },
+        {
+          "tau": 0.875,
+          "coverage": 0.84,
+          "false_auto_handle": 0.5357,
+          "n_auto": 168
+        },
+        {
+          "tau": 0.917,
+          "coverage": 0.79,
+          "false_auto_handle": 0.5316,
+          "n_auto": 158
+        },
+        {
+          "tau": 0.958,
+          "coverage": 0.42,
+          "false_auto_handle": 0.4524,
+          "n_auto": 84
+        },
+        {
+          "tau": 1.0,
+          "coverage": 0.0,
+          "false_auto_handle": 0.0,
+          "n_auto": 0,
+          "acceptable_rate": null
+        }
+      ]
+    }
+  },
+  "caveats": [
+    "The golden set is NOT distribution-matched (equal cluster allocation, account_security oversampled ~8x, hard cases sought). Accuracy here does not estimate production accuracy.",
+    "Accuracy should be read against the inter-labeller ceiling (75.0% if known), not against 100%.",
+    "Golden labels carry ~15% measured residual noise (D37).",
+    "The judge shares a provider with the generator and is smaller.",
+    "Batched inference shifts ~20% of individual predictions without changing aggregate accuracy (D44)."
+  ]
+}

@@ -1,0 +1,1021 @@
+{
+  "system": "simple_tfidf_silver",
+  "n": 100,
+  "n_failed": 0,
+  "judge_model": "qwen/qwen3.8-27b",
+  "send_unedited_rate": {
+    "point": 0.15,
+    "lo": 0.08,
+    "hi": 0.2202,
+    "n": 100
+  },
+  "criteria_means": {
+    "grounded": 2.44,
+    "on_intent": 2.07,
+    "no_overcommit": 4.91,
+    "voice": 2.86,
+    "actionable": 2.03
+  },
+  "scores": {
+    "1046744-1046743": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores positive review; asks for problem details when none exist."
+    },
+    "1051383-1051381": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Generic request for details; misses chance to explain selection process."
+    },
+    "1057310-1057308": {
+      "grounded": 2,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Invented link; does not address specific delivery date request."
+    },
+    "1099261-1099267": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Dismissive tone; ignores guaranteed delivery breach; abrupt ending."
+    },
+    "113798-113796": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Completely ignores billing complaint, answers shipping question instead."
+    },
+    "1145964-1145963": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Directs to tracking link, matches precedent style and intent."
+    },
+    "1160620-1160619": {
+      "grounded": 3,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Dismissive tone, ignores complaint about delivery times, poor voice."
+    },
+    "1195821-1195819": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate empathy and request for details, matches brand voice."
+    },
+    "1228011-1228010": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Dismissive tone, ignores wrong delivery context, lacks empathy."
+    },
+    "1245906-1245905": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Directly answers contact question with standard support link."
+    },
+    "1272329-1272330": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriately requests details since image content is unknown."
+    },
+    "1276274-1276272": {
+      "grounded": 3,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Generic link ignores specific digital/physical order confusion."
+    },
+    "1284537-1284538": {
+      "grounded": 5,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriately requests details before providing support links, matching brand caution."
+    },
+    "128794-128792": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": true,
+      "mean_ordinal": 3.8,
+      "why": "Generic request for details is acceptable when intent is unclear."
+    },
+    "1342572-1342569": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Tone is too blunt and lacks empathy required for angry customer."
+    },
+    "1349094-1349093": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores positive feedback and incorrectly assumes a bad experience occurred."
+    },
+    "1353489-1353487": {
+      "grounded": 4,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Ignores lockout; asks irrelevant question instead of providing support link."
+    },
+    "1376060-1376059": {
+      "grounded": 4,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Generic filler; fails to address specific shipping urgency or provide link."
+    },
+    "1385721-1385720": {
+      "grounded": 4,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Ignores delivery failure; asks irrelevant question instead of providing support link."
+    },
+    "141042-141040": {
+      "grounded": 2,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Irrelevant question; ignores damage complaint and fails to provide resolution link."
+    },
+    "1441922-1441920": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.0,
+      "why": "Generic but safe; provides link without inventing specifics."
+    },
+    "1449131-1449130": {
+      "grounded": 1,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Invents cancellation status not present in customer message."
+    },
+    "1461541-1461540": {
+      "grounded": 5,
+      "on_intent": 5,
+      "no_overcommit": 5,
+      "voice": 5,
+      "actionable": 5,
+      "send_unedited": true,
+      "mean_ordinal": 5.0,
+      "why": "Matches precedent tone and asks for details safely."
+    },
+    "1472695-1472694": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Dismissive tone and ignores specific complaints about lost packages."
+    },
+    "1501853-1501851": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Ignores urgency, asks irrelevant tracking question, rude tone."
+    },
+    "1507241-1507238": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Generic question, misses opportunity to check status or apologize."
+    },
+    "1572978-1572979": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 1,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 1.8,
+      "why": "Completely irrelevant reply to a feature request."
+    },
+    "1616332-1616330": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 1,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 1.8,
+      "why": "Ignores return policy question, asks irrelevant tracking question."
+    },
+    "1623886-1623885": {
+      "grounded": 4,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Ignores refund request; asks for details instead of providing link."
+    },
+    "1627637-1627636": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Assumes delay; customer asked about 'fresh discount' label meaning."
+    },
+    "1714259-1714257": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": true,
+      "mean_ordinal": 4.0,
+      "why": "Matches precedent style; appropriately asks for details without PII."
+    },
+    "1777713-1777712": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Invents cancellation; customer complained about pickup vs delivery."
+    },
+    "1806515-1806514": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Ignores lost package context; asks irrelevant tracking question."
+    },
+    "184872-184869": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Asks about delay reason for a broken app, not the issue."
+    },
+    "1869787-1869786": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 1,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 1.8,
+      "why": "Completely irrelevant response to a general market comment."
+    },
+    "1997915-1997914": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Appropriate empathetic request for details without personal info."
+    },
+    "20482-20480": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Ignores request to check link; asks irrelevant question about delay."
+    },
+    "210395-210394": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Generic link doesn't address specific beta code issue or EA referral."
+    },
+    "2119275-2119273": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Completely irrelevant; suggests app reinstall for a policy question."
+    },
+    "21405-21404": {
+      "grounded": 3,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Generic template ignores specific complaint about wrong replacement suggestion."
+    },
+    "2142978-2142976": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Ignores specific grocery list request; generic link not supported by precedent."
+    },
+    "2147976-2147975": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 4,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 1.8,
+      "why": "Completely misses feedback intent; irrelevant tracking question."
+    },
+    "2152253-2152252": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 4,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 1.8,
+      "why": "Ignores missing item complaint; irrelevant tracking question."
+    },
+    "21861-21859": {
+      "grounded": 2,
+      "on_intent": 3,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Invents name 'Olly'; misses China-specific login issue."
+    },
+    "226109-226108": {
+      "grounded": 4,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Ignores customer's complaint about training; asks irrelevant question."
+    },
+    "2286021-2286020": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Completely irrelevant response to a positive review; hallucinates tracking issue."
+    },
+    "2289002-2289001": {
+      "grounded": 4,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Misses the specific request for a replacement case; generic delay inquiry."
+    },
+    "2318611-2318609": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores complaint about wrong product; irrelevant tracking question."
+    },
+    "2318872-2318870": {
+      "grounded": 2,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.4,
+      "why": "Ignores wrong item complaint; asks irrelevant tracking question."
+    },
+    "235728-235729": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Completely irrelevant response about shipping delays instead of price."
+    },
+    "2374468-2374467": {
+      "grounded": 4,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.2,
+      "why": "Generic apology; fails to address specific MRP complaint or call request."
+    },
+    "2459125-2459124": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 1,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 1.8,
+      "why": "Ignores thank you; asks irrelevant tracking question to positive feedback."
+    },
+    "2461305-2461303": {
+      "grounded": 5,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Generic but safe, matches precedent style of asking for details."
+    },
+    "2467611-2467610": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Completely irrelevant; suggests app reinstall for cashback issue."
+    },
+    "2508095-2508093": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Irrelevant; discusses shipping delays for a login error."
+    },
+    "2523373-2523371": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Tone-deaf; ignores break-in context, asks irrelevant tracking question."
+    },
+    "2541088-2541087": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores brand inquiry, invents delay context, unhelpful."
+    },
+    "2550658-2550657": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores broken link, invents delay context, unhelpful."
+    },
+    "2563976-2563975": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores email request, invents delay context, unhelpful."
+    },
+    "2571337-2571336": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Dismissive, ignores fraud claim, lacks empathy or next step."
+    },
+    "2678073-2678071": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores Vine question; suggests irrelevant app reinstall."
+    },
+    "2697167-2697165": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": true,
+      "mean_ordinal": 4.0,
+      "why": "Appropriate empathy and request for details without overpromising."
+    },
+    "2710423-2710421": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores credit delay question; suggests irrelevant app reinstall."
+    },
+    "2734334-2734332": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.2,
+      "why": "Addresses delivery complaint and asks for specific order details."
+    },
+    "2748308-2748307": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Invents 'Olly' and irrelevant app advice for skill deletion."
+    },
+    "276485-276486": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Claims cancellation when customer reported transit delay."
+    },
+    "2800415-2800414": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Ignores specific complaints about wrong address and false tracking."
+    },
+    "2810301-2810299": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Ignores cancellation request and asks irrelevant tracking question."
+    },
+    "2821115-2821116": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Ignores payment issue, invents cancellation, no support link."
+    },
+    "2837016-2837014": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Generic request for info instead of providing standard support link."
+    },
+    "2849114-2849113": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Ignores carrier preference request, asks irrelevant delivery status questions."
+    },
+    "2850731-2850729": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Ignores quiz eligibility question, suggests irrelevant app reinstall."
+    },
+    "2853772-2853771": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Fails to explain the shipping math as requested, only asks clarifying questions."
+    },
+    "2872468-2872467": {
+      "grounded": 5,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Matches precedent style, asks for error details without overcommitting."
+    },
+    "2884240-2884238": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Suggests reinstalling app for a billing issue, completely irrelevant and ungrounded."
+    },
+    "2887955-2887954": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Addresses shipping delays instead of the specific delivery driver failure complaint."
+    },
+    "2899618-2899617": {
+      "grounded": 5,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": false,
+      "mean_ordinal": 4.0,
+      "why": "Wrong intent; customer complained about waste, not a delivery issue."
+    },
+    "2915758-2915757": {
+      "grounded": 2,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Ignores safety concern; irrelevant tracking question; rude tone."
+    },
+    "2928447-2928446": {
+      "grounded": 3,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Dismissive tone; misses urgency of spoiled food; generic advice."
+    },
+    "2945430-2945428": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Completely irrelevant; ignores pricing fraud complaint entirely."
+    },
+    "2976549-2976548": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Ignores specific shipping question; asks vague clarifying questions instead of providing contact info."
+    },
+    "2978881-2978880": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Offers 'options' for packaging complaint which is nonsensical; precedent directs to feedback form."
+    },
+    "298462-298463": {
+      "grounded": 3,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.4,
+      "why": "Assumes delay without evidence; customer complaint is vague, needs broader clarification."
+    },
+    "302246-302245": {
+      "grounded": 4,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Lacks empathy and specific next steps (like checking neighbors) shown in precedent."
+    },
+    "389619-389618": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Dismissive tone, ignores customer's claim, lacks empathy and proper support link."
+    },
+    "423829-423828": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.4,
+      "why": "Invents cancellation status not in message; customer asked for status, not cancellation info."
+    },
+    "448309-448307": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Generic question; misses opportunity to provide support link or acknowledge cancellation."
+    },
+    "465041-465040": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.4,
+      "why": "Invents cancellation; customer asked about refund/offer issue, not cancellation status."
+    },
+    "470187-470185": {
+      "grounded": 5,
+      "on_intent": 4,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 4,
+      "send_unedited": true,
+      "mean_ordinal": 4.4,
+      "why": "Matches precedent style of asking for details without account info."
+    },
+    "478591-478590": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Ignores specific quiz context; precedent gives status or directs to website."
+    },
+    "526202-526201": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 2,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Completely irrelevant; asks about tracking for a content suggestion."
+    },
+    "569159-569158": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.8,
+      "why": "Dismissive; ignores complaint about courier reliability, asks for tracking instead."
+    },
+    "598059-598058": {
+      "grounded": 2,
+      "on_intent": 2,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Ignores lost package complaint, asks irrelevant shipping delay questions."
+    },
+    "606154-606153": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 4,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.0,
+      "why": "Misinterprets positive comment as a problem, offers irrelevant help link."
+    },
+    "727109-727105": {
+      "grounded": 3,
+      "on_intent": 2,
+      "no_overcommit": 4,
+      "voice": 2,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 2.6,
+      "why": "Dismissive tone, fails to address missing delivery or offer escalation."
+    },
+    "784066-784064": {
+      "grounded": 3,
+      "on_intent": 3,
+      "no_overcommit": 4,
+      "voice": 3,
+      "actionable": 2,
+      "send_unedited": false,
+      "mean_ordinal": 3.0,
+      "why": "Vague question about delay reason, lacks empathy and clear next step."
+    },
+    "818866-818865": {
+      "grounded": 4,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.8,
+      "why": "Generic filler; asks for details instead of providing known troubleshooting steps."
+    },
+    "861817-861820": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Claims order was canceled (false); ignores empty box issue and refund request."
+    },
+    "931379-931377": {
+      "grounded": 3,
+      "on_intent": 3,
+      "no_overcommit": 5,
+      "voice": 4,
+      "actionable": 3,
+      "send_unedited": false,
+      "mean_ordinal": 3.6,
+      "why": "Suggests reinstalling (not in precedent); misses specific sign-in button issue."
+    },
+    "99986-99984": {
+      "grounded": 1,
+      "on_intent": 1,
+      "no_overcommit": 5,
+      "voice": 3,
+      "actionable": 1,
+      "send_unedited": false,
+      "mean_ordinal": 2.2,
+      "why": "Asks about 'delay' which is irrelevant to login failure; nonsensical response."
+    }
+  }
+}

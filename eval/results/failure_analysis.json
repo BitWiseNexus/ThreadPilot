@@ -1,0 +1,259 @@
+{
+  "generated": "2026-09-15 22:38:47",
+  "n_rows": 200,
+  "judge_scores_available": false,
+  "ordering": "by harm, not by frequency",
+  "modes": [
+    {
+      "rank": 1,
+      "name": "False auto-handle (the dangerous failure)",
+      "count": 51,
+      "denominator": 124,
+      "severity": "HIGH - publishes an unreviewed reply under the brand's name",
+      "concentrated_in": {
+        "delivery_failure": 11,
+        "unresolved_followup": 9,
+        "delivery_delay": 8,
+        "order_investigation": 7,
+        "prime_membership": 6
+      },
+      "hypothesis": "The model proposed auto_handle on all 200 rows, so every escalate comes from a deterministic gate. The gates fire on intent (G1), missing precedent (G2), low confidence (G3) and explicit identifiers (G4) - none of which detects the two rubric tests that dominate the gold labels: E5 (anger an automated reply would worsen) and E2 (a reply that would have to commit a remedy). Those are properties of TONE and OBLIGATION, and no current gate reads either.",
+      "fix_location": "New gate. A sentiment/anger signal and a commitment-language detector would target the actual gap. Prompt changes will not help while the model's own proposal is constant.",
+      "examples": [
+        {
+          "pair_id": "1057310-1057308",
+          "text": "<user> <user> <url> I have ordered nd requested the call centre to deliver the product on 23rd still it got returned.",
+          "gold_intent": "delivery_failure",
+          "pred_intent": "delivery_failure",
+          "gold_decision": "escalate",
+          "pred_decision": "auto_handle",
+          "reply": "Sorry this happened. Could you please check your delivery details in the link and let us know if anything needs updating?",
+          "gates": [],
+          "max_similarity": 0.6961
+        },
+        {
+          "pair_id": "1195821-1195819",
+          "text": "Hey <user> this probably wasn't a great way to ship a battery. Also the driver threw it on my porch. 😠 #amazon <user> #Lithium <url>",
+          "gold_intent": "item_condition",
+          "pred_intent": "delivery_failure",
+          "gold_decision": "escalate",
+          "pred_decision": "auto_handle",
+          "reply": "Sorry about that. Please contact us here by phone or chat so an agent can look into it: <url>",
+          "gates": [],
+          "max_similarity": 0.534
+        },
+        {
+          "pair_id": "1208401-1208399",
+          "text": "<user> amazon has adopted a cheap way of marketing.amazon has cancelled my order without any reason",
+          "gold_intent": "order_investigation",
+          "pred_intent": "order_investigation",
+          "gold_decision": "escalate",
+          "pred_decision": "auto_handle",
+          "reply": "Every cancelled order is followed up with an email explaining the reason; please check your email for details.",
+          "gates": [],
+          "max_similarity": 0.8421
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Over-escalation (costly, not dangerous)",
+      "count": 17,
+      "denominator": 76,
+      "severity": "LOW - wastes an agent's time, publishes nothing wrong",
+      "gates_responsible": {
+        "G1": 9,
+        "G2": 7,
+        "G4": 1
+      },
+      "hypothesis": "G1 escalates by INTENT, unconditionally. But the rubric judges per message, and a generically-answerable message inside an always-escalate intent ('how long do refunds normally take?') is auto-handleable. This is the predicted cost of a blunt intent-level gate, now measured.",
+      "fix_location": "Gate design: make G1 conditional on the message rather than the intent alone. That is the single highest-value change available.",
+      "examples": [
+        {
+          "pair_id": "1059561-1059562",
+          "text": "<user> <user> need support on order no 171-7352190-1637951. Size is very small need replacement or return",
+          "gold_intent": "order_investigation",
+          "pred_intent": "order_investigation",
+          "gold_decision": "auto_handle",
+          "pred_decision": "escalate",
+          "reply": "Sorry the size isn’t right. Please fill out this form so we can process a replacement or return: <url>.",
+          "gates": [
+            "G4"
+          ],
+          "max_similarity": 0.6267
+        },
+        {
+          "pair_id": "1143153-1143156",
+          "text": "<user> Bought Nikon B700 &amp; it's wifi and bluetooth not working. Contacted tele service centre, they were not able to answer.",
+          "gold_intent": "other",
+          "pred_intent": "other",
+          "gold_decision": "auto_handle",
+          "pred_decision": "escalate",
+          "reply": "My apologies for the trouble, kindly fill in your details here: <url> and we’ll get back to you soon.",
+          "gates": [
+            "G2"
+          ],
+          "max_similarity": 0.431
+        },
+        {
+          "pair_id": "1359016-1359014",
+          "text": "Amazon Flex needs to screen the drivers better for logistics delivery. Some of these fuckers are mad dumb.",
+          "gold_intent": "service_complaint",
+          "pred_intent": "service_complaint",
+          "gold_decision": "auto_handle",
+          "pred_decision": "escalate",
+          "reply": "<user> We’re sorry about your experience with Flex drivers. Please contact us via this secure link: <url> so we can look into it.",
+          "gates": [
+            "G1"
+          ],
+          "max_similarity": 0.6636
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Adjacent-intent confusion",
+      "count": 39,
+      "denominator": 200,
+      "severity": "MEDIUM - wrong intent can mis-route and mis-gate",
+      "top_pairs": {
+        "delivery_failure -> delivery_delay": 4,
+        "prime_membership -> delivery_delay": 4,
+        "service_complaint -> other": 3,
+        "order_investigation -> delivery_delay": 3,
+        "unresolved_followup -> delivery_failure": 3,
+        "refund_billing -> other": 2
+      },
+      "hypothesis": "These are the SAME pairs the two independent labellers disagreed on in Phase 3, recorded before the classifier existed. The classifier fails where the taxonomy boundary is genuinely contested, not arbitrarily - so most of this is irreducible against these labels rather than a model deficiency.",
+      "fix_location": "Taxonomy, not prompt. Merging delivery_delay/delivery_failure or sharpening the prime_membership boundary would remove more error than any prompt edit.",
+      "examples": [
+        {
+          "pair_id": "1051383-1051381",
+          "text": "<user> why can't I win any quiz contest even after being eligible to win it ? I wonder how you guys select winners?",
+          "gold_intent": "service_complaint",
+          "pred_intent": "other",
+          "gold_decision": "auto_handle",
+          "pred_decision": "auto_handle",
+          "reply": "<user> We've escalated this to our team internally for an update. Kindly stay tuned.",
+          "gates": [],
+          "max_similarity": 0.528
+        },
+        {
+          "pair_id": "1099261-1099267",
+          "text": "<user> <user> <user> #405-3161422-8924357 I was informed about the Guaranteed delivery yesterday and it never got delivered",
+          "gold_intent": "order_investigation",
+          "pred_intent": "delivery_delay",
+          "gold_decision": "escalate",
+          "pred_decision": "escalate",
+          "reply": "I’m sorry for the delay. Have you received an updated delivery date? If so, please let us know.",
+          "gates": [
+            "G4"
+          ],
+          "max_similarity": 0.7911
+        },
+        {
+          "pair_id": "1160620-1160619",
+          "text": "<user> why do your delivery drivers insist on trying to deliver next day items outside of commercial times? Pointless having next day.",
+          "gold_intent": "delivery_failure",
+          "pred_intent": "delivery_delay",
+          "gold_decision": "auto_handle",
+          "pred_decision": "auto_handle",
+          "reply": "Orders placed with next‑day delivery arrive one business day after dispatch. More info: <url>",
+          "gates": [],
+          "max_similarity": 0.7919
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Drafting with weak precedent",
+      "count": 10,
+      "denominator": 20,
+      "severity": "MEDIUM - a confident reply with nothing behind it",
+      "hypothesis": "Gate G2 escalates below TAU_SIM=0.45, but similarity is a blunt proxy for 'is there relevant precedent'. A message can score 0.5 against a superficially similar but substantively different precedent and still be auto-handled.",
+      "fix_location": "Retrieval. Re-ranking, or requiring agreement among the top-k rather than the single max, would tighten this.",
+      "examples": [
+        {
+          "pair_id": "1342572-1342569",
+          "text": "F you <user> you lost my corgi onesie and now Halloween is ruined",
+          "gold_intent": "delivery_failure",
+          "pred_intent": "delivery_failure",
+          "gold_decision": "escalate",
+          "pred_decision": "auto_handle",
+          "reply": "<user> Oh no, we’re sorry your corgi onesie didn’t arrive. Please reach us here: <url> so we can help.",
+          "gates": [],
+          "max_similarity": 0.4548
+        },
+        {
+          "pair_id": "2613257-2613256",
+          "text": "He's part cat and part boy. Notice him playing in a small cardboard box. Thanks <user> for the hours of entertainment. <url>",
+          "gold_intent": "other",
+          "pred_intent": "other",
+          "gold_decision": "auto_handle",
+          "pred_decision": "auto_handle",
+          "reply": "Sounds like a fun time! Thanks for sharing.",
+          "gates": [],
+          "max_similarity": 0.4637
+        },
+        {
+          "pair_id": "1572978-1572979",
+          "text": "<user> please include legendary shows like x-files etc into your library with Musical Live concerts.. to make it more appealing.",
+          "gold_intent": "product_digital",
+          "pred_intent": "product_digital",
+          "gold_decision": "auto_handle",
+          "pred_decision": "auto_handle",
+          "reply": "Thanks for the suggestion! We'll share your feedback with the team.",
+          "gates": [],
+          "max_similarity": 0.4743
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "EVALUATION failure: a 17% grab-bag inflates the headline",
+      "count": 34,
+      "denominator": 34,
+      "severity": "N/A - a defect in the measurement, not in the system",
+      "overall_accuracy": 0.805,
+      "accuracy_excluding_other": 0.7651,
+      "inflation_points": 0.0399,
+      "hypothesis": "`other` is the largest gold class (34/200, 17%) and the classifier scores 100% on it - yet it is not one thing. It holds praise ('Absolutely fantastic customer service'), pre-purchase questions ('When will amazon restock this item?'), checkout problems and third-party product faults. Scoring perfectly on a bag of unlike things is not a capability, but it lifts overall accuracy from 76.5% to 80.5% - 4.0% points of the headline number. Part of that is the same methodological coupling that makes 80.5% exceed the 75.0% inter-labeller ceiling: the classifier reads the taxonomy definitions I also used when adjudicating those rows into `other`.",
+      "fix_location": "Taxonomy: add `positive_feedback` and `pre_purchase`, which would break the grab-bag into measurable classes. Frozen before labelling on purpose (D12/D14), so reported rather than patched - and it is the highest-value single change in 'what I would do next'.",
+      "examples": [
+        {
+          "pair_id": "1015578-1015576",
+          "text": "<user> hi I've got tickets for j cole tomorrow o2 however I'm not sure if they're actual Seated tickets in the arena? It's AL101",
+          "gold_intent": "other",
+          "pred_intent": "other",
+          "gold_decision": "auto_handle",
+          "pred_decision": "auto_handle",
+          "reply": "<user> Hi! To confirm seat details, please check the confirmation email or contact the venue.",
+          "gates": [],
+          "max_similarity": 0.4987
+        },
+        {
+          "pair_id": "1046744-1046743",
+          "text": "Absolutely fantastic customer service at <user> problem understood, sorted and refunded in 10 minutes. Bravo.",
+          "gold_intent": "other",
+          "pred_intent": "other",
+          "gold_decision": "auto_handle",
+          "pred_decision": "auto_handle",
+          "reply": "<user> I'm glad we could help! We love our customers!🙂",
+          "gates": [],
+          "max_similarity": 0.7268
+        },
+        {
+          "pair_id": "1047215-1047214",
+          "text": "<user> When will amazon restock this item? <url>",
+          "gold_intent": "other",
+          "pred_intent": "other",
+          "gold_decision": "auto_handle",
+          "pred_decision": "auto_handle",
+          "reply": "<user> The item is currently unavailable and we can't speculate on restock timing.",
+          "gates": [],
+          "max_similarity": 0.7088
+        }
+      ]
+    }
+  ]
+}
