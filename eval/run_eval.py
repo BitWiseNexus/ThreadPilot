@@ -130,16 +130,24 @@ def main() -> int:
 
     # ---- judge (the token spend) -----------------------------------------
     if not args.skip_judge:
-        index = retrieval.RetrievalIndex.load()
         rng = np.random.default_rng(config.SEED)
         idx = sorted(rng.permutation(len(golden))[:args.judge_n])
         paired_ids = [golden[i]["pair_id"] for i in idx]
 
-        # Same evidence for every system: the precedent the INDEX returns for
-        # this message, not whatever precedent a given system happened to use.
-        evidence = {pid: index.search_text(by_pair[pid]["text"],
+        # The index is loaded LAZILY, and only if something actually needs
+        # judging. It lives in data/interim/ (gitignored, because its metadata
+        # carries tweet text from a CC BY-NC-SA dataset), so a fresh clone does
+        # not have it. Eagerly loading it here made `--offline` crash on a clean
+        # checkout with FileNotFoundError - i.e. the README's central promise,
+        # "reproduce every number with no API key", was false for everyone but
+        # me. Found by the Phase 9 fresh-clone pass, which is what it is for.
+        _index = {"i": None}
+
+        def evidence_for(pid):
+            if _index["i"] is None:
+                _index["i"] = retrieval.RetrievalIndex.load()
+            return _index["i"].search_text(by_pair[pid]["text"],
                                            k=config.RETRIEVAL_K)
-                    for pid in paired_ids}
 
         print(f"\njudging on a paired subsample of {len(paired_ids)} rows "
               f"with {config.JUDGE_MODEL}")
@@ -169,7 +177,7 @@ def main() -> int:
                 items.append(judge_mod.JudgeItem(
                     customer_msg=by_pair[pid]["text"],
                     reply=preds[pid]["reply"],
-                    precedents=evidence[pid]))
+                    precedents=evidence_for(pid)))
                 ids.append(pid)
             try:
                 scores = judge_mod.judge_many(items, offline=args.offline,

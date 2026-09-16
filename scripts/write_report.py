@@ -260,6 +260,33 @@ def main() -> int:
           "everything scores 55%, so the gates buy a real but modest "
           "improvement, at a large cost in coverage.")
         A("")
+    nr = sysd.get("pipeline_no_retr")
+    if nr and nr.get("judge") and P.get("judge"):
+        A("### Both halves are necessary — the ablation is decisive")
+        A("")
+        A("| configuration | send unedited | grounded |")
+        A("|---|---|---|")
+        A(f"| **pipeline** (LLM + retrieval) | **{P['judge']['send_unedited_rate']['point']:.0%}** | "
+          f"**{P['judge']['criteria_means']['grounded']:.2f}** |")
+        A(f"| `pipeline_no_retr` (LLM alone) | {nr['judge']['send_unedited_rate']['point']:.0%} | "
+          f"{nr['judge']['criteria_means']['grounded']:.2f} |")
+        nnj = sysd.get("retrieval_1nn", {}).get("judge")
+        if nnj:
+            A(f"| `retrieval_1nn` (retrieval alone) | {nnj['send_unedited_rate']['point']:.0%} | "
+              f"{nnj['criteria_means']['grounded']:.2f} |")
+        A("")
+        A(f"Retrieval adds **{P['judge']['send_unedited_rate']['point']-nr['judge']['send_unedited_rate']['point']:+.0%} "
+          f"points** over the LLM alone; generation adds "
+          f"**{P['judge']['send_unedited_rate']['point']-nnj['send_unedited_rate']['point']:+.0%} points** over "
+          f"retrieval alone. **Neither component is close on its own.** "
+          f"Groundedness rises {nr['judge']['criteria_means']['grounded']:.2f} → "
+          f"{P['judge']['criteria_means']['grounded']:.2f} when precedent is "
+          f"supplied, which is exactly what retrieval is for.")
+        A("")
+        A("*Read these with §4b attached: the judge is systematically generous, "
+          "so the levels are inflated even if the gaps are not.*")
+        A("")
+
     nn = sysd.get("retrieval_1nn")
     if nn and nn.get("judge"):
         A("### What generation adds over copying")

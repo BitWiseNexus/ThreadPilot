@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17 00:48:59",
+  "generated": "2026-09-17 01:21:33",
   "brand": "AmazonHelp",
   "seed": 20260909,
   "n_golden": 200,
@@ -339,6 +339,25 @@
         },
         "n": 200,
         "note": "auto-handled nothing, so false-auto-handle is trivially 0.0 - the exact reason a single safety number is gameable (D9/D49)"
+      },
+      "judge": {
+        "system": "trivial",
+        "n": 100,
+        "n_failed": 0,
+        "judge_model": "qwen/qwen3.8-27b",
+        "send_unedited_rate": {
+          "point": 0.01,
+          "lo": 0.0,
+          "hi": 0.03,
+          "n": 100
+        },
+        "criteria_means": {
+          "grounded": 3.94,
+          "on_intent": 2.35,
+          "no_overcommit": 5.0,
+          "voice": 2.93,
+          "actionable": 2.23
+        }
       }
     },
     "simple_tfidf_silver": {
@@ -671,6 +690,25 @@
         },
         "n": 200,
         "note": ""
+      },
+      "judge": {
+        "system": "simple_tfidf_silver",
+        "n": 100,
+        "n_failed": 0,
+        "judge_model": "qwen/qwen3.8-27b",
+        "send_unedited_rate": {
+          "point": 0.15,
+          "lo": 0.08,
+          "hi": 0.2202,
+          "n": 100
+        },
+        "criteria_means": {
+          "grounded": 2.44,
+          "on_intent": 2.07,
+          "no_overcommit": 4.91,
+          "voice": 2.86,
+          "actionable": 2.03
+        }
       }
     },
     "simple_tfidf_cluster": {
@@ -1003,6 +1041,25 @@
         },
         "n": 200,
         "note": ""
+      },
+      "judge": {
+        "system": "simple_tfidf_cluster",
+        "n": 100,
+        "n_failed": 0,
+        "judge_model": "qwen/qwen3.8-27b",
+        "send_unedited_rate": {
+          "point": 0.17,
+          "lo": 0.1,
+          "hi": 0.26,
+          "n": 100
+        },
+        "criteria_means": {
+          "grounded": 2.76,
+          "on_intent": 2.07,
+          "no_overcommit": 4.94,
+          "voice": 2.99,
+          "actionable": 2.1
+        }
       }
     },
     "retrieval_1nn": {
@@ -1335,6 +1392,25 @@
         },
         "n": 200,
         "note": ""
+      },
+      "judge": {
+        "system": "retrieval_1nn",
+        "n": 100,
+        "n_failed": 0,
+        "judge_model": "qwen/qwen3.8-27b",
+        "send_unedited_rate": {
+          "point": 0.48,
+          "lo": 0.39,
+          "hi": 0.58,
+          "n": 100
+        },
+        "criteria_means": {
+          "grounded": 3.81,
+          "on_intent": 3.3,
+          "no_overcommit": 4.87,
+          "voice": 4.25,
+          "actionable": 3.41
+        }
       }
     },
     "pipeline_no_retr": {
@@ -2018,6 +2094,25 @@
         },
         "n": 200,
         "note": ""
+      },
+      "judge": {
+        "system": "pipeline_no_gates",
+        "n": 100,
+        "n_failed": 0,
+        "judge_model": "qwen/qwen3.8-27b",
+        "send_unedited_rate": {
+          "point": 0.78,
+          "lo": 0.7,
+          "hi": 0.86,
+          "n": 100
+        },
+        "criteria_means": {
+          "grounded": 4.51,
+          "on_intent": 4.36,
+          "no_overcommit": 4.93,
+          "voice": 4.63,
+          "actionable": 4.23
+        }
       }
     },
     "pipeline": {
@@ -2350,6 +2445,25 @@
         },
         "n": 200,
         "note": ""
+      },
+      "judge": {
+        "system": "pipeline",
+        "n": 100,
+        "n_failed": 0,
+        "judge_model": "qwen/qwen3.8-27b",
+        "send_unedited_rate": {
+          "point": 0.78,
+          "lo": 0.7,
+          "hi": 0.86,
+          "n": 100
+        },
+        "criteria_means": {
+          "grounded": 4.51,
+          "on_intent": 4.36,
+          "no_overcommit": 4.93,
+          "voice": 4.63,
+          "actionable": 4.23
+        }
       },
       "coverage_risk_curve": [
         {
