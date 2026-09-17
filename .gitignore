@@ -49,7 +49,7 @@ desktop.ini
 # WARNING: docs/decision_log.md and docs/report.md are graded deliverables of the
 # assignment. Ignoring docs/ keeps them off GitHub. To ship them to evaluators,
 # delete the line below (or see README for the selective alternative).
-docs
+docs/memory.md
 
 # ---- sqlite sidecars ----
 # The cache DB itself IS committed (D10), but WAL/SHM are transient per-process

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "allam-2-7b",
+    "owned_by": "SDAIA",
+    "context_window": 4096,
+    "max_completion_tokens": 4096
+  },
+  {
+    "id": "canopylabs/orpheus-arabic-saudi",
+    "owned_by": "Canopy Labs",
+    "context_window": 4000,
+    "max_completion_tokens": 50000
+  },
+  {
+    "id": "canopylabs/orpheus-v1-english",
+    "owned_by": "Canopy Labs",
+    "context_window": 4000,
+    "max_completion_tokens": 50000
+  },
+  {
+    "id": "groq/compound",
+    "owned_by": "Groq",
+    "context_window": 131072,
+    "max_completion_tokens": 8192
+  },
+  {
+    "id": "groq/compound-mini",
+    "owned_by": "Groq",
+    "context_window": 131072,
+    "max_completion_tokens": 8192
+  },
+  {
+    "id": "meta-llama/llama-prompt-guard-2-22m",
+    "owned_by": "Meta",
+    "context_window": 512,
+    "max_completion_tokens": 512
+  },
+  {
+    "id": "meta-llama/llama-prompt-guard-2-86m",
+    "owned_by": "Meta",
+    "context_window": 512,
+    "max_completion_tokens": 512
+  },
+  {
+    "id": "openai/gpt-oss-120b",
+    "owned_by": "OpenAI",
+    "context_window": 131072,
+    "max_completion_tokens": 65536
+  },
+  {
+    "id": "openai/gpt-oss-20b",
+    "owned_by": "OpenAI",
+    "context_window": 131072,
+    "max_completion_tokens": 65536
+  },
+  {
+    "id": "openai/gpt-oss-safeguard-20b",
+    "owned_by": "OpenAI",
+    "context_window": 131072,
+    "max_completion_tokens": 65536
+  },
+  {
+    "id": "qwen/qwen3.6-27b",
+    "owned_by": "Alibaba Cloud",
+    "context_window": 131072,
+    "max_completion_tokens": 16384
+  },
+  {
+    "id": "qwen/qwen3.8-27b",
+    "owned_by": "Alibaba Cloud",
+    "context_window": 131042,
+    "max_completion_tokens": 16384
+  },
+  {
+    "id": "whisper-large-v3",
+    "owned_by": "OpenAI",
+    "context_window": 448,
+    "max_completion_tokens": 448
+  },
+  {
+    "id": "whisper-large-v3-turbo",
+    "owned_by": "OpenAI",
+    "context_window": 448,
+    "max_completion_tokens": 448
+  }
+]
